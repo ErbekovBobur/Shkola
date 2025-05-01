@@ -1,0 +1,122 @@
+/* ===== Анимации ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 8px;
+    opacity: 1;
+  }
+  50% {
+    top: 15px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 8px;
+    opacity: 1;
+  }
+}
+
+/* Классы анимаций */
+.wow {
+  visibility: hidden;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.slideDown {
+  animation-name: slideDown;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}

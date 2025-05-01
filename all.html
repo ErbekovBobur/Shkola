@@ -1,0 +1,2504 @@
+<!-- program.html -->
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Программы | School Academy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Шапка (такая же как на главной) -->
+    <div id="header-placeholder"></div>
+
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <!-- <header class="sticky-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo-uz.png" alt="School Academy" class="logo" />
+          <div class="school-info">
+            <h1>School Academy</h1>
+            <p>Ташкент, Юнусабадский район</p>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li class="dropdown">
+              <a href="about.html" class="nav-link">О школе <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="about.html#history" class="nav-link">История</a></li>
+                <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
+                <li><a href="about.html#gallery" class="nav-link">Галерея</a></li>
+                <li><a href="about.html#mission" class="nav-link">Миссия</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="program.html" class="active nav-link"
+                >Программы <i class="fas fa-chevron-down dropdown-icon"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#kindergarten" class="nav-link">Детский сад</a></li>
+                <li><a href="#elementary" class="nav-link">Начальная школа</a></li>
+                <li><a href="#middle" class="nav-link">Средняя школа</a></li>
+              </ul>
+            </li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <div class="lang-switcher">
+            <button class="lang-btn active">РУ</button>
+            <button class="lang-btn">UZ</button>
+          </div>
+          <div class="phone"><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</div>
+        </div>
+
+        <button class="mobile-menu-btn">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header> -->
+
+    <!-- Основной контент -->
+    <main class="content-wrapper">
+      <!-- Детский сад -->
+      <section id="kindergarten" class="section-padding">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Детский сад</h2>
+            <div class="divider"></div>
+            <p>Для детей 3-6 лет</p>
+          </div>
+
+          <div class="program-container wow fadeIn">
+            <div class="program-img">
+              <img src="img/programs/kindergarten.jpg" alt="Детский сад" />
+            </div>
+            <div class="program-content">
+              <h3>Раннее развитие</h3>
+              <p>Наша программа для дошкольников направлена на всестороннее развитие ребенка в игровой форме.</p>
+
+              <div class="program-features">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Развитие речи и логики</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Подготовка к школе</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Творческие занятия</span>
+                </div>
+              </div>
+
+              <button class="cta-button">Узнать подробнее</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Начальная школа -->
+      <section id="elementary" class="section-padding bg-light">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Начальная школа</h2>
+            <div class="divider"></div>
+            <p>1-4 классы</p>
+          </div>
+
+          <div class="program-container reverse wow fadeIn">
+            <div class="program-img">
+              <img src="img/programs/elementary.jpg" alt="Начальная школа" />
+            </div>
+            <div class="program-content">
+              <h3>Фундаментальные знания</h3>
+              <p>Программа начальной школы сочетает традиционные методы обучения с современными технологиями.</p>
+
+              <div class="program-features">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Углубленное изучение языков</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Проектная деятельность</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>IT-грамотность с 1 класса</span>
+                </div>
+              </div>
+
+              <button class="cta-button">Узнать подробнее</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Средняя школа -->
+      <section id="middle" class="section-padding">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Средняя школа</h2>
+            <div class="divider"></div>
+            <p>5-11 классы</p>
+          </div>
+
+          <div class="program-container wow fadeIn">
+            <div class="program-img">
+              <img src="img/programs/middle.jpg" alt="Средняя школа" />
+            </div>
+            <div class="program-content">
+              <h3>Профильное обучение</h3>
+              <p>Старшеклассники могут выбрать одно из трех направлений для углубленного изучения.</p>
+
+              <div class="program-tabs">
+                <div class="tab-buttons">
+                  <button class="tab-btn active" data-tab="stem">STEM</button>
+                  <button class="tab-btn" data-tab="humanities">Гуманитарное</button>
+                  <button class="tab-btn" data-tab="business">Бизнес</button>
+                </div>
+
+                <div class="tab-content">
+                  <div id="stem" class="tab-pane active">
+                    <p>Углубленное изучение математики, физики, программирования и робототехники.</p>
+                  </div>
+                  <div id="humanities" class="tab-pane">
+                    <p>Литература, история, иностранные языки и журналистика.</p>
+                  </div>
+                  <div id="business" class="tab-pane">
+                    <p>Основы экономики, предпринимательства и финансовой грамотности.</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="cta-button">Узнать подробнее</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал (такой же как на главной) -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
+            <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
+            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+          </div>
+          <div class="footer-column">
+            <h3>Соцсети</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Часы работы</h3>
+            <p>Пн-Пт: 8:00 - 18:00</p>
+            <p>Сб: 9:00 - 14:00</p>
+            <p>Вс: выходной</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2024 School Academy. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+
+      // Табы для программ
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const tabId = this.getAttribute("data-tab");
+
+          // Удаляем активный класс у всех кнопок и контента
+          document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+          document.querySelectorAll(".tab-pane").forEach((p) => p.classList.remove("active"));
+
+          // Добавляем активный класс текущей кнопке и соответствующему контенту
+          this.classList.add("active");
+          document.getElementById(tabId).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Academy | Ташкент</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />    
+    <link rel="stylesheet" href="./css/phone.css">
+    <link rel="stylesheet" href="./css/lang.css">
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="sticky-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo-uz.png" alt="School Academy" class="logo" />
+          <div class="school-info">
+            <h1>School Academy</h1>
+            <p>Ташкент, Юнусабадский район</p>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="active nav-link">Главная</a></li>
+            <li class="dropdown">
+              <a href="about.html" class="nav-link">О школе <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="about.html#history" class="nav-link">История</a></li>
+                <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
+                <li><a href="about.html#gallery" class="nav-link">Галерея</a></li>
+                <li><a href="about.html#mission" class="nav-link">Миссия</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="program.html" class="nav-link">Программы <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="program.html#kindergarten" class="nav-link">Детский сад</a></li>
+                <li><a href="program.html#elementary" class="nav-link">Начальная школа</a></li>
+                <li><a href="program.html#middle" class="nav-link">Средняя школа</a></li>
+              </ul>
+            </li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <!-- =lang=======11111111========= -->
+          <!-- <div class="lang-switcher">
+            <button class="lang-btn active">РУ</button>
+            <button class="lang-btn">UZ</button>
+          </div> -->
+          <!-- ======2222222222====== -->
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="ru">РУ</button>
+            <button class="lang-btn" data-lang="uz">UZ</button>
+            <span class="lang-slider"></span>
+          </div>
+          <!-- ===Phone===== -->
+          <!-- <div class="phone"><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</div> -->
+           <!-- ================+1111111111+================ -->
+           <!-- <div class="phone-container">
+            <div class="phone-wrapper">
+              <div class="phone-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <a href="tel:+998711234567" class="phone-link">
+                <span class="phone-number">+998 (71) 123-45-67</span>
+                <span class="phone-call-text">Позвонить сейчас</span>
+              </a>
+            </div>
+            <div class="phone-ripple"></div>
+          </div> -->
+          <!-- ==============222222222222222================ -->
+          <!-- <div class="modern-phone">
+            <div class="phone-icon-circle">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <a href="tel:+998711234567" class="phone-content">
+              <span class="phone-number">+998 (71) 123-45-67</span>
+              <span class="phone-label">Звонок бесплатный</span>
+            </a>
+          </div> -->
+          <!-- ============3333333333333============== -->
+          <!-- <div class="pulsing-phone-element">
+            <div class="pulsing-phone-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <a href="tel:+998711234567" class="pulsing-phone-link">
+              <span class="pulsing-phone-number">+998 (71) 123-45-67</span>
+              <span class="phone-call-action">Доступно 24/7</span>
+            </a>
+          </div> -->
+          <!-- =========444444444444======== -->
+          <!-- <div class="animated-phone-element">
+            <div class="phone-icon-pulse">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <a href="tel:+998711234567" class="phone-link-motion">
+              <span class="phone-number-bounce">+998 (71) 123-45-67</span>
+              <span class="phone-call-hint">Нажмите для звонка</span>
+            </a>
+          </div> -->
+          <!-- =========5555555555====== -->
+          <div class="minimal-phone">
+            <div class="phone-pulse-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67</a>
+          </div>
+          <!-- --------------- -->
+        </div>
+
+        <button class="mobile-menu-btn">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="content-wrapper">      
+      <!-- Баннер -->
+      <section class="hero-banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <h1 class="wow fadeInUp" data-wow-delay="0.2s">Качественное образование <span>в Ташкенте</span></h1>
+          <p class="wow fadeInUp" data-wow-delay="0.4s">Лицензия МНО РУз №12345 | Юнусабадский район</p>
+          <!-- <button class="cta-button wow fadeInUp" data-wow-delay="0.6s">Записаться на экскурсию</button> -->
+          <a 
+          href="https://t.me/Shkolnayakademiya" 
+          class="cta-button wow fadeInUp" 
+          data-wow-delay="0.6s"
+          target="_blank"
+          rel="noopener noreferrer"
+      >
+          Записаться на экскурсию
+      </a>
+        </div>
+        <div class="scroll-down">
+          <div class="mouse">
+            <div class="scroller"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- О школе -->
+      <section class="about-section section-padding">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Наша школа</h2>
+            <div class="divider"></div>
+            <p>Уникальное пространство для развития</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card wow fadeIn" data-wow-delay="0.2s">
+              <div class="feature-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <h3>Индивидуальный подход</h3>
+              <p>Программы адаптированы под способности каждого ученика</p>
+            </div>
+
+            <div class="feature-card wow fadeIn" data-wow-delay="0.4s">
+              <div class="feature-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>IT-классы</h3>
+              <p>Современные компьютерные лаборатории</p>
+            </div>
+
+            <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+              <div class="feature-icon">
+                <i class="fas fa-medal"></i>
+              </div>
+              <h3>Подготовка в вузы</h3>
+              <p>90% выпускников поступают в топ-вузы</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Новости -->
+      <section class="news-section section-padding bg-light">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Последние новости</h2>
+            <div class="divider"></div>
+            <p>Будьте в курсе наших событий</p>
+          </div>
+
+          <div class="news-grid">
+            <div class="news-card wow fadeIn" data-wow-delay="0.2s">
+              <div class="news-img" style="background-image: url('img/news1.jpg')"></div>
+              <div class="news-content">
+                <span class="news-date">15 мая 2024</span>
+                <h3>Открытие STEM-лаборатории</h3>
+                <p>Новое оборудование для изучения робототехники и программирования</p>
+                <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="news-card wow fadeIn" data-wow-delay="0.4s">
+              <div class="news-img" style="background-image: url('img/news2.jpg')"></div>
+              <div class="news-content">
+                <span class="news-date">10 мая 2024</span>
+                <h3>Победа в олимпиаде</h3>
+                <p>Наши ученики заняли первые места по математике и физике</p>
+                <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+          <h3>Часы работы</h3>
+          <p>Пн-Пт: 8:00 - 18:00</p>
+          <!-- <p>Сб: 9:00 - 14:00</p> -->
+          <p>Вс: выходной</p>
+          </div>
+          <div class="footer-column">
+            <h3>Адрес</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
+          </div>
+          <div class="footer-column">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
+            <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
+            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+          </div>
+          <div class="footer-column">
+            <h3>Соцсети</h3>
+            <div class="social-links">
+              <a href="https://t.me/Shkolnayakademiya"><i class="fab fa-telegram"></i></a>
+              <a href="https://www.instagram.com/shkolnayakademiya/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <!-- <div class="footer-column"></div> -->
+        </div>
+        <!-- <div class="footer-column" style="position: relative"> -->
+        <div class="footer-map">
+          <a
+            href="https://yandex.uz/maps/org/97045873646/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >Школьная академия</a
+          ><a
+            href="https://yandex.uz/maps/10335/tashkent/category/private_school/184106252/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+            >Частная школа в Ташкенте</a
+          >
+          <iframe
+            src="https://yandex.uz/map-widget/v1/?ll=69.272024%2C41.370359&mode=poi&poi%5Bpoint%5D=69.271655%2C41.371280&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D97045873646&z=17.94"
+            width="600"
+            height="500"
+            frameborder="1"
+            allowfullscreen="true"
+            style="position: relative"
+          >
+          </iframe>
+        </div>        
+        
+        </div>
+        <div class="copyright">
+          <p>© 2024 School Academy. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+<script src="./js/ya.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW({
+        boxClass: "wow",
+        animateClass: "animated",
+        offset: 50,
+        mobile: true,
+      }).init();
+    </script>
+  </body>
+</html>
+
+<!-- contacts.html -->
+
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты | School Academy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Шапка (такая же как на главной) -->
+    <header class="sticky-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo-uz.png" alt="School Academy" class="logo" />
+          <div class="school-info">
+            <h1>School Academy</h1>
+            <p>Ташкент, Юнусабадский район</p>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li class="dropdown">
+              <a href="about.html" class="nav-link">О школе <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="about.html#history" class="nav-link">История</a></li>
+                <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
+                <li><a href="about.html#gallery" class="nav-link">Галерея</a></li>
+                <li><a href="about.html#mission" class="nav-link">Миссия</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="program.html" class="nav-link">Программы <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="program.html#kindergarten" class="nav-link">Детский сад</a></li>
+                <li><a href="program.html#elementary" class="nav-link">Начальная школа</a></li>
+                <li><a href="program.html#middle" class="nav-link">Средняя школа</a></li>
+              </ul>
+            </li>
+            <li><a href="contacts.html" class="active nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <div class="lang-switcher">
+            <button class="lang-btn active">РУ</button>
+            <button class="lang-btn">UZ</button>
+          </div>
+          <div class="phone"><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</div>
+        </div>
+
+        <button class="mobile-menu-btn">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="content-wrapper">
+      <!-- Контактная информация -->
+      <div class="map-container">
+        <h3>Мы находимся</h3>
+        <div class="simple-map">
+          <iframe
+            src="https://yandex.uz/map-widget/v1/?ll=69.272024%2C41.370359&mode=poi&poi%5Bpoint%5D=69.271655%2C41.371280&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D97045873646&z=17.94"
+            width="100%"
+            height="300"
+            frameborder="0"
+            style="border-radius: 8px"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <p class="address">
+          <i class="fas fa-map-marker-alt"></i>
+          Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1
+        </p>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
+            <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
+            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+          </div>
+          <div class="footer-column">
+            <h3>Соцсети</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Часы работы</h3>
+            <p>Пн-Пт: 8:00 - 18:00</p>
+            <p>Сб: 9:00 - 14:00</p>
+            <p>Вс: выходной</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2024 School Academy. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О школе | School Academy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/phone.css" />
+  </head>
+  <body>
+    <!-- Шапка (такая же как на главной) -->
+    <header class="sticky-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo-uz.png" alt="School Academy" class="logo" />
+          <div class="school-info">
+            <h1>School Academy</h1>
+            <p>Ташкент, Юнусабадский район</p>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li class="dropdown">
+              <a href="about.html" class="active nav-link">О школе <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#history" class="nav-link">История</a></li>
+                <li><a href="#teachers" class="nav-link">Преподаватели</a></li>
+                <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                <li><a href="#mission" class="nav-link">Миссия</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="program.html" class="nav-link">Программы <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="program.html#kindergarten" class="nav-link">Детский сад</a></li>
+                <li><a href="program.html#elementary" class="nav-link">Начальная школа</a></li>
+                <li><a href="program.html#middle" class="nav-link">Средняя школа</a></li>
+              </ul>
+            </li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <div class="lang-switcher">
+            <button class="lang-btn active">РУ</button>
+            <button class="lang-btn">UZ</button>
+          </div>
+          <div class="phone"><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</div>
+        </div>
+
+        <button class="mobile-menu-btn">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="content-wrapper">
+      <!-- История школы -->
+      <section id="history" class="section-padding">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Наша история</h2>
+            <div class="divider"></div>
+            <p>Как все начиналось</p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item wow fadeInLeft">
+              <div class="timeline-year">2010</div>
+              <div class="timeline-content">
+                <h3>Основание школы</h3>
+                <p>Школа открыла свои двери для первых 50 учеников начальных классов</p>
+              </div>
+            </div>
+
+            <div class="timeline-item wow fadeInRight">
+              <div class="timeline-year">2015</div>
+              <div class="timeline-content">
+                <h3>Расширение</h3>
+                <p>Построено новое здание для средней школы и спортивный комплекс</p>
+              </div>
+            </div>
+
+            <div class="timeline-item wow fadeInLeft">
+              <div class="timeline-year">2020</div>
+              <div class="timeline-content">
+                <h3>Современные технологии</h3>
+                <p>Оснащение классов интерактивными досками и компьютерными лабораториями</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Преподаватели -->
+      <section id="teachers" class="section-padding bg-light">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Наши преподаватели</h2>
+            <div class="divider"></div>
+            <p>Профессионалы с большим опытом</p>
+          </div>
+
+          <div class="teachers-grid">
+            <div class="teacher-card wow fadeIn" data-wow-delay="0.2s">
+              <div class="teacher-img" style="background-image: url('img/teachers/teacher1.jpg')"></div>
+              <div class="teacher-info">
+                <h3>Исматова Дилфуза</h3>
+                <p class="subject">Математика</p>
+                <p class="experience">Опыт: 15 лет</p>
+                <div class="teacher-social">
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="teacher-card wow fadeIn" data-wow-delay="0.4s">
+              <div class="teacher-img" style="background-image: url('img/teachers/teacher2.jpg')"></div>
+              <div class="teacher-info">
+                <h3>Каримов Рустам</h3>
+                <p class="subject">Физика и робототехника</p>
+                <p class="experience">Опыт: 10 лет</p>
+                <div class="teacher-social">
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Галерея -->
+      <section id="gallery" class="section-padding">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Галерея</h2>
+            <div class="divider"></div>
+            <p>Жизнь нашей школы</p>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item wow fadeIn" data-wow-delay="0.1s">
+              <img src="img/gallery/1.jpg" alt="Школьные мероприятия" />
+              <div class="gallery-overlay">
+                <h3>Школьные мероприятия</h3>
+              </div>
+            </div>
+            <div class="gallery-item wow fadeIn" data-wow-delay="0.2s">
+              <img src="img/gallery/2.jpg" alt="Учебные классы" />
+              <div class="gallery-overlay">
+                <h3>Учебные классы</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Миссия -->
+      <section id="mission" class="section-padding bg-light">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Наша миссия</h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="mission-content wow fadeIn">
+            <p>
+              Мы стремимся создать среду, где каждый ученик может раскрыть свой потенциал, получить качественное
+              образование и воспитать в себе лидерские качества, необходимые для успеха в современном мире.
+            </p>
+
+            <div class="mission-values">
+              <div class="value-item">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Качество образования</h4>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-users"></i>
+                <h4>Индивидуальный подход</h4>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-globe"></i>
+                <h4>Глобальное мышление</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал (такой же как на главной) -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
+            <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
+            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+          </div>
+          <div class="footer-column">
+            <h3>Соцсети</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Часы работы</h3>
+            <p>Пн-Пт: 8:00 - 18:00</p>
+            <p>Сб: 9:00 - 14:00</p>
+            <p>Вс: выходной</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2024 School Academy. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
+
+<!-- main.js -->
+document.addEventListener("DOMContentLoaded", function () {
+    // Мобильное меню
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const mainNav = document.querySelector(".main-nav");
+  
+    mobileMenuBtn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      mainNav.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
+    });
+  
+    // Плавный скролл для якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      // anchor.addEventListener("click", function (e) {
+      // Строка 15 - обработчик без debounce
+      window.addEventListener("scroll", function () {
+        // Может вызываться слишком часто
+  
+        e.preventDefault();
+  
+        if (this.classList.contains("nav-link")) {
+          mobileMenuBtn.classList.remove("active");
+          mainNav.classList.remove("active");
+          document.body.classList.remove("no-scroll");
+        }
+  
+        const targetId = this.getAttribute("href");
+        if (targetId === "#") return;
+  
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const headerHeight = document.querySelector(".sticky-header").offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+  
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  
+    // Фиксация шапки при скролле
+    const header = document.querySelector(".sticky-header");
+    let lastScroll = 0;
+  
+    window.addEventListener("scroll", function () {
+      const currentScroll = window.pageYOffset;
+  
+      if (currentScroll <= 0) {
+        header.style.boxShadow = "none";
+        header.style.background = "rgba(255, 255, 255, 0.98)";
+        return;
+      }
+  
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        // Прокрутка вниз
+        header.style.transform = "translateY(-100%)";
+      } else {
+        // Прокрутка вверх
+        header.style.transform = "translateY(0)";
+        header.style.background = "rgba(255, 255, 255, 0.98)";
+        header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+      }
+  
+      lastScroll = currentScroll;
+    });
+  
+    // Анимация при наведении на карточки
+    const featureCards = document.querySelectorAll(".feature-card");
+    featureCards.forEach((card) => {
+      card.addEventListener("mouseenter", function () {
+        this.style.transform = "translateY(-10px)";
+      });
+  
+      card.addEventListener("mouseleave", function () {
+        this.style.transform = "translateY(0)";
+      });
+    });
+  
+    // Закрытие меню при клике вне его области
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".main-nav") && !e.target.closest(".mobile-menu-btn")) {
+        mobileMenuBtn.classList.remove("active");
+        mainNav.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+      }
+    });
+  });
+
+  <!-- language.js -->
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const langButtons = document.querySelectorAll(".lang-btn");
+    const elementsToTranslate = {
+      title: {
+        РУ: "School Academy | Ташкент",
+        UZ: "School Academy | Toshkent",
+      },
+      welcome: {
+        РУ: "Добро пожаловать",
+        UZ: "Xush kelibsiz",
+      },
+      address: {
+        РУ: "Ташкент, Юнусабадский район",
+        UZ: "Toshkent, Yunusobod tumani",
+      },
+      "main-nav-home": {
+        РУ: "Главная",
+        UZ: "Bosh sahifa",
+      },
+      "main-nav-about": {
+        РУ: "О школе",
+        UZ: "Maktab haqida",
+      },
+      "main-nav-programs": {
+        РУ: "Программы",
+        UZ: "Dasturlar",
+      },
+      "main-nav-contacts": {
+        РУ: "Контакты",
+        UZ: "Aloqa",
+      },
+    };
+  
+    langButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        // Удаляем активный класс у всех кнопок
+        langButtons.forEach((btn) => btn.classList.remove("active"));
+  
+        // Добавляем активный класс текущей кнопке
+        this.classList.add("active");
+  
+        // Получаем выбранный язык
+        const lang = this.textContent;
+  
+        // Применяем перевод ко всем элементам
+        document.title = elementsToTranslate["title"][lang];
+  
+        document.querySelectorAll("[data-translate]").forEach((element) => {
+          const key = element.getAttribute("data-translate");
+          if (elementsToTranslate[key]) {
+            element.textContent = elementsToTranslate[key][lang];
+          }
+        });
+  
+        // Сохраняем выбор языка в localStorage
+        localStorage.setItem("selectedLang", lang);
+      });
+    });
+  
+    // Восстанавливаем выбранный язык при загрузке страницы
+    const savedLang = localStorage.getItem("selectedLang") || "РУ";
+    document.querySelector(`.lang-btn:contains('${savedLang}')`).click();
+  });
+  // ====222222222222=======
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // Удаляем active у всех кнопок
+      document.querySelectorAll(".lang-btn").forEach((b) => b.classList.remove("active"));
+  
+      // Добавляем active текущей кнопке
+      this.classList.add("active");
+  
+      // Обновляем позицию слайдера
+      const lang = this.getAttribute("data-lang");
+      document.querySelector(".language-switcher").setAttribute("data-active-lang", lang);
+  
+      // Здесь можно добавить логику смены языка
+      console.log("Выбран язык:", lang);
+    });
+  });
+
+  <!-- style.css -->
+ 
+  /* ===== Глобальные стили ===== */
+:root {
+  /* --primary: #3498db;
+  --primary-dark: #2980b9;
+  --secondary: #2ecc71;
+  --dark: #2c3e50;
+  --light: #ecf0f1;
+  --white: #ffffff;
+  --gray: #95a5a6; */
+
+  --primary: #1e88e5; /* Основной синий */
+  --primary-dark: #2980b9; /* Темный синий */
+  --secondary: #2ecc71; /* Зеленый */
+  --dark: #2c3e50; /* Темный текст */
+  --light: #ecf0f1; /* Светлый фон */
+  --white: #ffffff;
+  --gray: #95a5a6; /* Серый текст */
+
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Шапка ===== */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+  transition: var(--transition);
+}
+
+.school-info h1 {
+  font-size: 1.4rem;
+  margin-bottom: 3px;
+  color: var(--dark);
+}
+
+.school-info p {
+  font-size: 0.8rem;
+  color: var(--primary);
+}
+
+/* Основная навигация */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+  padding: 8px 0;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+/* Phone number */
+
+/* Выпадающее меню */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 15px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 100;
+}
+/* .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+} */
+/* Проблема в строке 128 */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Лучше использовать opacity/visibility для плавности */
+}
+
+.dropdown-menu li {
+  padding: 0 20px;
+}
+
+.dropdown-menu .nav-link {
+  display: block;
+  padding: 8px 0;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+  font-size: 0.8em;
+  transition: var(--transition);
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Кнопка мобильного меню */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: var(--dark);
+  left: 0;
+  transition: var(--transition);
+}
+
+.menu-line:nth-child(1) {
+  top: 0;
+}
+
+.menu-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-line:nth-child(3) {
+  bottom: 0;
+}
+
+/* ===== Герой баннер ===== */
+.hero-banner {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/banner-tashkent.jpg.jpg") center/cover no-repeat;
+  margin-top: 80px;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.banner-content h1 span {
+  color: var(--secondary);
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Кнопка CTA */
+.cta-button {
+  display: inline-block;
+  padding: 15px 35px;
+  background: var(--secondary);
+  color: var(--white);
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background: #27ae60;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Скролл вниз */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroller {
+  width: 4px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 8px;
+    opacity: 1;
+  }
+  50% {
+    top: 15px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 8px;
+    opacity: 1;
+  }
+}
+
+/* ===== Секции ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.divider::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--secondary);
+  right: -40px;
+}
+
+.section-header p {
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+/* Карточки особенностей */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* ===== Подвал ===== */
+.main-footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.footer-column p {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* КАРТА */
+.footer-column iframe {
+  max-width: 100%;
+  min-height: 400px;
+  height: auto;
+}
+.container iframe {
+  width: 80%;
+  max-width: 100%;
+  min-height: 25vh;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+/* ======== */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+.footer-map {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* ===== Адаптивность ===== */
+@media (max-width: 992px) {
+  .header-container {
+    padding: 15px 20px;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 80px 30px 30px;
+    transition: var(--transition);
+    z-index: 1000;
+  }
+
+  .main-nav.active {
+    right: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 15px;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu-btn.active .menu-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .mobile-menu-btn.active .menu-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.active .menu-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  .hero-banner {
+    min-height: 600px;
+  }
+
+  .banner-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* =========== */
+/* Стили для карты */
+.map-container {
+  margin-top: 50px;
+  padding: 70px;
+}
+
+.simple-map {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.address {
+  font-size: 0.95rem;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.address i {
+  color: var(--primary);
+}
+<!-- responsive.css -->
+
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    nav {
+      margin: 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    nav a {
+      margin: 5px 10px;
+    }
+  
+    .banner {
+      height: 50vh;
+    }
+  
+    .banner-content h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .advantages {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  <!-- phone.css -->
+  /* .phone-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 50px;
+  }
+  
+  .phone-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 50px;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .phone-icon {
+    font-size: 18px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .phone-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .phone-number {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .phone-call-text {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .phone-ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    z-index: 1;
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  
+  .phone-container:hover .phone-wrapper {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .phone-container:hover .phone-icon {
+    transform: rotate(15deg);
+  }
+  
+  .phone-container:hover .phone-call-text {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  
+  
+  .phone-link:active + .phone-ripple {
+    animation: ripple 0.6s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  
+  @media (prefers-color-scheme: dark) {
+    .phone-wrapper {
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+  */
+  /* ==========2222222222222222============ */
+  /* .modern-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background-color: rgba(30, 136, 229, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(30, 136, 229, 0.2);
+  }
+  
+  .modern-phone:hover {
+    background-color: rgba(30, 136, 229, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.1);
+  }
+  
+  .phone-icon-circle {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e88e5, #1976d2);
+    color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .modern-phone:hover .phone-icon-circle {
+    transform: scale(1.1) rotate(10deg);
+  }
+  
+  .phone-content {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  
+  .phone-number {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  
+  .phone-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 2px;
+    transition: color 0.3s ease;
+  }
+  
+  .modern-phone:hover .phone-label {
+    color: #1e88e5;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .phone-icon-circle i {
+    animation: pulse 2s infinite;
+  }
+  
+  .modern-phone:hover .phone-icon-circle i {
+    animation: none;
+  } */
+  /* =====333333333333====== */
+  /* Используем ваши точные переменные */
+  /* .pulsing-phone-element {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background-color: var(--white);
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid rgba(30, 136, 229, 0.2);
+  }
+  
+  .pulsing-phone-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .pulsing-phone-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(30, 136, 229, 0.3);
+    animation: pulse-ring 2s infinite;
+    z-index: 0;
+  }
+  
+  .pulsing-phone-icon i {
+    position: relative;
+    z-index: 1;
+    animation: pulse-icon 2s infinite;
+  }
+  
+  .pulsing-phone-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  
+  .pulsing-phone-number {
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 17px;
+    line-height: 1.3;
+    animation: pulse-text 2s infinite;
+    position: relative;
+  }
+  
+  .phone-call-action {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    70%,
+    100% {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse-icon {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes pulse-text {
+    0%,
+    100% {
+      color: var(--dark);
+      text-shadow: 0 0 0 rgba(30, 136, 229, 0);
+    }
+    50% {
+      color: var(--primary);
+      text-shadow: 0 0 8px rgba(30, 136, 229, 0.3);
+    }
+  }
+  
+  .pulsing-phone-element:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.25);
+  }
+  
+  .pulsing-phone-element:hover .pulsing-phone-icon {
+    transform: rotate(15deg);
+  }
+  
+  .pulsing-phone-element:hover .pulsing-phone-icon::after,
+  .pulsing-phone-element:hover .pulsing-phone-icon i,
+  .pulsing-phone-element:hover .pulsing-phone-number {
+    animation: none;
+  }
+  
+  .pulsing-phone-element:hover .phone-call-action {
+    color: var(--primary);
+    transform: translateX(5px);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .pulsing-phone-element {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    .pulsing-phone-number {
+      color: var(--light);
+    }
+  
+    @keyframes pulse-text {
+      0%,
+      100% {
+        color: var(--light);
+        text-shadow: 0 0 0 rgba(30, 136, 229, 0);
+      }
+      50% {
+        color: var(--secondary);
+        text-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+      }
+    }
+  } */
+  /* =========44444444========== */
+  /* Ваши переменные */
+  
+  /* .animated-phone-element {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background-color: var(--white);
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.15);
+    transition: all 0.8s ease;
+    border: 1px solid rgba(30, 136, 229, 0.2);
+  }
+  
+  .phone-icon-pulse {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    border-radius: 50%;
+    position: relative;
+    animation: pulse-icon 2.5s infinite ease-in-out;
+  }
+  
+  .phone-link-motion {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  
+  .phone-number-bounce {
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.3;
+    animation: bounce-text 2.8s infinite cubic-bezier(0.5, 0, 0.5, 1);
+    position: relative;
+    transform-origin: left center;
+  }
+  
+  .phone-call-hint {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  @keyframes pulse-icon {
+    0%,
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(30, 136, 229, 0.4);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 8px rgba(30, 136, 229, 0);
+    }
+  }
+  
+  
+  @keyframes bounce-text {
+    0%,
+    100% {
+      transform: translateY(0);
+      color: var(--dark);
+    }
+    25% {
+      transform: translateY(-3px);
+      color: var(--primary);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-2px);
+    }
+  }
+  
+  
+  .animated-phone-element:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.25);
+  }
+  
+  .animated-phone-element:hover .phone-icon-pulse,
+  .animated-phone-element:hover .phone-number-bounce {
+    animation: none;
+  }
+  
+  .animated-phone-element:hover .phone-icon-pulse {
+    transform: scale(1.1) rotate(15deg);
+  }
+  
+  .animated-phone-element:hover .phone-number-bounce {
+    transform: translateY(-3px);
+    color: var(--primary);
+  }
+  
+  .animated-phone-element:hover .phone-call-hint {
+    color: var(--primary);
+    transform: translateX(5px);
+  }
+  
+  
+  @media (prefers-color-scheme: dark) {
+    .animated-phone-element {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    .phone-number-bounce {
+      color: var(--light);
+    }
+  
+    @keyframes bounce-text {
+      0%,
+      100% {
+        transform: translateY(0);
+        color: var(--light);
+      }
+      25% {
+        transform: translateY(-3px);
+        color: var(--secondary);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      75% {
+        transform: translateY(-2px);
+      }
+    }
+  } */
+  /* =======555555555555555========== */
+  /* Ваши переменные */
+  /* :root {
+      --primary: #1E88E5;
+      --primary-dark: #2980b9;
+      --dark: #2c3e50;
+      --white: #ffffff;
+    } */
+  
+  .minimal-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    background-color: var(--white);
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .phone-pulse-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .bouncing-phone-number {
+    font-weight: 600;
+    color: var(--dark) !important;
+    font-size: 16px;
+    text-decoration: none;
+    animation: bounce 1.5s infinite ease-in-out;
+    display: inline-block;
+  }
+  
+  /* Анимация пульсации иконки */
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Анимация движения номера */
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+  
+  /* Эффекты при наведении */
+  .minimal-phone:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  }
+  
+  .minimal-phone:hover .phone-pulse-icon,
+  .minimal-phone:hover .bouncing-phone-number {
+    animation: none;
+  }
+  
+  .minimal-phone:hover .phone-pulse-icon {
+    background: var(--primary-dark);
+    transform: scale(1.1) rotate(15deg);
+  }
+  
+  .minimal-phone:hover .bouncing-phone-number {
+    color: var(--primary);
+    transform: translateY(-3px);
+  }
+  
+  /* Темная тема */
+  @media (prefers-color-scheme: dark) {
+    .minimal-phone {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  
+    .bouncing-phone-number {
+      color: var(--white);
+    }
+  }
+  <!--lang.css-  -->
+  .language-switcher {
+    position: relative;
+    display: inline-flex;
+    background: rgba(30, 136, 229, 0.1);
+    border-radius: 50px;
+    padding: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lang-btn {
+    position: relative;
+    width: 48px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 2;
+    transition: var(--transition);
+    border-radius: 50px;
+    outline: none;
+  }
+  
+  .lang-btn.active {
+    color: var(--white);
+  }
+  
+  .lang-slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50px;
+    z-index: 1;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+  }
+  
+  /* Анимация переключения */
+  .language-switcher[data-active-lang="uz"] .lang-slider {
+    transform: translateX(100%);
+  }
+  
+  /* Эффекты при наведении */
+  .lang-btn:not(.active):hover {
+    color: var(--primary);
+    transform: translateY(-1px);
+  }
+  
+  /* Микро-анимация активной кнопки */
+  @keyframes pulse-active {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+  }
+  
+  .lang-btn.active {
+    animation: pulse-active 3s infinite ease-in-out;
+  }
+  
+  .language-switcher:hover .lang-btn.active {
+    animation: none;
+  }
+  
+  /* Темная тема */
+  @media (prefers-color-scheme: dark) {
+    .language-switcher {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  
+    .lang-btn {
+      color: var(--gray);
+    }
+  
+    .lang-btn:not(.active):hover {
+      color: var(--primary-dark);
+    }
+  }
+  <!-- animate.css -->
+  /* ===== Анимации ===== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scrollDown {
+    0% {
+      top: 8px;
+      opacity: 1;
+    }
+    50% {
+      top: 15px;
+      opacity: 0.5;
+    }
+    100% {
+      top: 8px;
+      opacity: 1;
+    }
+  }
+  
+  /* Классы анимаций */
+  .wow {
+    visibility: hidden;
+  }
+  
+  .fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+  }
+  
+  .fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+  }
+  
+  .fadeInRight {
+    animation-name: fadeInRight;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+  }
+  
+  .zoomIn {
+    animation-name: zoomIn;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+  }
+  
+  .slideDown {
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+  

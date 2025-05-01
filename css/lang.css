@@ -1,0 +1,89 @@
+/* lang.css - добавить эти стили */
+.language-switcher {
+  position: relative;
+  display: inline-flex;
+  background: rgba(30, 136, 229, 0.1);
+  border-radius: 50px;
+  padding: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+
+.lang-btn {
+  position: relative;
+  width: 48px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  outline: none;
+}
+
+.lang-btn.active {
+  color: white;
+}
+
+.lang-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 48px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 50px;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+}
+
+/* Анимация переключения */
+.language-switcher[data-active-lang="uz"] .lang-slider {
+  transform: translateX(100%);
+}
+
+/* Эффекты при наведении */
+.lang-btn:not(.active):hover {
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* Микро-анимация активной кнопки */
+@keyframes pulse-active {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+.lang-btn.active {
+  animation: pulse-active 3s infinite ease-in-out;
+}
+
+.language-switcher:hover .lang-btn.active {
+  animation: none;
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .language-switcher {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .lang-btn {
+    color: var(--gray);
+  }
+
+  .lang-btn:not(.active):hover {
+    color: var(--primary-dark);
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Список новостей</title>
+</head>
+
+<body>
+    <h1>Новости</h1>
+    <ul id="newsList"></ul>
+
+    <script>
+        // mongodb + srv://<db_username>:<db_password>@data-0.qktfsfs.mongodb.net/?retryWrites=true&w=majority&appName=data-0
+        // mongodb + srv://<db_username>:<db_password>@data-0.qktfsfs.mongodb.net/?retryWrites=true&w=majority&appName=data-0
+        // mongodb + srv://atlas-sample-dataset-load-67f2a3dbb89c807b62c44c28:<db_password>@data-0.qktfsfs.mongodb.net/?retryWrites=true&w=majority&appName=data-0
+        // pulbic key - tahgbiqa
+        // private key - fc54f964 - 73be - 4cf5 - 8387 - f85f898f4c8f
+        const apiKey = 'tahgbiqa';
+        const databaseName = 'ВАША_БАЗА_ДАННЫХ';
+        const collectionName = 'ВАША_КОЛЛЕКЦИЯ';
+
+        async function fetchNews() {
+            const response = await fetch(`https://data.mongodb-api.com/app/data-XXXXX/endpoint/data/v1/action/find`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'api-key': apiKey,
+                },
+                body: JSON.stringify({
+                    collection: collectionName,
+                    database: databaseName,
+                    filter: {}, // Пустой фильтр для получения всех новостей
+                }),
+            });
+
+            const result = await response.json();
+            const newsList = document.getElementById('newsList');
+            newsList.innerHTML = ''; // Очистить список перед добавлением
+
+            result.documents.forEach(news => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${news.title}</strong> (${news.date}): ${news.content}`;
+                newsList.appendChild(li);
+            });
+        }
+
+        fetchNews(); // Загрузить новости при старте
+    </script>
+</body>
+
+</html>

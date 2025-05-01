@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Academy | Ташкент</title>
+
+  <!-- 🚀 Preload важнейших ресурсов -->
+  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="preload" href="js/main.js" as="script" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="preload" href="img/logo-uz.png" as="image" imagesrcset="img/logo-uz.png 1x, img/logo-uz@2x.png 2x" />
+
+  <!-- 🖋️ Стили -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/phone.css" />
+  <link rel="stylesheet" href="css/lang.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/gallery -2.css" />
+
+  <!-- 🔤 Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- 🧭 Иконка и манифест -->
+  <link rel="shortcut icon" href="img/logo-uz.png" type="image/x-icon" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#1e88e5" />
+
+  <!-- 📊 Аналитика и логика -->
+  <!-- <script defer src="js/analytics.js"></script>
+    <script defer src="js/language.js"></script>
+    <script defer src="./js/ya.js"></script>-->
+  <!-- <script defer src="js/main.js"></script>  -->
+
+  <!-- WOW.js -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+</head>
+
+<body>
+  <!-- Шапка (такая же как на главной) -->
+  <header class="sticky-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="img/logo-uz.png" alt="School Academy" class="logo" />
+        <div class="school-info">
+          <h1>School Academy</h1>
+          <p>Ташкент, Юнусабадский район</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a data-translate="nav-home" href="index.html" class="active nav-link">Главная</a></li>
+          <li class="dropdown">
+            <a data-translate="nav-about" href="about.html" class="nav-link">О школе <i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html#history" class="nav-link">История</a></li>
+              <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
+              <li><a href="about.html#gallery" class="nav-link">Галерея</a></li>
+              <li><a href="about.html#mission" class="nav-link">Миссия</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="program.html" class="nav-link">Программы <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="program.html#kindergarten" class="nav-link">Детский сад</a></li>
+              <li><a href="program.html#elementary" class="nav-link">Начальная школа</a></li>
+              <li><a href="program.html#middle" class="nav-link">Средняя школа</a></li>
+            </ul>
+          </li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <!-- =lang=======11111111========= -->
+        <!-- <div class="lang-switcher">
+              <button class="lang-btn active">РУ</button>
+              <button class="lang-btn">UZ</button>
+            </div> -->
+        <!-- ======2222222222====== -->
+        <!--<div class="language-switcher">
+            <button class="lang-btn active" data-lang="ru">РУ</button>
+            <button class="lang-btn" data-lang="uz">UZ</button>
+            <span class="lang-slider"></span>
+          </div>-->
+        <!--3333333333333-->
+        <!-- Заменить переключатель языка на этот код -->
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="ru" aria-label="Русский язык">РУ</button>
+          <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
+          <span class="lang-slider"></span>
+        </div>
+        <!-- ===Phone===== -->
+        <!-- <div class="phone"><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</div> -->
+        <!-- ================+1111111111+================ -->
+        <!-- <div class="phone-container">
+              <div class="phone-wrapper">
+                <div class="phone-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <a href="tel:+998711234567" class="phone-link">
+                  <span class="phone-number">+998 (71) 123-45-67</span>
+                  <span class="phone-call-text">Позвонить сейчас</span>
+                </a>
+              </div>
+              <div class="phone-ripple"></div>
+            </div> -->
+        <!-- ==============222222222222222================ -->
+        <!-- <div class="modern-phone">
+              <div class="phone-icon-circle">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <a href="tel:+998711234567" class="phone-content">
+                <span class="phone-number">+998 (71) 123-45-67</span>
+                <span class="phone-label">Звонок бесплатный</span>
+              </a>
+            </div> -->
+        <!-- ============3333333333333============== -->
+        <!-- <div class="pulsing-phone-element">
+              <div class="pulsing-phone-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <a href="tel:+998711234567" class="pulsing-phone-link">
+                <span class="pulsing-phone-number">+998 (71) 123-45-67</span>
+                <span class="phone-call-action">Доступно 24/7</span>
+              </a>
+            </div> -->
+        <!-- =========444444444444======== -->
+        <!-- <div class="animated-phone-element">
+              <div class="phone-icon-pulse">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <a href="tel:+998711234567" class="phone-link-motion">
+                <span class="phone-number-bounce">+998 (71) 123-45-67</span>
+                <span class="phone-call-hint">Нажмите для звонка</span>
+              </a>
+            </div> -->
+        <!-- =========5555555555====== -->
+        <div class="minimal-phone">
+          <div class="phone-pulse-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67</a>
+        </div>
+        <!-- --------------- -->
+      </div>
+
+      <button class="mobile-menu-btn">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <script>
+    // Анимация выпадающего меню
+    document.querySelectorAll(".dropdown").forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        const menu = item.querySelector(".dropdown-menu");
+        menu.style.display = "block";
+        menu.style.animation = "slideDown 0.3s ease-out forwards";
+      });
+
+      item.addEventListener("mouseleave", () => {
+        const menu = item.querySelector(".dropdown-menu");
+        menu.style.animation = "";
+        setTimeout(() => {
+          menu.style.display = "none";
+        }, 300);
+      });
+    });
+
+    // Мобильное меню
+    document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
+      document.querySelector(".main-nav").classList.toggle("show-mobile");
+    });
+  </script>
+
+  <!-- Основной контент -->
+  <main class="content-wrapper">
+    <!-- История школы -->
+    <section id="history" class="section-padding">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Наша история</h2>
+          <div class="divider"></div>
+          <p>Как все начиналось</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item wow fadeInLeft">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content">
+              <h3>Основание школы</h3>
+              <p>Школа открыла свои двери для первых 50 учеников начальных классов</p>
+            </div>
+          </div>
+
+          <div class="timeline-item wow fadeInRight">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+              <h3>Расширение</h3>
+              <p>Построено новое здание для средней школы и спортивный комплекс</p>
+            </div>
+          </div>
+
+          <div class="timeline-item wow fadeInLeft">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+              <h3>Современные технологии</h3>
+              <p>Оснащение классов интерактивными досками и компьютерными лабораториями</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преподаватели -->
+    <!-- <section id="teachers" class="section-padding bg-light">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Наши преподаватели</h2>
+            <div class="divider"></div>
+            <p>Профессионалы с большим опытом</p>
+          </div>
+
+          <div class="teachers-grid">
+            <div class="teacher-card wow fadeIn" data-wow-delay="0.2s">
+              <div class="teacher-img" style="background-image: url('img/teachers/teacher1.jpg')"></div>
+              <div class="teacher-info">
+                <h3>Исматова Дилфуза</h3>
+                <p class="subject">Математика</p>
+                <p class="experience">Опыт: 15 лет</p>
+                <div class="teacher-social">
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="teacher-card wow fadeIn" data-wow-delay="0.4s">
+              <div class="teacher-img" style="background-image: url('img/teachers/teacher2.jpg')"></div>
+              <div class="teacher-info">
+                <h3>Каримов Рустам</h3>
+                <p class="subject">Физика и робототехника</p>
+                <p class="experience">Опыт: 10 лет</p>
+                <div class="teacher-social">
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    <section id="teachers" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Наши преподаватели</h2>
+          <div class="divider"></div>
+          <p>Профессионалы с большим опытом</p>
+        </div>
+
+        <!-- Фильтрация преподавателей (по предмету) -->
+        <div class="teacher-filter">
+          <button class="filter-btn active" data-filter="all">Все преподаватели</button>
+          <button class="filter-btn" data-filter="math">Математика</button>
+          <button class="filter-btn" data-filter="physics">Физика</button>
+          <button class="filter-btn" data-filter="robotics">Робототехника</button>
+        </div>
+
+        <div class="teachers-grid">
+          <div class="teacher-card wow fadeIn" data-wow-delay="0.2s" data-category="math">
+            <div class="teacher-img" style="background-image: url('img/teachers/teacher1.jpg')"
+              alt="Преподаватель Дилфуза Исматова"></div>
+            <div class="teacher-info">
+              <h3>Исматова Дилфуза</h3>
+              <p class="subject">Математика</p>
+              <p class="experience">Опыт: 15 лет</p>
+              <p class="education">Образование: МГУ, магистр</p>
+              <div class="teacher-social">
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="teacher-card wow fadeIn" data-wow-delay="0.4s" data-category="physics">
+            <div class="teacher-img" style="background-image: url('img/teachers/teacher2.jpg')"
+              alt="Преподаватель Рустам Каримов"></div>
+            <div class="teacher-info">
+              <h3>Каримов Рустам</h3>
+              <p class="subject">Физика и робототехника</p>
+              <p class="experience">Опыт: 10 лет</p>
+              <p class="education">Образование: Узбекистанский университет, бакалавр</p>
+              <div class="teacher-social">
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Добавьте других преподавателей по аналогии -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Галерея -->
+    <!-- <section id="gallery" class="section-padding">
+        
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Галерея</h2>
+            <div class="divider"></div>
+            <p>Жизнь нашей школы</p>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item wow fadeIn" data-wow-delay="0.1s">
+              <img src="img/gallery/1.jpg" alt="Школьные мероприятия" />
+              <div class="gallery-overlay">
+                <h3>Школьные мероприятия</h3>
+              </div>
+            </div>
+            <div class="gallery-item wow fadeIn" data-wow-delay="0.2s">
+              <img src="img/gallery/2.jpg" alt="Учебные классы" />
+              <div class="gallery-overlay">
+                <h3>Учебные классы</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    <!-- <section id="gallery" class="section-padding bg-light">
+        <div class="container">
+          <div class="section-header wow fadeIn">
+            <h2>Галерея</h2>
+            <div class="divider"></div>
+            <p>Погрузитесь в мир наших проектов</p>
+          </div>
+
+          
+          <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="design">Дизайн</button>
+            <button class="filter-btn" data-filter="projects">Проекты</button>
+            <button class="filter-btn" data-filter="events">Мероприятия</button>
+          </div>
+
+          
+          <div class="gallery-grid">
+            <div class="gallery-item wow fadeIn" data-wow-delay="0.2s" data-category="design">
+              <img src="img/gallery/image1.jpg" alt="Проект 1" class="gallery-image" />
+            </div>
+            <div class="gallery-item wow fadeIn" data-wow-delay="0.4s" data-category="projects">
+              <img src="img/gallery/image2.jpg" alt="Проект 2" class="gallery-image" />
+            </div>
+            <div class="gallery-item wow fadeIn" data-wow-delay="0.6s" data-category="events">
+              <img src="img/gallery/image3.jpg" alt="Событие 1" class="gallery-image" />
+            </div>
+            
+          </div>
+
+          
+          <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" class="lightbox-img" src="" alt="" />
+          </div>
+        </div>
+      </section> -->
+    <!--<section id="gallery" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Галерея</h2>
+          <div class="divider"></div>
+          <p>Погрузитесь в мир наших проектов</p>
+        </div>
+
+         Карусель
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/gallery/image1.jpg" alt="Проект 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery/image2.jpg" alt="Проект 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery/image3.jpg" alt="Проект 3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery/image4.jpg" alt="Проект 4" />
+              </div>
+              <Добавьте больше слайдов по необходимости
+            </div>
+          </div>
+        </div>
+        <div id="lightbox" class="lightbox">
+          <span class="lightbox-close">&times;</span>
+          <img id="lightbox-img" class="lightbox-img" src="" alt="" />
+        </div>
+      </div>
+      </section> -->
+    <section id="gallery" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Галерея</h2>
+          <div class="divider"></div>
+          <p>Погрузитесь в мир наших проектов</p>
+        </div>
+
+        <!-- Горизонтальный скролл -->
+        <div class="gallery-wrapper">
+          <button class="gallery-nav left" id="galleryPrev">&#10094;</button>
+          <div class="gallery-row" id="galleryRow">
+            <!-- Карточки галереи -->
+
+
+            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 1" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 2" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 3" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 4" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
+            <!-- Добавьте больше карточек -->
+          </div>
+          <button class="gallery-nav right" id="galleryNext">&#10095;</button>
+        </div>
+
+        <div class="scroll-btn right" onclick="scrollGallery(1)">&#10095;</div>
+      </div>
+      </div>
+
+      <!-- Модальное окно -->
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeModal()">&times;</span>
+        <button class="lightbox-nav left" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="" />
+        <button class="lightbox-nav right" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Миссия -->
+    <section id="mission" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Наша миссия</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="mission-content wow fadeIn">
+          <p>
+            Мы стремимся создать среду, где каждый ученик может раскрыть свой потенциал, получить качественное
+            образование и воспитать в себе лидерские качества, необходимые для успеха в современном мире.
+          </p>
+
+          <div class="mission-values">
+            <div class="value-item">
+              <i class="fas fa-graduation-cap"></i>
+              <h4>Качество образования</h4>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-users"></i>
+              <h4>Индивидуальный подход</h4>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-globe"></i>
+              <h4>Глобальное мышление</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал (такой же как на главной) -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("partials/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+  <script src="js/ya.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/language.js" defer></script>
+  <script src="js/about.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/gallery -2.js"></script>
+  ;
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 50,
+      mobile: true,
+    }).init();
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22ZG2NQ22L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-22ZG2NQ22L");
+  </script>
+</body>
+
+</html>
+<!--
+git add .
+git commit -m "Ваше сообщение о коммите"
+git push origin fixBug
+-->
