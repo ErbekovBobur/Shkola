@@ -134,7 +134,7 @@ img {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   left: 0;
   min-width: 220px;
   background: var(--white);

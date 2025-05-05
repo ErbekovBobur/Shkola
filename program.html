@@ -52,36 +52,8 @@
 
   <body>
     <!-- Шапка (такая же как на главной) -->
-    <div id="header-placeholder"></div>
-
-    <script>
-      fetch("partials/header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header-placeholder").innerHTML = data;
-          document.querySelectorAll(".dropdown").forEach((item) => {
-            item.addEventListener("mouseenter", () => {
-              const menu = item.querySelector(".dropdown-menu");
-              menu.style.display = "block";
-              menu.style.animation = "slideDown 0.3s ease-out forwards";
-            });
-
-            item.addEventListener("mouseleave", () => {
-              const menu = item.querySelector(".dropdown-menu");
-              menu.style.animation = "";
-              setTimeout(() => {
-                menu.style.display = "none";
-              }, 300);
-            });
-          });
-
-          // Мобильное меню
-          document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
-            document.querySelector(".main-nav").classList.toggle("show-mobile");
-          });
-        });
-    </script>
-    <!-- <header class="sticky-header">
+    
+    <header class="sticky-header">
       <div class="header-container">
         <div class="logo-container">
           <img src="img/logo-uz.png" alt="School Academy" class="logo" />
@@ -90,12 +62,11 @@
             <p>Ташкент, Юнусабадский район</p>
           </div>
         </div>
-
         <nav class="main-nav">
           <ul>
-            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a data-translate="nav-home" href="index.html" class="nav-link">Главная</a></li>
             <li class="dropdown">
-              <a href="about.html" class="nav-link">О школе <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <a data-translate="nav-about" href="about.html" class="nav-link">О школе <i class="fas fa-chevron-down dropdown-icon"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="about.html#history" class="nav-link">История</a></li>
                 <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
@@ -104,34 +75,40 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="program.html" class="active nav-link"
-                >Программы <i class="fas fa-chevron-down dropdown-icon"></i
-              ></a>
+              <a href="program.html" class="active nav-link">Программы <i class="fas fa-chevron-down dropdown-icon"></i></a>
               <ul class="dropdown-menu">
-                <li><a href="#kindergarten" class="nav-link">Детский сад</a></li>
-                <li><a href="#elementary" class="nav-link">Начальная школа</a></li>
-                <li><a href="#middle" class="nav-link">Средняя школа</a></li>
+                <li><a href="program.html#kindergarten" class="nav-link">Детский сад</a></li>
+                <li><a href="program.html#elementary" class="nav-link">Начальная школа</a></li>
+                <li><a href="program.html#middle" class="nav-link">Средняя школа</a></li>
               </ul>
             </li>
             <li><a href="contacts.html" class="nav-link">Контакты</a></li>
           </ul>
         </nav>
-
+  
         <div class="header-right">
-          <div class="lang-switcher">
-            <button class="lang-btn active">РУ</button>
-            <button class="lang-btn">UZ</button>
+          <!-- Переключатель языка на этот код -->
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="ru" aria-label="Русский язык">РУ</button>
+            <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
+            <span class="lang-slider"></span>
           </div>
-          <div class="phone"><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</div>
+          <!-- ========= Телефон ====== -->
+          <div class="minimal-phone">
+            <div class="phone-pulse-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67</a>
+          </div>          
         </div>
-
+        <!-- Мобильное меню  -->
         <button class="mobile-menu-btn">
           <span class="menu-line"></span>
           <span class="menu-line"></span>
           <span class="menu-line"></span>
         </button>
       </div>
-    </header> -->
+    </header>
 
     <!-- Основной контент -->
     <main class="content-wrapper">
@@ -296,36 +273,60 @@
         </div>
       </div>
     </section>
-    <!-- Подвал (такой же как на главной) -->
-    <footer class="main-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>Контакты</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
-            <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
-            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
-          </div>
-          <div class="footer-column">
-            <h3>Соцсети</h3>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-telegram"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
-          </div>
-          <div class="footer-column">
-            <h3>Часы работы</h3>
-            <p>Пн-Пт: 8:00 - 18:00</p>
-            <p>Сб: 9:00 - 14:00</p>
-            <p>Вс: выходной</p>
-          </div>
-        </div>
-        <div class="copyright">
-          <p>© 2024 School Academy. Все права защищены.</p>
+    <!-- Подвал -->
+<footer class="main-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Часы работы</h3>
+        <p>Пн-Пт: 8:00 - 18:00</p>
+        <!-- <p>Сб: 9:00 - 14:00</p> -->
+        <p>Вс: выходной</p>
+      </div>
+      <div class="footer-column">
+        <h3>Адрес</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
+      </div>
+      <div class="footer-column">
+        <h3>Контакты</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
+        <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
+        <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+      </div>
+      <div class="footer-column">
+        <h3>Соцсети</h3>
+        <div class="social-links">
+          <a href="https://t.me/Shkolnayakademiya"><i class="fab fa-telegram"></i></a>
+          <a href="https://www.instagram.com/shkolnayakademiya/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
-    </footer>
+      <!-- <div class="footer-column"></div> -->
+    </div>
+    <!-- <div class="footer-column" style="position: relative"> -->
+   
+    <div class="footer-map">
+      <a href="https://yandex.uz/maps/org/97045873646/?utm_medium=mapframe&utm_source=maps"
+        style="color: #eee; font-size: 12px; position: absolute; top: 0px">Школьная академия</a><a
+        href="https://yandex.uz/maps/10335/tashkent/category/private_school/184106252/?utm_medium=mapframe&utm_source=maps"
+        style="color: #eee; font-size: 12px; position: absolute; top: 14px">Частная школа в Ташкенте</a>
+      <iframe
+        src="https://yandex.uz/map-widget/v1/?ll=69.272024%2C41.370359&mode=poi&poi%5Bpoint%5D=69.271655%2C41.371280&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D97045873646&z=17.94"
+        width="600" height="500" frameborder="1" allowfullscreen="true" style="position: relative">
+      </iframe>
+    </div>
+
+  </div>
+  <div class="copyright">
+    <p>© 2024 School Academy. Все права защищены.</p>
+    <!-- Yandex Metrika -->
+    <!-- <noscript>
+      <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> -->
+
+  </div>
+  </div>
+</footer>
 
     <script src="js/main.js"></script>
     <script src="js/language.js"></script>
