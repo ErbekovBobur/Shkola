@@ -3,87 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="О School Academy - частной школе в Ташкенте с профессиональными педагогами и современными образовательными программами.">
-  <meta name="keywords" content="School Academy, частная школа, Ташкент, педагоги, образование">
-  <meta name="robots" content="index, follow">
-  <title>School Academy - О школе</title>
+  <meta name="description" content="О School Academy в Ташкенте - узнайте о наших преподавателях, программах и школьной жизни." />
+  <meta name="keywords" content="School Academy, частная школа, Ташкент, преподаватели, школьная жизнь" />
+  <meta name="robots" content="index, follow" />
+  <title>О школе - School Academy</title>
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" type="image/png" href="img/icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/img/favicon.ico" />
 </head>
 <body>
-  <div id="header"></div>
-
+  <header class="sticky-header">
+    <div class="header-container container">
+      <div class="logo-container">
+        <img src="img/logo-uz.png" alt="School Academy Logo" class="logo" />
+        <div class="school-info">
+          <h1 data-translate="school-name">School Academy</h1>
+          <p data-translate="address">Ташкент, Юнусабадский район</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link" data-translate="nav-home">Главная</a></li>
+          <li><a href="about.html" class="nav-link active" data-translate="nav-about">О школе</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link">Программы<i class="fas fa-angle-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="program.html#kindergarten" class="nav-link" data-translate="program-kg">Детский сад</a></li>
+              <li><a href="program.html#elementary" class="nav-link" data-translate="program-elem">Начальная школа</a></li>
+              <li><a href="program.html#middle" class="nav-link" data-translate="program-middle">Средняя школа</a></li>
+            </ul>
+          </li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <button class="lang-btn" data-lang="ru" aria-label="Русский язык">RU</button>
+        <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
+        <div class="lang-slider"></div>
+      </div>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+  </header>
   <main>
-    <section class="teachers">
-      <div class="container">
-        <div class="section-header wow fadeInUp">
-          <h2>Наши преподаватели</h2>
-          <div class="divider"></div>
-          <p>Профессионалы, которые вдохновляют</p>
-        </div>
-        <div class="teacher-filter wow fadeInUp">
-          <button class="filter-btn active" data-filter="all">Все</button>
-          <button class="filter-btn" data-filter="kindergarten">Детский сад</button>
-          <button class="filter-btn" data-filter="elementary">Начальная школа</button>
-          <button class="filter-btn" data-filter="middle">Средняя школа</button>
-        </div>
-        <div class="teachers-grid">
-          <div class="teacher-card wow fadeInUp" data-category="kindergarten">
-            <div class="teacher-img" style="background-image: url('img/teacher1.jpg');"></div>
-            <div class="teacher-info">
-              <h3>Анна Иванова</h3>
-              <p class="education">Воспитатель детского сада</p>
-              <p>Опыт работы: 10 лет</p>
-              <div class="teacher-social">
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
+    <section class="teachers container">
+      <div class="section-header">
+        <h2>Наши преподаватели</h2>
+        <div class="divider"></div>
+        <p>Познакомьтесь с нашей командой профессионалов</p>
+      </div>
+      <div class="teacher-filter">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="kindergarten">Детский сад</button>
+        <button class="filter-btn" data-filter="elementary">Начальная школа</button>
+        <button class="filter-btn" data-filter="middle">Средняя школа</button>
+      </div>
+      <div class="teachers-grid">
+        <div class="teacher-card" data-category="kindergarten">
+          <div class="teacher-img" style="background-image: url('img/teacher1.jpg')"></div>
+          <div class="teacher-info">
+            <h3>Анна Иванова</h3>
+            <p class="education">Воспитатель</p>
+            <p>Опыт работы: 10 лет</p>
+            <div class="teacher-social">
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          <!-- Другие карточки преподавателей -->
+        </div>
+        <div class="teacher-card" data-category="elementary">
+          <div class="teacher-img" style="background-image: url('img/teacher2.jpg')"></div>
+          <div class="teacher-info">
+            <h3>Мария Петрова</h3>
+            <p class="education">Учитель начальных классов</p>
+            <p>Опыт работы: 8 лет</p>
+            <div class="teacher-social">
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <section class="gallery">
-      <div class="container">
-        <div class="section-header wow fadeInUp">
-          <h2>Наши проекты</h2>
-          <div class="divider"></div>
-          <p>Моменты из жизни школы</p>
-        </div>
-        <div class="gallery-wrapper wow fadeInUp">
-          <div class="gallery-row" id="galleryRow">
-            <div class="gallery-card">
-              <img src="img/gallery/image1.jpg" alt="Проект 1" loading="lazy" />
-            </div>
-            <div class="gallery-card">
-              <img src="img/gallery/image2.jpg" alt="Проект 2" loading="lazy" />
-            </div>
-            <!-- Другие изображения -->
-          </div>
-          <button class="scroll-btn left" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
-          <button class="scroll-btn right" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
-        </div>
+    <section class="gallery container">
+      <div class="section-header">
+        <h2>Школьная жизнь</h2>
+        <div class="divider"></div>
+        <p>Моменты из нашей повседневной жизни</p>
       </div>
-      <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">&times;</span>
-        <img src="" alt="Галерея" class="lightbox-img" id="lightbox-img" />
-        <button class="lightbox-nav left" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox-nav right" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+      <div class="gallery-wrapper">
+        <div class="gallery-row" id="galleryRow">
+          <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Школьный проект 1" loading="lazy" /></div>
+          <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Школьный проект 2" loading="lazy" /></div>
+        </div>
+        <button class="scroll-btn left" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="scroll-btn right" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
       </div>
     </section>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <button class="lightbox-nav left"><i class="fas fa-chevron-left"></i></button>
+      <img class="lightbox-img" id="lightbox-img" alt="Галерея" />
+      <button class="lightbox-nav right"><i class="fas fa-chevron-right"></i></button>
+    </div>
   </main>
-
-  <div id="footer"></div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-column">
+        <h3>School Academy</h3>
+        <p data-translate="address"><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+998900000000" class="bouncing-phone-number">+998 90 000 00 00</a></p>
+        <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-column footer-map">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=69.279737%2C41.311158&z=14" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 School Academy. All rights reserved.</p>
+    </div>
+  </footer>
   <script src="js/app.js"></script>
-  <script>
-    new WOW().init();
-  </script>
 </body>
 </html>
