@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="School Academy в Ташкенте - частная школа с качественным образованием для детей от детского сада до средней школы.">
+  <meta name="keywords" content="School Academy, частная школа, Ташкент, образование, детский сад, начальная школа, средняя школа">
+  <meta name="robots" content="index, follow">
+  <title>School Academy - Главная</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="img/icon.png" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="hero-banner">
+      <div class="banner-overlay"></div>
+      <div class="banner-content wow fadeIn" data-wow-duration="1s">
+        <h1>Добро пожаловать в <span>School Academy</span></h1>
+        <p>Качественное образование для вашего ребенка с детского сада до средней школы</p>
+        <a href="#appointment" class="cta-button">Записаться на экскурсию</a>
+      </div>
+      <div class="scroll-down">
+        <div class="mouse">
+          <div class="scroller"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h2>Наши преимущества</h2>
+          <div class="divider"></div>
+          <p>Почему родители выбирают School Academy</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <h3>Квалифицированные педагоги</h3>
+            <p>Наши учителя — профессионалы с многолетним опытом</p>
+          </div>
+          <div class="feature-card wow fadeInUp" data-wow-delay="0.4s">
+            <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Современные программы</h3>
+            <p>Инновационные подходы к обучению</p>
+          </div>
+          <div class="feature-card wow fadeInUp" data-wow-delay="0.6s">
+            <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Индивидуальный подход</h3>
+            <p>Учитываем особенности каждого ребенка</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="appointment" id="appointment">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h2>Запишитесь на экскурсию</h2>
+          <div class="divider"></div>
+          <p>Узнайте больше о нашей школе, посетив нас</p>
+        </div>
+        <form id="schoolTourForm" action="/api/appointment" method="POST" class="appointment-form wow fadeInUp">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" data-translate="form-name">Ваше имя</label>
+              <input type="text" id="name" name="name" required data-translate-placeholder="form-name" />
+            </div>
+            <div class="form-group">
+              <label for="phone" data-translate="form-phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" required data-translate-placeholder="form-phone" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date" data-translate="form-date">Дата посещения</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="program" data-translate="form-program">Интересующая программа</label>
+              <select id="program" name="program" required>
+                <option value="" disabled selected data-translate="form-program">Выберите программу</option>
+                <option value="kindergarten" data-translate="program-kg">Детский сад</option>
+                <option value="elementary" data-translate="program-elem">Начальная школа</option>
+                <option value="middle" data-translate="program-middle">Средняя школа</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="cta-button" data-translate="form-submit">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+</body>
+</html>
