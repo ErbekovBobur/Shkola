@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harakatlanuvchi ism</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #eef2f3;
+      overflow: hidden;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    input, button {
+      font-size: 18px;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    #container {
+      position: relative;
+      height: 100px;
+      margin-top: 50px;
+      overflow: hidden;
+      border: 2px solid #ccc;
+    }
+
+    #movingText {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 32px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="startAnimation()">Boshlash</button>
+
+  <div id="container">
+    <div id="movingText">Lorem ipsum dolor sit.</div>
+  </div>
+
+  <script>
+
+
+let position = 0;
+let animationId;
+
+function startAnimation() {  
+  const text = document.getElementById("movingText");
+  const container = document.getElementById("container");
+     cancelAnimationFrame(animationId); // oldingi animatsiyani to‘xtatish
+    
+    position = -text.offsetWidth; // ekrandan tashqaridan boshlanadi
+    
+    function animate() {
+        position += 2; // harakat tezligi
+        if (position > container.offsetWidth) {
+            position = -text.offsetWidth; // boshidan boshlash
+        }
+    text.style.left = position + "px";
+    animationId = requestAnimationFrame(animate);
+}
+
+  animate();
+}
+
+</script>
+</body>
+</html>

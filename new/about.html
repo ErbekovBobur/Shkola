@@ -1,138 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="О School Academy в Ташкенте - узнайте о наших преподавателях, программах и школьной жизни." />
-  <meta name="keywords" content="School Academy, частная школа, Ташкент, преподаватели, школьная жизнь" />
-  <meta name="robots" content="index, follow" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>О школе - School Academy</title>
-  <link rel="stylesheet" href="css/app.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="sticky-header">
-    <div class="header-container container">
-      <div class="logo-container">
-        <img src="img/logo-uz.png" alt="School Academy Logo" class="logo" />
-        <div class="school-info">
-          <h1 data-translate="school-name">School Academy</h1>
-          <p data-translate="address">Ташкент, Юнусабадский район</p>
-        </div>
+    <nav class="main-nav">
+      <span data-translate="school-name">School Academy</span>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <ul>
+        <li><a href="index.html" class="nav-link" data-translate="nav-home">Главная</a></li>
+        <li><a href="#about" class="nav-link" data-translate="nav-about">О школе</a></li>
+        <li class="dropdown">
+          <a href="program.html" class="nav-link">Программы</a>
+          <div class="dropdown-menu">
+            <a href="#program1">Программа 1</a>
+            <a href="#program2">Программа 2</a>
+            <a href="#program3">Программа 3</a>
+          </div>
+        </li>
+        <li><a href="index.html#tour" class="nav-link">Экскурсия</a></li>
+        <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="uz">UZ</button>
+        <span class="lang-slider"></span>
       </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="nav-link" data-translate="nav-home">Главная</a></li>
-          <li><a href="about.html" class="nav-link active" data-translate="nav-about">О школе</a></li>
-          <li class="dropdown">
-            <a href="#" class="nav-link">Программы<i class="fas fa-angle-down dropdown-icon"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="program.html#kindergarten" class="nav-link" data-translate="program-kg">Детский сад</a></li>
-              <li><a href="program.html#elementary" class="nav-link" data-translate="program-elem">Начальная школа</a></li>
-              <li><a href="program.html#middle" class="nav-link" data-translate="program-middle">Средняя школа</a></li>
-            </ul>
-          </li>
-          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="language-switcher">
-        <button class="lang-btn" data-lang="ru" aria-label="Русский язык">RU</button>
-        <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
-        <div class="lang-slider"></div>
-      </div>
-      <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu">
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-      </button>
-    </div>
+    </nav>
   </header>
+
   <main>
-    <section class="teachers container">
-      <div class="section-header">
-        <h2>Наши преподаватели</h2>
-        <div class="divider"></div>
-        <p>Познакомьтесь с нашей командой профессионалов</p>
+    <section id="about">
+      <div class="container">
+        <h2>О нашей школе</h2>
+        <p>School Academy — это современное образовательное учреждение, которое предоставляет высококачественное образование для детей всех возрастов.</p>
+        <p>Наша миссия — раскрыть потенциал каждого ученика через индивидуальный подход и инновационные методики обучения.</p>
       </div>
-      <div class="teacher-filter">
-        <button class="filter-btn active" data-filter="all">Все</button>
-        <button class="filter-btn" data-filter="kindergarten">Детский сад</button>
-        <button class="filter-btn" data-filter="elementary">Начальная школа</button>
-        <button class="filter-btn" data-filter="middle">Средняя школа</button>
-      </div>
-      <div class="teachers-grid">
-        <div class="teacher-card" data-category="kindergarten">
-          <div class="teacher-img" style="background-image: url('img/teacher1.jpg')"></div>
-          <div class="teacher-info">
-            <h3>Анна Иванова</h3>
-            <p class="education">Воспитатель</p>
-            <p>Опыт работы: 10 лет</p>
-            <div class="teacher-social">
-              <a href="#"><i class="fab fa-telegram"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
+    </section>
+
+    <section id="teachers">
+      <div class="container">
+        <h2>Наши учителя</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all" data-target="teachers">Все</button>
+          <button class="filter-btn" data-filter="math" data-target="teachers">Математика</button>
+          <button class="filter-btn" data-filter="science" data-target="teachers">Наука</button>
+          <button class="filter-btn" data-filter="language" data-target="teachers">Языки</button>
         </div>
-        <div class="teacher-card" data-category="elementary">
-          <div class="teacher-img" style="background-image: url('img/teacher2.jpg')"></div>
-          <div class="teacher-info">
-            <h3>Мария Петрова</h3>
-            <p class="education">Учитель начальных классов</p>
-            <p>Опыт работы: 8 лет</p>
-            <div class="teacher-social">
-              <a href="#"><i class="fab fa-telegram"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+        <div class="teacher-grid">
+          <div class="teacher-card" data-category="math">
+            <img src="teacher1.jpg" alt="Иван Иванов" loading="lazy">
+            <h3>Иван Иванов</h3>
+            <p>Учитель математики</p>
+          </div>
+          <div class="teacher-card" data-category="science">
+            <img src="teacher2.jpg" alt="Анна Петрова" loading="lazy">
+            <h3>Анна Петрова</h3>
+            <p>Учитель науки</p>
+          </div>
+          <div class="teacher-card" data-category="language">
+            <img src="teacher3.jpg" alt="Елена Сидорова" loading="lazy">
+            <h3>Елена Сидорова</h3>
+            <p>Учитель английского</p>
+          </div>
+          <div class="teacher-card" data-category="math">
+            <img src="teacher4.jpg" alt="Сергей Кузнецов" loading="lazy">
+            <h3>Сергей Кузнецов</h3>
+            <p>Учитель математики</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="gallery container">
-      <div class="section-header">
-        <h2>Школьная жизнь</h2>
-        <div class="divider"></div>
-        <p>Моменты из нашей повседневной жизни</p>
-      </div>
-      <div class="gallery-wrapper">
-        <div class="gallery-row" id="galleryRow">
-          <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Школьный проект 1" loading="lazy" /></div>
-          <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Школьный проект 2" loading="lazy" /></div>
+
+    <section id="gallery">
+      <div class="container">
+        <h2>Галерея</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all" data-target="gallery">Все</button>
+          <button class="filter-btn" data-filter="events" data-target="gallery">События</button>
+          <button class="filter-btn" data-filter="classes" data-target="gallery">Классы</button>
+          <button class="filter-btn" data-filter="extracurricular" data-target="gallery">Внеклассные</button>
         </div>
-        <button class="scroll-btn left" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
-        <button class="scroll-btn right" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="gallery-grid">
+          <div class="gallery-card" data-category="events">
+            <img src="event1.jpg" alt="School event" loading="lazy">
+          </div>
+          <div class="gallery-card" data-category="classes">
+            <img src="class1.jpg" alt="Classroom" loading="lazy">
+          </div>
+          <div class="gallery-card" data-category="extracurricular">
+            <img src="extra1.jpg" alt="Extracurricular activity" loading="lazy">
+          </div>
+          <div class="gallery-card" data-category="events">
+            <img src="event2.jpg" alt="School event" loading="lazy">
+          </div>
+        </div>
       </div>
     </section>
-    <div class="lightbox" id="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <button class="lightbox-nav left"><i class="fas fa-chevron-left"></i></button>
-      <img class="lightbox-img" id="lightbox-img" alt="Галерея" />
-      <button class="lightbox-nav right"><i class="fas fa-chevron-right"></i></button>
-    </div>
   </main>
-  <footer class="main-footer">
-    <div class="container footer-content">
-      <div class="footer-column">
-        <h3>School Academy</h3>
-        <p data-translate="address"><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+998900000000" class="bouncing-phone-number">+998 90 000 00 00</a></p>
-        <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-telegram"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3 data-translate="school-name">School Academy</h3>
+          <p data-translate="address">Ташкент, Юнусабадский район</p>
+          <p>Телефон: +998 71 123 45 67</p>
+          <p>Email: info@schoolacademy.uz</p>
+        </div>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.849374!2d69.279737!3d41.311158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0JHQvtC70LzQvdC90LjRjw!5e0!3m2!1sru!2suz!4v1634567890123" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
-      <div class="footer-column footer-map">
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=69.279737%2C41.311158&z=14" frameborder="0"></iframe>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>© 2025 School Academy. All rights reserved.</p>
+      <p>© 2025 School Academy. Все права защищены.</p>
     </div>
   </footer>
-  <script src="js/app.js"></script>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">×</button>
+    <button class="lightbox-nav left" aria-label="Previous image">←</button>
+    <img id="lightbox-img" src="" alt="Gallery image">
+    <button class="lightbox-nav right" aria-label="Next image">→</button>
+  </div>
+
+  <script src="scripts.js" defer></script>
+  <script src="ya.js" defer></script>
 </body>
 </html>
