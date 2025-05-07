@@ -494,6 +494,28 @@
   display: inline-block;
 }
 
+
+/* Эффекты при наведении */
+.minimal-phone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.minimal-phone:hover .phone-pulse-icon,
+.minimal-phone:hover .bouncing-phone-number {
+  animation: none;
+}
+
+.minimal-phone:hover .phone-pulse-icon {
+  background: var(--primary-dark);
+  transform: scale(1.1) rotate(15deg);
+}
+
+.minimal-phone:hover .bouncing-phone-number {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
 /* Анимация пульсации иконки */
 @keyframes pulse {
   0%,
@@ -517,28 +539,6 @@
     transform: translateY(-3px);
   }
 }
-
-/* Эффекты при наведении */
-.minimal-phone:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-}
-
-.minimal-phone:hover .phone-pulse-icon,
-.minimal-phone:hover .bouncing-phone-number {
-  animation: none;
-}
-
-.minimal-phone:hover .phone-pulse-icon {
-  background: var(--primary-dark);
-  transform: scale(1.1) rotate(15deg);
-}
-
-.minimal-phone:hover .bouncing-phone-number {
-  color: var(--primary);
-  transform: translateY(-3px);
-}
-
 /* Темная тема */
 @media (prefers-color-scheme: dark) {
   .minimal-phone {
