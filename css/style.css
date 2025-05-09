@@ -222,7 +222,7 @@ img {
 .language-switcher {
   position: relative;
   display: inline-flex;
-  background: rgba(30, 136, 229, 0.1);
+  background: var(--white);
   border-radius: 50px;
   padding: 4px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -244,9 +244,9 @@ img {
   border-radius: 50px;
   outline: none;
 }
-
 .lang-btn.active {
-  color: white;
+  animation: pulse-active 3s infinite ease-in-out;
+  color: var(--white);
 }
 
 .lang-slider {
@@ -283,10 +283,6 @@ img {
   50% {
     transform: scale(0.95);
   }
-}
-
-.lang-btn.active {
-  animation: pulse-active 3s infinite ease-in-out;
 }
 
 .language-switcher:hover .lang-btn.active {
@@ -400,7 +396,7 @@ img[loading="lazy"].loaded {
   align-items: center;
   justify-content: center;
   background: url("../img/orig.jpg") center/cover no-repeat;
-  /* margin-top: 80px; */
+  margin-bottom: 80px;
 }
 
 .banner-overlay {
