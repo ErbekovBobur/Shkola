@@ -8,9 +8,9 @@
   --secondary: #cd0074;
   --dark: #2c3e50;
   --light: #fbf4f6;
-  /* --white: #ffffff; */
+  --white: #ffffff;
   /* --white: #fbf4f6; */
-  --white: #faf0fa;
+  /* --white: #faf0fa; */
   --gray: #95a5a6;
   --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -885,14 +885,10 @@ textarea:focus {
 
 /* Адаптивность формы */
 @media (max-width: 768px) {
-  body {
-    background-color: blue;
-  }
   .form-row {
     flex-direction: column;
     gap: 0;
   }
-
   .banner-content h1 {
     font-size: 2rem;
   }
@@ -903,10 +899,6 @@ textarea:focus {
 }
 
 @media (max-width: 575px) {
-  /*  */
-  body {
-    background-color: red;
-  }
   .language-switcher,
   .minimal-phone {
     display: none;
