@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +14,15 @@
   <link rel="preload" href="img/logo-uz.png" as="image" imagesrcset="img/logo-uz.png 1x, img/logo-uz@2x.png 2x" />
 
   <!-- 🖋️ Стили -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/phone.css" />
   <link rel="stylesheet" href="css/lang.css" />
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/gallery -2.css" />
+  <link rel="stylesheet" href="css/faq.css" />
 
   <!-- 🔤 Шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,7 +52,8 @@
         <ul>
           <li><a data-translate="nav-home" href="index.html" class="nav-link">Главная</a></li>
           <li class="dropdown">
-            <a data-translate="nav-about" href="about.html" class="active nav-link">О школе <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <a data-translate="nav-about" href="about.html" class="active nav-link">О школе <i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
             <ul class="dropdown-menu">
               <li><a href="about.html#history" class="nav-link">История</a></li>
               <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
@@ -82,7 +86,7 @@
             <i class="fas fa-phone-alt"></i>
           </div>
           <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67</a>
-        </div>          
+        </div>
       </div>
       <!-- Мобильное меню  -->
       <button class="mobile-menu-btn">
@@ -358,15 +362,24 @@
             <!-- Карточки галереи -->
 
 
-            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 1" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 2" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 3" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 4" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
-            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)" /></div>
+            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 1" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 2" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 3" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 4" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 5" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 5" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 5" onclick="openModal(this)" />
+            </div>
+            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)" />
+            </div>
             <!-- Добавьте больше карточек -->
           </div>
           <button class="gallery-nav right" id="galleryNext">&#10095;</button>
@@ -416,62 +429,162 @@
         </div>
       </div>
     </section>
+    <!-- FAQ -->
+    <section class="faq-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Часто задаваемые вопросы</h2>
+          <div class="divider"></div>
+          <p>Здесь вы найдете ответы на самые распространенные вопросы о нашей школе</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              Как записаться в школу?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Записаться в нашу школу можно несколькими способами. Вы можете заполнить онлайн-заявку на нашем сайте,
+                указав все необходимые данные, или обратиться в наш приемный отдел для получения консультации по всем
+                вопросам, связанным с поступлением. Наши сотрудники помогут вам с выбором подходящей образовательной
+                программы и оформлением всех документов. Также можно записаться на день открытых дверей, чтобы лично
+                познакомиться с педагогами и директором школы.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Какие программы обучения предлагаются?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Мы предлагаем широкий выбор образовательных программ для детей разного возраста. Наша школа включает в
+                себя детский сад, начальную школу, среднюю школу и программы подготовки к вузам. Все программы
+                ориентированы на индивидуальные особенности каждого ребенка. Мы предлагаем специализированные курсы, а
+                также дополнительное образование по интересам, включая искусство, спорт и технологии. Программы
+                адаптированы под возрастные и интеллектуальные особенности учеников, что помогает максимально раскрыть
+                потенциал каждого ребенка.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Какие документы необходимы для поступления?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Для поступления в нашу школу требуется несколько документов. Вам нужно предоставить паспорт одного из
+                родителей (или законного представителя), свидетельство о рождении ребенка, медицинскую справку о
+                состоянии здоровья (обновляемую ежегодно), а также анкеты, которые заполняются при регистрации. В
+                случае, если ребенок уже учился в другой школе, может понадобиться аттестат или другие справки из
+                предыдущего учебного заведения. Вся информация о процессе поступления, а также о сроках и документах,
+                указана на нашем сайте в разделе "Поступление".</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Есть ли программа для детей с особыми потребностями?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Да, наша школа предоставляет особые образовательные условия для детей с особыми потребностями. Мы
+                понимаем, что каждый ребенок уникален, и создаем такие условия, которые помогут ему развиваться в
+                соответствии с индивидуальными потребностями. Для этого у нас есть квалифицированные специалисты,
+                включая психологов и дефектологов, которые разрабатывают персонализированные программы обучения. Мы
+                активно сотрудничаем с родителями, чтобы найти лучший подход для каждого ученика. В школе также
+                проводятся дополнительные занятия и занятия по коррекционной педагогике, которые помогают детям с
+                особыми образовательными потребностями достигать успехов в учебе.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Как осуществляется питание в школе?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>В нашей школе организовано полноценное и сбалансированное питание для всех учеников. Мы заботимся о
+                здоровье наших детей и предлагаем пятиразовое питание, включая завтрак, второй завтрак, обед, полдник и
+                ужин. Все блюда готовятся из свежих продуктов, а меню составляется с учетом возрастных особенностей и
+                потребностей детей. Мы также предлагаем специальные диетические блюда для детей с аллергиями или особыми
+                потребностями в питании. Питание организовано с учетом всех санитарных норм, а качество продуктов
+                постоянно проверяется нашим контролем качества.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Есть ли программа спортивных секций?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Да, наша школа активно поддерживает спортивные занятия и секции для учеников. Мы понимаем важность
+                физического развития и поддерживаем спортивные традиции. В нашей школе предлагаются различные спортивные
+                секции, включая футбол, баскетбол, плавание, гимнастику, волейбол и другие виды спорта. Также проводятся
+                спортивные мероприятия, турниры и олимпиады, в которых могут принять участие все желающие. Наша цель —
+                способствовать не только умственному, но и физическому развитию каждого ребенка. Мы уверены, что
+                активные занятия спортом способствуют лучшему обучению и укреплению здоровья наших учеников.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
   </main>
 
   <!-- Подвал -->
-<footer class="main-footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-column">
-        <h3>Часы работы</h3>
-        <p>Пн-Пт: 8:00 - 18:00</p>
-        <!-- <p>Сб: 9:00 - 14:00</p> -->
-        <p>Вс: выходной</p>
-      </div>
-      <div class="footer-column">
-        <h3>Адрес</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
-      </div>
-      <div class="footer-column">
-        <h3>Контакты</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
-        <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
-        <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
-      </div>
-      <div class="footer-column">
-        <h3>Соцсети</h3>
-        <div class="social-links">
-          <a href="https://t.me/Shkolnayakademiya"><i class="fab fa-telegram"></i></a>
-          <a href="https://www.instagram.com/shkolnayakademiya/"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"><i class="fab fa-facebook-f"></i></a>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Часы работы</h3>
+          <p>Пн-Пт: 8:00 - 18:00</p>
+          <!-- <p>Сб: 9:00 - 14:00</p> -->
+          <p>Вс: выходной</p>
         </div>
+        <div class="footer-column">
+          <h3>Адрес</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
+        </div>
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
+          <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
+          <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+        </div>
+        <div class="footer-column">
+          <h3>Соцсети</h3>
+          <div class="social-links">
+            <a href="https://t.me/Shkolnayakademiya"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/shkolnayakademiya/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <!-- <div class="footer-column"></div> -->
       </div>
-      <!-- <div class="footer-column"></div> -->
-    </div>
-    <!-- <div class="footer-column" style="position: relative"> -->
-   
-    <div class="footer-map">
-      <a href="https://yandex.uz/maps/org/97045873646/?utm_medium=mapframe&utm_source=maps"
-        style="color: #eee; font-size: 12px; position: absolute; top: 0px">Школьная академия</a><a
-        href="https://yandex.uz/maps/10335/tashkent/category/private_school/184106252/?utm_medium=mapframe&utm_source=maps"
-        style="color: #eee; font-size: 12px; position: absolute; top: 14px">Частная школа в Ташкенте</a>
-      <iframe
-        src="https://yandex.uz/map-widget/v1/?ll=69.272024%2C41.370359&mode=poi&poi%5Bpoint%5D=69.271655%2C41.371280&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D97045873646&z=17.94"
-        width="600" height="500" frameborder="1" allowfullscreen="true" style="position: relative">
-      </iframe>
-    </div>
+      <!-- <div class="footer-column" style="position: relative"> -->
 
-  </div>
-  <div class="copyright">
-    <p>© 2024 School Academy. Все права защищены.</p>
-    <!-- Yandex Metrika -->
-    <!-- <noscript>
+      <div class="footer-map">
+        <a href="https://yandex.uz/maps/org/97045873646/?utm_medium=mapframe&utm_source=maps"
+          style="color: #eee; font-size: 12px; position: absolute; top: 0px">Школьная академия</a><a
+          href="https://yandex.uz/maps/10335/tashkent/category/private_school/184106252/?utm_medium=mapframe&utm_source=maps"
+          style="color: #eee; font-size: 12px; position: absolute; top: 14px">Частная школа в Ташкенте</a>
+        <iframe
+          src="https://yandex.uz/map-widget/v1/?ll=69.272024%2C41.370359&mode=poi&poi%5Bpoint%5D=69.271655%2C41.371280&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D97045873646&z=17.94"
+          width="600" height="500" frameborder="1" allowfullscreen="true" style="position: relative">
+        </iframe>
+      </div>
+
+    </div>
+    <div class="copyright">
+      <p>© 2024 School Academy. Все права защищены.</p>
+      <!-- Yandex Metrika -->
+      <!-- <noscript>
       <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript> -->
 
-  </div>
-  </div>
-</footer>
+    </div>
+    </div>
+  </footer>
   <script src="js/ya.js"></script>
   <script src="js/main.js" defer></script>
   <script src="js/language.js" defer></script>

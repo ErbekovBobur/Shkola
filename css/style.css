@@ -749,6 +749,7 @@ img[loading="lazy"].loaded {
 .cta-wow-btn:hover {
   background-color: var(--secondary-dark);
 }
+/* === FAQ === */
 
 /* ===== Подвал ===== */
 .main-footer {
