@@ -1,19 +1,4 @@
-/* Стили для карусели */
-.swiper-container {
-  width: 100%;
-  height: 400px; /* Установите высоту в зависимости от желаемого размера */
-  margin: 0 auto;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Добавление плавных переходов и эффектов */
-.swiper-container {
-  overflow: hidden;
-  position: relative;
-}
+@media (min-width: 992px)
+@media (max-width: 992px)
+@media (max-width: 768px)
+@media (max-width: 575px)

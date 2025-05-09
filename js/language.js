@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "uz": "Maktab haqida"
     },
     "nav-program": {
-      "ru": "Программы",
-      "uz": "Dasturlar"
+      "ru": "Учебные программы",
+      "uz": "O'quv dasturlari"
     }
     // Добавьте другие фразы по аналогии
   };
