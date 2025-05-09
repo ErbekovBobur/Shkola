@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "nav-about": {
       "ru": "О школе",
       "uz": "Maktab haqida"
+    },
+    "nav-program": {
+      "ru": "Программы",
+      "uz": "Dasturlar"
     }
     // Добавьте другие фразы по аналогии
   };

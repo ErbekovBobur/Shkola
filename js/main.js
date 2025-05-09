@@ -6,16 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainNav = document.querySelector(".main-nav");
   const header = document.querySelector(".sticky-header");
   const dateInput = document.getElementById("date");
+  const anchors = document.querySelectorAll('a[href^="#"]');
 
   // --- Мобильное меню ---
-  function toggleMenu() {
-    const isExpanded = mobileMenuBtn.getAttribute("aria-expanded") === "true";
-    mobileMenuBtn.setAttribute("aria-expanded", !isExpanded);
-    mainNav.classList.toggle("active");
-    document.body.classList.toggle("no-scroll");
-  }
 
   if (mobileMenuBtn && mainNav) {
+    function toggleMenu() {
+      const isExpanded = mobileMenuBtn.getAttribute("aria-expanded") === "true";
+      mobileMenuBtn.setAttribute("aria-expanded", !isExpanded);
+      mainNav.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
+    }
     mobileMenuBtn.addEventListener("click", toggleMenu);
 
     document.addEventListener("click", (e) => {
@@ -44,19 +45,21 @@ document.addEventListener("DOMContentLoaded", function () {
   function debounce(func, wait) {
     let timeout;
     return function (...args) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
+      // clearTimeout(timeout);
+      // timeout = setTimeout(() => func.apply(this, args), wait);
+      cancelAnimationFrame(timeout);
+      timeout = requestAnimationFrame(() => func.apply(this, args));
     };
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchors.forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
       if (targetId && targetId !== "#") {
         smoothScroll(targetId);
         // Закрыть мобильное меню при клике на ссылку
-        if (this.classList.contains("nav-link")) {
+        if (this.classList.contains("nav-link")) { // ++++
           mobileMenuBtn.classList.remove("active");
           mainNav.classList.remove("active");
           document.body.classList.remove("no-scroll");
@@ -122,16 +125,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = item.querySelector(".dropdown-menu");
     item.addEventListener("mouseenter", () => {
       if (menu) {
-        menu.style.display = "block";
+        // menu.style.display = "block";
+        menu.classList.add('show'); // меняем подход
         menu.style.animation = "slideDown 0.3s ease-out forwards";
       }
     });
 
     item.addEventListener("mouseleave", () => {
       if (menu) {
-        menu.style.animation = "";
+        // menu.style.animation = "";
+        menu.classList.remove('show');
         setTimeout(() => {
-          menu.style.display = "none";
+          // menu.style.display = "none";
+          menu.style.animation = "";
         }, 300);
       }
     });
