@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // FAQ
   const faqItems = document.querySelectorAll('.faq-item');
-
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
 
@@ -160,9 +159,67 @@ document.addEventListener("DOMContentLoaded", function () {
       item.classList.toggle('active');
     });
   });
-  
-  
+  // Teachers 
+  document.querySelectorAll('.bio-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const bio = button.nextElementSibling;
+      const overlay = button.closest('.bio-overlay');
+      const isVisible = bio.style.display === 'block';
+
+      if (isVisible) {
+        bio.style.display = 'none';
+        button.textContent = 'Показать биографию';
+        overlay.style.height = 'auto';
+      } else {
+        bio.style.display = 'block';
+        button.textContent = 'Скрыть биографию';
+        overlay.style.height = 'auto';  // Не меняем высоту карточки
+      }
+    });
+  });
+
+  // Скрипт для прокрутки карточек
+  // Скрипт для показа/скрытия биографии
+  document.querySelectorAll('.bio-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const bio = button.nextElementSibling;
+      const overlay = button.closest('.bio-overlay');
+      const isVisible = bio.style.display === 'block';
+
+      if (isVisible) {
+        bio.style.display = 'none';
+        button.textContent = 'Показать биографию';
+        overlay.style.height = 'auto';
+      } else {
+        bio.style.display = 'block';
+        button.textContent = 'Скрыть биографию';
+        overlay.style.height = 'auto';  // Не меняем высоту карточки
+      }
+    });
+  });
+
+  // Скрипт для прокрутки карточек
+  const scrollContainer = document.getElementById('teachersScroll');
+  document.querySelector('.left-btn').addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -324, behavior: 'smooth' });
+  });
+  document.querySelector('.right-btn').addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: 324, behavior: 'smooth' });
+  });
+
+  // Открытие биографии
+  document.querySelectorAll('.bio-toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.teacher-card');
+      card.classList.toggle('open');
+      button.textContent = card.classList.contains('open') ? 'Скрыть' : 'Подробнее';
+    });
+  });
+
+
+
 });
+
 
 // --- Service Worker ---
 if ("serviceWorker" in navigator) {

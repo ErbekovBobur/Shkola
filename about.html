@@ -7,9 +7,11 @@
   <title>School Academy | Ташкент</title>
   <!-- 🚀 Preload важнейших ресурсов -->
   <link rel="preload" href="css/style.css" as="style" />
+  <link rel="preload" href="css/teachers.css" as="style" />
   <link rel="preload" href="js/main.js" as="script" />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
     crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="preload" href="img/logo-uz.png" as="image" imagesrcset="img/logo-uz.png 1x, img/logo-uz@2x.png 2x" />
 
@@ -17,10 +19,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/teachers.css" />
   <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/phone.css" />
   <link rel="stylesheet" href="css/lang.css" />
-  <link rel="stylesheet" href="css/about.css" />
+  <!-- <link rel="stylesheet" href="css/about.css" /> -->
   <link rel="stylesheet" href="css/gallery -2.css" />
   <link rel="stylesheet" href="css/faq.css" />
 
@@ -51,6 +54,7 @@
       <nav class="main-nav">
         <ul>
           <li><a data-translate="nav-home" href="index.html" class="nav-link">Главная</a></li>
+
           <li class="dropdown">
             <a data-translate="nav-about" href="about.html" class="active nav-link">О школе <i
                 class="fas fa-chevron-down dropdown-icon"></i></a>
@@ -59,14 +63,16 @@
               <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
               <li><a href="about.html#gallery" class="nav-link">Галерея</a></li>
               <li><a href="about.html#mission" class="nav-link">Миссия</a></li>
+              <li><a href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="program.html" class="nav-link">Программы <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <a data-translate="nav-program" href="program.html" class="nav-link">Учебные программы<i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="program.html#kindergarten" class="nav-link">Детский сад</a></li>
               <li><a href="program.html#elementary" class="nav-link">Начальная школа</a></li>
               <li><a href="program.html#middle" class="nav-link">Средняя школа</a></li>
+              <li><a href="program.html#kindergarten" class="nav-link">Дополнительные занятия</a></li>
             </ul>
           </li>
           <li><a href="contacts.html" class="nav-link">Контакты</a></li>
@@ -85,10 +91,12 @@
           <div class="phone-pulse-icon">
             <i class="fas fa-phone-alt"></i>
           </div>
-          <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67</a>
+          <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67
+
+          </a>
         </div>
       </div>
-      <!-- Мобильное меню  -->
+
       <button class="mobile-menu-btn">
         <span class="menu-line"></span>
         <span class="menu-line"></span>
@@ -96,31 +104,6 @@
       </button>
     </div>
   </header>
-
-  <script>
-    // Анимация выпадающего меню
-    document.querySelectorAll(".dropdown").forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        const menu = item.querySelector(".dropdown-menu");
-        menu.style.display.opasity = 1;
-        menu.style.display.visibility = "visible";
-        menu.style.animation = "slideDown 0.3s ease-out forwards";
-      });
-
-      item.addEventListener("mouseleave", () => {
-        const menu = item.querySelector(".dropdown-menu");
-        menu.style.animation = "";
-        setTimeout(() => {
-          menu.style.display = "none";
-        }, 300);
-      });
-    });
-
-    // Мобильное меню
-    document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
-      document.querySelector(".main-nav").classList.toggle("show-mobile");
-    });
-  </script>
 
   <!-- Основной контент -->
   <main class="content-wrapper">
@@ -162,191 +145,173 @@
     </section>
 
     <!-- Преподаватели -->
-    <!-- <section id="teachers" class="section-padding bg-light">
-        <div class="container">
-          <div class="section-header wow fadeIn">
-            <h2>Наши преподаватели</h2>
-            <div class="divider"></div>
-            <p>Профессионалы с большим опытом</p>
+    <section class="teachers-section" id="teachers">
+      <h2 class="section-title">Наши преподаватели</h2>
+
+      <!-- Кнопки прокрутки -->
+      <button class="teacher-scroll-btn left-btn" aria-label="Назад">&#10094;</button>
+      <button class="teacher-scroll-btn right-btn" aria-label="Вперёд">&#10095;</button>
+
+      <!-- Контейнер с карточками -->
+      <div class="teachers-scroll-container" id="teachersScroll">
+
+        <!-- Пример карточки -->
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
           </div>
 
-          <div class="teachers-grid">
-            <div class="teacher-card wow fadeIn" data-wow-delay="0.2s">
-              <div class="teacher-img" style="background-image: url('img/teachers/teacher1.jpg')"></div>
-              <div class="teacher-info">
-                <h3>Исматова Дилфуза</h3>
-                <p class="subject">Математика</p>
-                <p class="experience">Опыт: 15 лет</p>
-                <div class="teacher-social">
-                  <a href="#"><i class="fab fa-telegram"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
+          <button class="bio-toggle-btn">Подробнее</button>
 
-            <div class="teacher-card wow fadeIn" data-wow-delay="0.4s">
-              <div class="teacher-img" style="background-image: url('img/teachers/teacher2.jpg')"></div>
-              <div class="teacher-info">
-                <h3>Каримов Рустам</h3>
-                <p class="subject">Физика и робототехника</p>
-                <p class="experience">Опыт: 10 лет</p>
-                <div class="teacher-social">
-                  <a href="#"><i class="fab fa-telegram"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-      </section> -->
-    <section id="teachers" class="section-padding bg-light">
-      <div class="container">
-        <div class="section-header wow fadeIn">
-          <h2>Наши преподаватели</h2>
-          <div class="divider"></div>
-          <p>Профессионалы с большим опытом</p>
-        </div>
-
-        <!-- Фильтрация преподавателей (по предмету) -->
-        <div class="teacher-filter">
-          <button class="filter-btn active" data-filter="all">Все преподаватели</button>
-          <button class="filter-btn" data-filter="math">Математика</button>
-          <button class="filter-btn" data-filter="physics">Физика</button>
-          <button class="filter-btn" data-filter="robotics">Робототехника</button>
-        </div>
-
-        <div class="teachers-grid">
-          <div class="teacher-card wow fadeIn" data-wow-delay="0.2s" data-category="math">
-            <div class="teacher-img" style="background-image: url('img/teachers/teacher1.jpg')"
-              alt="Преподаватель Дилфуза Исматова"></div>
-            <div class="teacher-info">
-              <h3>Исматова Дилфуза</h3>
-              <p class="subject">Математика</p>
-              <p class="experience">Опыт: 15 лет</p>
-              <p class="education">Образование: МГУ, магистр</p>
-              <div class="teacher-social">
-                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
           </div>
 
-          <div class="teacher-card wow fadeIn" data-wow-delay="0.4s" data-category="physics">
-            <div class="teacher-img" style="background-image: url('img/teachers/teacher2.jpg')"
-              alt="Преподаватель Рустам Каримов"></div>
-            <div class="teacher-info">
-              <h3>Каримов Рустам</h3>
-              <p class="subject">Физика и робототехника</p>
-              <p class="experience">Опыт: 10 лет</p>
-              <p class="education">Образование: Узбекистанский университет, бакалавр</p>
-              <div class="teacher-social">
-                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
+          <button class="bio-toggle-btn">Подробнее</button>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
           </div>
 
-          <!-- Добавьте других преподавателей по аналогии -->
+          <button class="bio-toggle-btn">Подробнее</button>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
+          </div>
+
+          <button class="bio-toggle-btn">Подробнее</button>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
+          </div>
+
+          <button class="bio-toggle-btn">Подробнее</button>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
+          </div>
+
+          <button class="bio-toggle-btn">Подробнее</button>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
+          </div>
+
+          <button class="bio-toggle-btn">Подробнее</button>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="teacher-card">
+          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
+          <h3 class="teacher-name">Алексей Иванов</h3>
+          <p class="teacher-subject">Математика</p>
+          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
+          <div class="teacher-bio-full">
+            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
+            поступлению.
+          </div>
+
+          <button class="bio-toggle-btn">Подробнее</button>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Добавь ещё карточки по образцу -->
+
       </div>
     </section>
 
+
+
+
+
     <!-- Галерея -->
-    <!-- <section id="gallery" class="section-padding">
-        
-        <div class="container">
-          <div class="section-header wow fadeIn">
-            <h2>Галерея</h2>
-            <div class="divider"></div>
-            <p>Жизнь нашей школы</p>
-          </div>
 
-          <div class="gallery-grid">
-            <div class="gallery-item wow fadeIn" data-wow-delay="0.1s">
-              <img src="img/gallery/1.jpg" alt="Школьные мероприятия" />
-              <div class="gallery-overlay">
-                <h3>Школьные мероприятия</h3>
-              </div>
-            </div>
-            <div class="gallery-item wow fadeIn" data-wow-delay="0.2s">
-              <img src="img/gallery/2.jpg" alt="Учебные классы" />
-              <div class="gallery-overlay">
-                <h3>Учебные классы</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-    <!-- <section id="gallery" class="section-padding bg-light">
-        <div class="container">
-          <div class="section-header wow fadeIn">
-            <h2>Галерея</h2>
-            <div class="divider"></div>
-            <p>Погрузитесь в мир наших проектов</p>
-          </div>
-
-          
-          <div class="gallery-filter">
-            <button class="filter-btn active" data-filter="all">Все</button>
-            <button class="filter-btn" data-filter="design">Дизайн</button>
-            <button class="filter-btn" data-filter="projects">Проекты</button>
-            <button class="filter-btn" data-filter="events">Мероприятия</button>
-          </div>
-
-          
-          <div class="gallery-grid">
-            <div class="gallery-item wow fadeIn" data-wow-delay="0.2s" data-category="design">
-              <img src="img/gallery/image1.jpg" alt="Проект 1" class="gallery-image" />
-            </div>
-            <div class="gallery-item wow fadeIn" data-wow-delay="0.4s" data-category="projects">
-              <img src="img/gallery/image2.jpg" alt="Проект 2" class="gallery-image" />
-            </div>
-            <div class="gallery-item wow fadeIn" data-wow-delay="0.6s" data-category="events">
-              <img src="img/gallery/image3.jpg" alt="Событие 1" class="gallery-image" />
-            </div>
-            
-          </div>
-
-          
-          <div id="lightbox" class="lightbox">
-            <span class="lightbox-close">&times;</span>
-            <img id="lightbox-img" class="lightbox-img" src="" alt="" />
-          </div>
-        </div>
-      </section> -->
-    <!--<section id="gallery" class="section-padding bg-light">
-      <div class="container">
-        <div class="section-header wow fadeIn">
-          <h2>Галерея</h2>
-          <div class="divider"></div>
-          <p>Погрузитесь в мир наших проектов</p>
-        </div>
-
-         Карусель
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="img/gallery/image1.jpg" alt="Проект 1" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/gallery/image2.jpg" alt="Проект 2" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/gallery/image3.jpg" alt="Проект 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/gallery/image4.jpg" alt="Проект 4" />
-              </div>
-              <Добавьте больше слайдов по необходимости
-            </div>
-          </div>
-        </div>
-        <div id="lightbox" class="lightbox">
-          <span class="lightbox-close">&times;</span>
-          <img id="lightbox-img" class="lightbox-img" src="" alt="" />
-        </div>
-      </div>
-      </section> -->
     <section id="gallery" class="section-padding bg-light">
       <div class="container">
         <div class="section-header wow fadeIn">
@@ -360,8 +325,6 @@
           <button class="gallery-nav left" id="galleryPrev">&#10094;</button>
           <div class="gallery-row" id="galleryRow">
             <!-- Карточки галереи -->
-
-
             <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 1" onclick="openModal(this)" />
             </div>
             <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 2" onclick="openModal(this)" />
@@ -380,12 +343,10 @@
             </div>
             <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)" />
             </div>
-            <!-- Добавьте больше карточек -->
+            <!-- Добавим больше карточек -->
           </div>
           <button class="gallery-nav right" id="galleryNext">&#10095;</button>
         </div>
-
-        <div class="scroll-btn right" onclick="scrollGallery(1)">&#10095;</div>
       </div>
       </div>
 
@@ -430,7 +391,7 @@
       </div>
     </section>
     <!-- FAQ -->
-    <section class="faq-section section-padding">
+    <section id="faq" class="faq-section section-padding">
       <div class="container">
         <div class="section-header">
           <h2>Часто задаваемые вопросы</h2>
@@ -526,11 +487,9 @@
       </div>
     </section>
 
-
-
-
   </main>
 
+  <!-- Подвал -->
   <!-- Подвал -->
   <footer class="main-footer">
     <div class="container">
@@ -564,19 +523,16 @@
       <!-- <div class="footer-column" style="position: relative"> -->
 
       <div class="footer-map">
-        <a href="https://yandex.uz/maps/org/97045873646/?utm_medium=mapframe&utm_source=maps"
-          style="color: #eee; font-size: 12px; position: absolute; top: 0px">Школьная академия</a><a
-          href="https://yandex.uz/maps/10335/tashkent/category/private_school/184106252/?utm_medium=mapframe&utm_source=maps"
-          style="color: #eee; font-size: 12px; position: absolute; top: 14px">Частная школа в Ташкенте</a>
+        <h3>Наша локация</h3>
+        <div class="divider"></div>
         <iframe
-          src="https://yandex.uz/map-widget/v1/?ll=69.272024%2C41.370359&mode=poi&poi%5Bpoint%5D=69.271655%2C41.371280&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D97045873646&z=17.94"
-          width="600" height="500" frameborder="1" allowfullscreen="true" style="position: relative">
-        </iframe>
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
+          width="702" height="579" frameborder="0"></iframe>
       </div>
 
     </div>
     <div class="copyright">
-      <p>© 2024 School Academy. Все права защищены.</p>
+      <p>© 2025 School Academy. Все права защищены.</p>
       <!-- Yandex Metrika -->
       <!-- <noscript>
       <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" /></div>

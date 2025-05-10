@@ -716,7 +716,7 @@ img[loading="lazy"].loaded {
 
 /* === CTA === */
 .cta-wow {
-  /* background: linear-gradient(135deg, var(--dark), var(--gray)); */
+  background: linear-gradient(135deg, var(--dark), var(--gray));
   background: url("../img/sections/cta-invite-2.jpg") no-repeat center;
   background-size: cover;
   color: var(--light);

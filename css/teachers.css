@@ -1,0 +1,158 @@
+/* Раздел */
+.teachers-section {
+  position: relative;
+  padding: 60px 20px;
+  background-color: var(--white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+/* Контейнер с горизонтальной прокруткой */
+.teachers-scroll-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  margin: 0 auto;
+  scrollbar-width: none;
+}
+
+.teachers-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Карточки */
+.teacher-card {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 12px;
+  /* box-shadow: var(--shadow); */
+  padding: 24px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  color: #1c1c1c;
+  transition: transform 0.3s ease;
+  position: relative;
+  border: 1px solid var(--gray);
+}
+
+.teacher-card:hover {
+  transform: translateY(-4px);
+}
+
+.teacher-photo {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.teacher-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.teacher-subject {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.teacher-bio-preview {
+  font-size: 0.95rem;
+  color: #444;
+  font-style: italic;
+}
+
+.teacher-bio-full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.teacher-card.open .teacher-bio-full {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.bio-toggle-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #0056b3;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.bio-toggle-btn:hover {
+  color: #003974;
+}
+
+.social-links {
+  margin-top: 14px;
+}
+
+.social-links a {
+  margin-right: 10px;
+  color: #555;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #0077b5;
+}
+
+/* Кнопки прокрутки */
+.teacher-scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.teacher-scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none;
+  }
+
+  .teachers-scroll-container {
+    padding: 0;
+  }
+}
