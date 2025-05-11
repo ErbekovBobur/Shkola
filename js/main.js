@@ -1,6 +1,7 @@
 console.log("main.js is start");
 
 document.addEventListener("DOMContentLoaded", function () {
+  eruda.init();
   // Элементы
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const mainNav = document.querySelector(".main-nav");

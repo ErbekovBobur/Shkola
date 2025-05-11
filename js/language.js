@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // 1. Словарь всех переводов
   const translations = {
     "school-name": {
-      "ru": "School Academy",
-      "uz": "School Akademiyasi"
+      "ru": "Школьная академия",
+      "uz": "School Academy"
     },
     "address": {
       "ru": "Ташкент, Юнусабадский район",
@@ -18,10 +18,38 @@ document.addEventListener("DOMContentLoaded", function () {
       "ru": "О школе",
       "uz": "Maktab haqida"
     },
+    "nav-about-history": {
+      "ru": "История",
+      "uz": "Tarix"
+    },
+    "nav-about-history": {
+      "ru": "История",
+      "uz": "Tarix"
+    },
+    "nav-about-teachers": {
+      "ru": "Преподаватели",
+      "uz": "Ustozlar"
+    },
+    "nav-about-gallery": {
+      "ru": "Галарея",
+      "uz": "Galareya"
+    },
+    "nav-about-mission": {
+      "ru": "Наша миссия",
+      "uz": "Bizning maqsadlarimiz"
+    },
+    "nav-about-faq": {
+      "ru": "Часто задаваемые вопросы",
+      "uz": "Savol-javoblar"
+    },
     "nav-program": {
       "ru": "Учебные программы",
       "uz": "O'quv dasturlari"
-    }
+    },
+    "nav-contact": {
+      "ru": "Контакты",
+      "uz": "Aloqa"
+    },
     // Добавьте другие фразы по аналогии
   };
 
