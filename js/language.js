@@ -46,6 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
       "ru": "Учебные программы",
       "uz": "O'quv dasturlari"
     },
+    "nav-program-primary-school": {
+      "ru": "Начальная школа",
+      "uz": "Boshlang'ich maktab"
+    },
+    "nav-program-high-school": {
+      "ru": "Средняя школа",
+      "uz": "O'rta maktab"
+    },
+    "nav-program-clubs" : {
+      "ru": "Дополнительные занятия",
+      "uz": "Qo'shimcha mashg'ulotlar"
+    },
+    
+    
+    
+    
     "nav-contact": {
       "ru": "Контакты",
       "uz": "Aloqa"
