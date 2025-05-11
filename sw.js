@@ -8,6 +8,8 @@ const urlsToCache = [
   "/img/logo-uz.png",
   "/img/banner-tashkent.jpg",
   "/offline.html",
+  "/about.html",
+  "/program.html",
 ];
 
 self.addEventListener("install", (event) => {

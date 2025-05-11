@@ -1,7 +1,10 @@
 console.log("main.js is start");
 
 document.addEventListener("DOMContentLoaded", function () {
-  eruda.init();
+  const consol = document.querySelector('p[data-translate="address"]');
+  if (consol) {
+    consol.onclick = () => eruda.init();
+  }
   // Элементы
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const mainNav = document.querySelector(".main-nav");
@@ -53,21 +56,23 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  anchors.forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      if (targetId && targetId !== "#") {
-        smoothScroll(targetId);
-        // Закрыть мобильное меню при клике на ссылку
-        if (this.classList.contains("nav-link")) { // ++++
-          mobileMenuBtn.classList.remove("active");
-          mainNav.classList.remove("active");
-          document.body.classList.remove("no-scroll");
+  if (anchors) {
+    anchors.forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        if (targetId && targetId !== "#") {
+          smoothScroll(targetId);
+          // Закрыть мобильное меню при клике на ссылку
+          if (this.classList.contains("nav-link")) { // ++++
+            mobileMenuBtn.classList.remove("active");
+            mainNav.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+          }
         }
-      }
+      });
     });
-  });
+  }
 
   // --- Фиксация шапки при скролле ---
   let lastScroll = 0;
@@ -97,14 +102,17 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // --- Анимация карточек при наведении ---
-  document.querySelectorAll(".feature-card").forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      card.style.transform = "translateY(-10px)";
+  const feature_card = document.querySelectorAll(".feature-card");
+  if (feature_card) {
+    feature_card.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-10px)";
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)";
+      });
     });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "translateY(0)";
-    });
-  });
+  }
 
   // --- Инициализация календаря ---
   if (dateInput) {
@@ -122,102 +130,73 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- Выпадающее меню (dropdown) ---
-  document.querySelectorAll(".dropdown").forEach((item) => {
-    const menu = item.querySelector(".dropdown-menu");
-    item.addEventListener("mouseenter", () => {
-      if (menu) {
-        // menu.style.display = "block";
-        menu.classList.add('show'); // меняем подход
-        menu.style.animation = "slideDown 0.3s ease-out forwards";
-      }
-    });
-
-    item.addEventListener("mouseleave", () => {
-      if (menu) {
-        // menu.style.animation = "";
-        menu.classList.remove('show');
-        setTimeout(() => {
-          // menu.style.display = "none";
-          menu.style.animation = "";
-        }, 300);
-      }
-    });
-  });
-  // FAQ
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-
-    question.addEventListener('click', () => {
-      // Закрываем все другие вопросы, если они были открыты
-      faqItems.forEach(innerItem => {
-        if (innerItem !== item) {
-          innerItem.classList.remove('active');
+  const dropdown_menu = document.querySelectorAll(".dropdown")
+  if (dropdown_menu) {
+    dropdown_menu.forEach((item) => {
+      const menu = item.querySelector(".dropdown-menu");
+      item.addEventListener("mouseenter", () => {
+        if (menu) {
+          // menu.style.display = "block";
+          menu.classList.add('show'); // меняем подход
+          menu.style.animation = "slideDown 0.3s ease-out forwards";
         }
       });
 
-      // Переключаем текущий вопрос
-      item.classList.toggle('active');
+      item.addEventListener("mouseleave", () => {
+        if (menu) {
+          // menu.style.animation = "";
+          menu.classList.remove('show');
+          setTimeout(() => {
+            // menu.style.display = "none";
+            menu.style.animation = "";
+          }, 300);
+        }
+      });
     });
-  });
+  }
+  // FAQ
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (faqItems) {
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+
+      question.addEventListener('click', () => {
+        // Закрываем все другие вопросы, если они были открыты
+        faqItems.forEach(innerItem => {
+          if (innerItem !== item) {
+            innerItem.classList.remove('active');
+          }
+        });
+
+        // Переключаем текущий вопрос
+        item.classList.toggle('active');
+      });
+    });
+  }
   // Teachers 
-  document.querySelectorAll('.bio-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const bio = button.nextElementSibling;
-      const overlay = button.closest('.bio-overlay');
-      const isVisible = bio.style.display === 'block';
-
-      if (isVisible) {
-        bio.style.display = 'none';
-        button.textContent = 'Показать биографию';
-        overlay.style.height = 'auto';
-      } else {
-        bio.style.display = 'block';
-        button.textContent = 'Скрыть биографию';
-        overlay.style.height = 'auto';  // Не меняем высоту карточки
-      }
-    });
-  });
-
   // Скрипт для прокрутки карточек
-  // Скрипт для показа/скрытия биографии
-  document.querySelectorAll('.bio-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const bio = button.nextElementSibling;
-      const overlay = button.closest('.bio-overlay');
-      const isVisible = bio.style.display === 'block';
 
-      if (isVisible) {
-        bio.style.display = 'none';
-        button.textContent = 'Показать биографию';
-        overlay.style.height = 'auto';
-      } else {
-        bio.style.display = 'block';
-        button.textContent = 'Скрыть биографию';
-        overlay.style.height = 'auto';  // Не меняем высоту карточки
-      }
-    });
-  });
-
-  // Скрипт для прокрутки карточек
   const scrollContainer = document.getElementById('teachersScroll');
-  document.querySelector('.left-btn').addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: -324, behavior: 'smooth' });
-  });
-  document.querySelector('.right-btn').addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: 324, behavior: 'smooth' });
-  });
-
-  // Открытие биографии
-  document.querySelectorAll('.bio-toggle-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const card = button.closest('.teacher-card');
-      card.classList.toggle('open');
-      button.textContent = card.classList.contains('open') ? 'Скрыть' : 'Подробнее';
+  if (scrollContainer) {
+    document.querySelector('.left-btn').addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: -324, behavior: 'smooth' });
     });
-  });
+    document.querySelector('.right-btn').addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: 324, behavior: 'smooth' });
+    });
 
+    // Открытие биографии
+    document.querySelectorAll('.bio-toggle-btn').forEach(button => {
 
+      button.addEventListener('click', () => {
+        console.log('bio');
+
+        const card = button.closest('.teacher-card');
+        card.classList.toggle('open');
+        button.textContent = card.classList.contains('open') ? 'Скрыть' : 'Подробнее';
+      });
+    });
+  }
 
 });
 
