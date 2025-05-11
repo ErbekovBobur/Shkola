@@ -58,13 +58,21 @@ document.addEventListener("DOMContentLoaded", function () {
       "ru": "Дополнительные занятия",
       "uz": "Qo'shimcha mashg'ulotlar"
     },
-    
-    
-    
-    
     "nav-contact": {
       "ru": "Контакты",
       "uz": "Aloqa"
+    },
+    "hero-title": {
+      "ru": "Качественное образование",
+      "uz": "Zamonaviy va sifatli taʼlim"
+    },
+    "hero-title-accent": {
+      "ru": "в Ташкенте",
+      "uz": "Toshkentda"
+    },
+    "hero-button": {
+      "ru": "Записаться на экскурсию",
+      "uz": "Ekskursiyaga yoziling"
     },
     // Добавьте другие фразы по аналогии
   };

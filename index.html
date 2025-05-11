@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием. Запишитесь на экскурсию.">
+  content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием. Запишитесь на экскурсию.">
   <meta name="theme-color" content="#1e88e5">
 
   <title>School Academy | Ташкент</title>
@@ -15,12 +15,12 @@
   <link rel="preload" href="js/main.js" as="script" defer>
   <link rel="preload" href="js/language.js" as="script" defer>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-    crossorigin="anonymous">
+  crossorigin="anonymous">
   <link rel="preload" href="img/logo-uz.png" as="image" imagesrcset="img/logo-uz.png 1x, img/logo-uz@2x.png 2x">
 
   <!-- 🖋️ Стили -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous">
+  crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
   <!-- <link rel="stylesheet" href="./css/phone.css" > -->
@@ -45,7 +45,9 @@
         <img src="img/logo-uz.png" alt="School Academy" class="logo">
         <div class="school-info">
           <h1 data-translate="school-name">School Academy</h1>
-          <p data-translate="address">Ташкент, Юнусабадский район</p>
+          <p data-translate="address">
+            Ташкент, Юнусабадский район
+          </p>
         </div>
       </div>
       <nav class="main-nav">
@@ -56,7 +58,7 @@
 
           <li class="dropdown">
             <a data-translate="nav-about" href="about.html" class="nav-link">О школе <i
-                class="fas fa-chevron-down dropdown-icon"></i></a>
+              class="fas fa-chevron-down dropdown-icon"></i></a>
             <ul class="dropdown-menu">
               <li>
                 <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
@@ -77,19 +79,16 @@
           </li>
           <li class="dropdown">
             <a data-translate="nav-program" href="program.html" class="nav-link">Учебные программы<i
-                class="fas fa-chevron-down dropdown-icon"></i></a>
+              class="fas fa-chevron-down dropdown-icon"></i></a>
             <ul class="dropdown-menu">
               <li>
-                <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link">Начальная
-                  школа</a>
+                <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link">Начальная школа</a>
               </li>
               <li>
-                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">Средняя
-                  школа</a>
+                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">Средняя школа</a>
               </li>
               <li>
-                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Дополнительные
-                  занятия</a>
+                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Дополнительные занятия</a>
               </li>
             </ul>
           </li>
@@ -127,29 +126,29 @@
   </header>
 
   <!-- <script>
-      // Анимация выпадающего меню
-      document.querySelectorAll(".dropdown").forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-          const menu = item.querySelector(".dropdown-menu");
-          menu.style.display.opasity = 1;
-          menu.style.display.visibility = "visible";
-          menu.style.animation = "slideDown 0.3s ease-out forwards";
+        // Анимация выпадающего меню
+        document.querySelectorAll(".dropdown").forEach((item) => {
+          item.addEventListener("mouseenter", () => {
+            const menu = item.querySelector(".dropdown-menu");
+            menu.style.display.opasity = 1;
+            menu.style.display.visibility = "visible";
+            menu.style.animation = "slideDown 0.3s ease-out forwards";
+          });
+
+          item.addEventListener("mouseleave", () => {
+            const menu = item.querySelector(".dropdown-menu");
+            menu.style.animation = "";
+            setTimeout(() => {
+              menu.style.display = "none";
+            }, 300);
+          });
         });
 
-        item.addEventListener("mouseleave", () => {
-          const menu = item.querySelector(".dropdown-menu");
-          menu.style.animation = "";
-          setTimeout(() => {
-            menu.style.display = "none";
-          }, 300);
+        // Мобильное меню
+        document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
+          document.querySelector(".main-nav").classList.toggle("show-mobile");
         });
-      });
-
-      // Мобильное меню
-      document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
-        document.querySelector(".main-nav").classList.toggle("show-mobile");
-      });
-    </script> -->
+      </script> -->
   <!-- Основной контент -->
   <main class="content-wrapper">
     <!-- Баннер -->
@@ -157,11 +156,13 @@
       <div class="banner-overlay"></div>
       <div class="banner-content">
         <h1 class="wow fadeInUp" data-wow-delay="0.6s">
-          Качественное образование <span>в Ташкенте</span>
+          <span class="banner-content-title" data-translate="hero-title">Качественное образование</span>
+          <span class="banner-content-accent" data-translate="hero-title-accent">в Ташкенте</span>
         </h1>
+
         <!-- <p class="wow fadeInUp" data-wow-delay="0.4s">Лицензия МНО РУз №12345 | Юнусабадский район</p> -->
         <!-- <button class="cta-button wow fadeInUp" data-wow-delay="0.6s">Записаться на экскурсию</button> -->
-        <a href="https://t.me/Shkolnayakademiya" class="cta-button wow fadeInUp" data-wow-delay="0.6s" target="_blank"
+        <a href="https://t.me/Shkolnayakademiya" class="cta-button wow fadeInUp" data-translate="hero-button" data-wow-delay="0.6s" target="_blank"
           rel="noopener noreferrer">
           Записаться на экскурсию
         </a>
@@ -179,7 +180,9 @@
         <div class="section-header wow fadeIn">
           <h2>Почему выбирают нас?</h2>
           <div class="divider"></div>
-          <p>Наши ключевые преимущества</p>
+          <p>
+            Наши ключевые преимущества
+          </p>
         </div>
 
         <!-- Блок 1 -->
@@ -299,7 +302,9 @@
         <div class="section-header wow fadeIn">
           <h2>Преимущества обучения в нашей школе</h2>
           <div class="divider"></div>
-          <p>Уникальное пространство для развития</p>
+          <p>
+            Уникальное пространство для развития
+          </p>
         </div>
 
         <div class="features-grid">
@@ -308,7 +313,9 @@
               <i class="fas fa-user-graduate"></i>
             </div>
             <h3>Индивидуальный подход</h3>
-            <p>Программы адаптированы под способности каждого ученика</p>
+            <p>
+              Программы адаптированы под способности каждого ученика
+            </p>
           </div>
 
           <div class="feature-card wow fadeIn" data-wow-delay="0.4s">
@@ -362,7 +369,9 @@
               <i class="fas fa-shield-alt"></i>
             </div>
             <h3>Безопасная территория</h3>
-            <p>Мы заботимся о безопасности каждого ученика и учителя</p>
+            <p>
+              Мы заботимся о безопасности каждого ученика и учителя
+            </p>
           </div>
         </div>
       </div>
@@ -407,42 +416,44 @@
 
     <!-- Новости -->
     <!-- <section class="news-section section-padding bg-light">
-            <div class="container">
-        <div class="section-header wow fadeIn">
-          <h2>Последние новости</h2>
-          <div class="divider"></div>
-          <p>Будьте в курсе наших событий</p>
-        </div>
+                <div class="container">
+            <div class="section-header wow fadeIn">
+              <h2>Последние новости</h2>
+              <div class="divider"></div>
+              <p>Будьте в курсе наших событий</p>
+            </div>
 
-        <div class="news-grid">
-          <div class="news-card wow fadeIn" data-wow-delay="0.2s">
-            <div class="news-img" style="background-image: url('img/news1.jpg')"></div>
-            <div class="news-content">
-              <span class="news-date">15 мая 2024</span>
-              <h3>Открытие STEM-лаборатории</h3>
-              <p>Новое оборудование для изучения робототехники и программирования</p>
-              <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
+            <div class="news-grid">
+              <div class="news-card wow fadeIn" data-wow-delay="0.2s">
+                <div class="news-img" style="background-image: url('img/news1.jpg')"></div>
+                <div class="news-content">
+                  <span class="news-date">15 мая 2024</span>
+                  <h3>Открытие STEM-лаборатории</h3>
+                  <p>Новое оборудование для изучения робототехники и программирования</p>
+                  <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <div class="news-card wow fadeIn" data-wow-delay="0.4s">
+                <div class="news-img" style="background-image: url('img/news2.jpg')"></div>
+                <div class="news-content">
+                  <span class="news-date">10 мая 2024</span>
+                  <h3>Победа в олимпиаде</h3>
+                  <p>Наши ученики заняли первые места по математике и физике</p>
+                  <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="news-card wow fadeIn" data-wow-delay="0.4s">
-            <div class="news-img" style="background-image: url('img/news2.jpg')"></div>
-            <div class="news-content">
-              <span class="news-date">10 мая 2024</span>
-              <h3>Победа в олимпиаде</h3>
-              <p>Наши ученики заняли первые места по математике и физике</p>
-              <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+        </section> -->
     <section class="news-unique section-padding">
       <div class="container">
         <div class="section-header wow fadeIn">
           <h2>Новости и события</h2>
           <div class="divider"></div>
-          <p>Самое свежее из жизни нашей школы</p>
+          <p>
+            Самое свежее из жизни нашей школы
+          </p>
         </div>
 
         <div class="news-grid">
@@ -515,9 +526,13 @@
       <div class="footer-content">
         <div class="footer-column">
           <h3>Часы работы</h3>
-          <p>Пн-Пт: 8:00 - 18:00</p>
+          <p>
+            Пн-Пт: 8:00 - 18:00
+          </p>
           <!-- <p>Сб: 9:00 - 14:00</p> -->
-          <p>Вс: выходной</p>
+          <p>
+            Вс: выходной
+          </p>
         </div>
         <div class="footer-column">
           <h3>Адрес</h3>
@@ -531,8 +546,12 @@
           <p>
             <i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район
           </p>
-          <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
-          <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+          <p>
+            <i class="fas fa-phone-alt"></i> +998 (71) 123-45-67
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i> info@schoolacademy.uz
+          </p>
         </div>
         <div class="footer-column">
           <h3>Соцсети</h3>
@@ -555,11 +574,13 @@
       </div>
     </div>
     <div class="copyright">
-      <p>© 2025 School Academy. Все права защищены.</p>
+      <p>
+        © 2025 School Academy. Все права защищены.
+      </p>
       <!-- Yandex Metrika -->
       <!-- <noscript>
-      <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" ></div>
-    </noscript> -->
+            <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" ></div>
+          </noscript> -->
     </div>
   </footer>
   <script src="js/ya.js"></script>
@@ -567,7 +588,7 @@
   <script src="js/language.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script>
-    new WOW({
+    new WOW( {
       boxClass: "wow",
       animateClass: "animated",
       offset: 50,

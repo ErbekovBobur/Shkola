@@ -420,13 +420,12 @@ img[loading="lazy"].loaded {
   margin: 0 auto;
 }
 
-.banner-content h1 {
+.banner-content-title, .banner-content-accent {
   font-size: 3.2rem;
   margin-bottom: 20px;
   line-height: 1.2;
 }
-
-.banner-content h1 span {
+.banner-content-accent {
   color: var(--secondary);
 }
 
