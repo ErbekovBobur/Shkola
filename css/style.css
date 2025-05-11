@@ -427,6 +427,7 @@ img[loading="lazy"].loaded {
 }
 .banner-content-accent {
   color: var(--secondary);
+  margin-bottom: 30px;
 }
 
 .banner-content p {
