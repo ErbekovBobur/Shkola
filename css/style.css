@@ -397,8 +397,8 @@ img[loading="lazy"].loaded {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../img/orig.jpg") center/cover no-repeat;
-  margin-bottom: 80px;
+  background: url("../img/hero-banner.jpg") center/cover no-repeat;
+  margin: 40px 0 80px;
 }
 
 .banner-overlay {
@@ -420,7 +420,8 @@ img[loading="lazy"].loaded {
   margin: 0 auto;
 }
 
-.banner-content-title, .banner-content-accent {
+.banner-content-title,
+.banner-content-accent {
   font-size: 3.2rem;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -800,7 +801,7 @@ img[loading="lazy"].loaded {
   min-height: 400px;
   height: auto;
 }
-.container iframe {
+.footer-map iframe {
   width: 80%;
   max-width: 100%;
   min-height: 40vh;
@@ -966,7 +967,6 @@ textarea:focus {
 .success-message i {
   margin-right: 10px;
 }
-
 
 /* Темная тема */
 @media (prefers-color-scheme: dark) {

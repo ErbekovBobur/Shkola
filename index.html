@@ -19,15 +19,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!--  Preload важнейших ресурсов -->
-  <link rel="preload" href="img/logo-uz.png" as="image"
-    imagesrcset="img/ico/favicon-16x16.png 1x, img/ico/favicon-32x32.png 2x">
+  <link rel="preload" href="img/logo-uz.png" as="image">
+  <link rel="icon" href="img/ico/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="img/ico/favicon-32x32.png" sizes="32x32" type="image/png">
+
+
   <link rel="preload" href="css/style.css" as="style">
-  <link rel="preload" href="js/main.js" as="script" defer>
-  <link rel="preload" href="js/language.js" as="script" defer>
+
+  <!-- <link rel="preload" href="js/main.js" as="script" defer>
+  <link rel="preload" href="js/language.js" as="script" defer> -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
     crossorigin="anonymous">
 
   <!-- Стили -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="css/video.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -37,6 +43,9 @@
 
   <!-- WOW.js -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/language.js" defer></script>
+
 </head>
 
 <body>
@@ -130,30 +139,6 @@
     </div>
   </header>
 
-  <!-- <script>
-        // Анимация выпадающего меню
-        document.querySelectorAll(".dropdown").forEach((item) => {
-          item.addEventListener("mouseenter", () => {
-            const menu = item.querySelector(".dropdown-menu");
-            menu.style.display.opasity = 1;
-            menu.style.display.visibility = "visible";
-            menu.style.animation = "slideDown 0.3s ease-out forwards";
-          });
-
-          item.addEventListener("mouseleave", () => {
-            const menu = item.querySelector(".dropdown-menu");
-            menu.style.animation = "";
-            setTimeout(() => {
-              menu.style.display = "none";
-            }, 300);
-          });
-        });
-
-        // Мобильное меню
-        document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
-          document.querySelector(".main-nav").classList.toggle("show-mobile");
-        });
-      </script> -->
   <!-- Основной контент -->
   <main class="content-wrapper">
     <!-- Баннер -->
@@ -164,9 +149,6 @@
           <span class="banner-content-title" data-translate="hero-title">Качественное образование</span>
           <span class="banner-content-accent" data-translate="hero-title-accent">в Ташкенте</span>
         </h1>
-
-        <!-- <p class="wow fadeInUp" data-wow-delay="0.4s">Лицензия МНО РУз №12345 | Юнусабадский район</p> -->
-        <!-- <button class="cta-button wow fadeInUp" data-wow-delay="0.6s">Записаться на экскурсию</button> -->
         <a href="https://t.me/Shkolnayakademiya" class="cta-button wow fadeInUp" data-translate="hero-button"
           data-wow-delay="0.6s" target="_blank" rel="noopener noreferrer">
           Записаться на экскурсию
@@ -180,17 +162,31 @@
     </section>
     <section class="video-section">
       <div class="container">
-        <h2 class="video-section__title" data-key="video_title">
-          Biz School academy xususiy maktabimiz
-        </h2>
-        <p class="video-section__descr" data-key="video_description">
-          Biz O'zbekistondagi eng yaxshi maktablardan biri sifatida
-          tan olinganmiz.
-        </p>
-        <div class="plyr__video-embed" id="player">
+        <div class="section-header video-section__title  wow zoomIn" data-key="video_title">
+          <h2>Школьная академия</h2>
+          <div class="divider"></div>
+          <p class="video-section__descr" data-key="video_description">
+            Наши ключевые преимущества
+          </p>
+        </div>
+        <!-- <div class="plyr__video-embed" id="player">
           <iframe src="https://www.youtube.com/embed/T6pMF2MBdtM?si=uPiuuoX5n2z5iEJF" allowfullscreen
             allow="autoplay"></iframe>
+        </div> -->
+        <!-- Постер с кнопкой запуска -->
+        <div class="video-placeholder" id="myVideo-placeholder"
+          style="position: relative; cursor: pointer; max-width: 100%; margin: 0 auto;">
+          <div class="banner-overlay"></div>
+          <img src="img/Poster-video.png" alt="Постер видео" style="width: 100%; height: auto; display: block;">
+          <button class="video-play-button">▶</button>
         </div>
+
+        <!-- Контейнер для видео -->
+        <div id="plyr-container" class="plyr__video-embed" style="display: none;"></div>
+
+
+
+
       </div>
     </section>
 
@@ -572,9 +568,6 @@
     </div>
   </footer>
   <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script src="js/ya.js"></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/language.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script>
     new WOW({
@@ -595,6 +588,9 @@
     gtag("config", "G-22ZG2NQ22L");
   </script>
   <script src="https://unpkg.com/eruda"></script>
+  <script src="js/ya.js"></script>
+  <!-- <script src="js/main.js" defer></script> -->
+  <!-- <script src="js/language.js" defer></script> -->
 </body>
 
 </html>

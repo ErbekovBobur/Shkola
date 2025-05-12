@@ -2,12 +2,15 @@
   padding: 80px 0;
   text-align: center;
 }
+.plyr__video-embed {
+  position: relative;
+}
 .video-section__title {
-  font-size: 48px;
+  /* font-size: 48px;
   font-weight: 900;
   margin-bottom: 16px;
   color: var(--text-color);
-  text-transform: uppercase;
+  text-transform: uppercase; */
 }
 .video-section__descr {
   font-size: 18px;
@@ -34,17 +37,17 @@
 .plyr {
   border-radius: 0;
   font-family: "Arial", sans-serif;
-  --plyr-color-main: #ff5a30;
+  --plyr-color-main: var(--secondary-dark);
   --plyr-control-spacing: 10px;
   --plyr-video-background: #1e212c;
 }
 .plyr__control {
-  background: transparent;
+  background: var(--secondary);
   color: var(--white);
   transition: all 0.3s ease;
 }
 .plyr__control:hover {
-  background: rgba(255, 90, 48, 0.2);
+  background: var(--secondary-dark);
 }
 .plyr-video::-webkit-media-controls-timeline,
 .plyr-video::-webkit-media-controls {
@@ -63,7 +66,7 @@
   border-radius: 2px;
 }
 .plyr__progress__bar {
-  background: var(--accent-color);
+  background: var(--secondary-dark);
   height: 100%;
   border-radius: 2px;
 }
@@ -76,14 +79,14 @@
 }
 .plyr__progress input[type="range"]::-webkit-slider-thumb {
   appearance: none;
-  background: var(--accent-color);
+  background: var(--secondary);
   border-radius: 50%;
   width: 12px;
   height: 12px;
   margin-top: -4px;
 } /* .plyr__volume input[type=range] {     width: 5px;     } */
 .plyr__progress input[type="range"]::-moz-range-thumb {
-  background: var(--accent-color);
+  background: var(--secondary);
   border: none;
   border-radius: 50%;
   width: 12px;
@@ -95,7 +98,7 @@
   font-weight: 600;
 }
 .plyr__control--overlaid {
-  background: var(--accent-color);
+  background: var(--secondary);
   border-radius: 50%;
   width: 80px !important;
   height: 80px !important;
@@ -106,7 +109,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .plyr__control--overlaid:hover {
-  background: #fc3a0e; /* transform: scale(1.1); */
+  background: var(--secondary-dark); /* transform: scale(1.1); */
 }
 .plyr__control--overlaid svg {
   fill: var(--white);
@@ -115,4 +118,22 @@
 }
 .video-section__play-btn {
   display: none;
+}
+
+.video-play-button {
+  font-size: 60px;
+  background: none;
+  border: none;
+  color: var(--secondary);
+  text-shadow: 0 0 10px #fff;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-play-button:hover {
+  color: var(--secondary-dark);
 }
