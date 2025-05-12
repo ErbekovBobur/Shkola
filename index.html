@@ -14,6 +14,7 @@
   <link rel="preload" href="css/style.css" as="style">
   <link rel="preload" href="js/main.js" as="script" defer>
   <link rel="preload" href="js/language.js" as="script" defer>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
   crossorigin="anonymous">
   <link rel="preload" href="img/logo-uz.png" as="image" imagesrcset="img/logo-uz.png 1x, img/logo-uz@2x.png 2x">
@@ -23,6 +24,7 @@
   crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/video.css">
   <!-- <link rel="stylesheet" href="./css/phone.css" > -->
   <!-- <link rel="stylesheet" href="./css/lang.css" > -->
 
@@ -173,11 +175,25 @@
         </div>
       </div>
     </section>
+    <section class="video-section">
+      <div class="container">
+          <h2 class="video-section__title" data-key="video_title">
+              Biz O'ztemiryo'lqurilishmontaj MCHJ qurilish kompaniyasimiz
+          </h2>
+          <p class="video-section__descr" data-key="video_description">
+              Biz O'zbekistondagi eng yaxshi qurilish kompaniyalaridan biri sifatida
+              tan olinganmiz.
+          </p>
+          <div class="plyr__video-embed" id="player">
+              <iframe src="https://www.youtube.com/embed/T6pMF2MBdtM?si=uPiuuoX5n2z5iEJF" allowfullscreen allow="autoplay"></iframe>              
+          </div>
+      </div>
+  </section>
 
     <!-- Поему мы -->
     <section class="why-us-section section-padding">
       <div class="container">
-        <div class="section-header wow fadeIn">
+        <div class="section-header wow zoomIn">
           <h2>Почему выбирают нас?</h2>
           <div class="divider"></div>
           <p>
@@ -186,7 +202,7 @@
         </div>
 
         <!-- Блок 1 -->
-        <div class="why-us-row">
+        <div class="why-us-row  wow fadeInLeft">
           <div class="why-us-image">
             <img src="img/sections/why-us-personal.png" alt="Индивидуальная траектория обучения">
           </div>
@@ -204,7 +220,7 @@
         </div>
 
         <!-- Блок 2 -->
-        <div class="why-us-row reverse">
+        <div class="why-us-row reverse wow fadeInRight">
           <div class="why-us-image">
             <img src="img/sections/why-us-program.webp" alt="Актуальное расписание занятий">
           </div>
@@ -223,7 +239,7 @@
         </div>
 
         <!-- Блок 3 -->
-        <div class="why-us-row">
+        <div class="why-us-row  wow fadeInLeft">
           <div class="why-us-image">
             <img src="img/sections/why-us-eats.png" alt="Полноценное питание в течение дня">
           </div>
@@ -241,7 +257,7 @@
         </div>
 
         <!-- Блок 4 -->
-        <div class="why-us-row reverse">
+        <div class="why-us-row reverse  wow fadeInRight">
           <div class="why-us-image">
             <img src="img/sections/why-us-early.png" alt="Обучение с раннего возраста до выпускного">
           </div>
@@ -259,7 +275,7 @@
         </div>
 
         <!-- Блок 5 -->
-        <div class="why-us-row">
+        <div class="why-us-row  wow fadeInLeft">
           <div class="why-us-image">
             <img src="img/sections/why-us-admission.png" alt="Комплексная подготовка к поступлению">
           </div>
@@ -277,7 +293,7 @@
         </div>
 
         <!-- Блок 6 -->
-        <div class="why-us-row reverse">
+        <div class="why-us-row reverse  wow fadeInRight">
           <div class="why-us-image">
             <img src="img/sections/why-us-safe.png" alt="Комфорт и безопасность — приоритет">
           </div>
@@ -299,7 +315,7 @@
     <!-- О школе -->
     <section class="about-section section-padding">
       <div class="container">
-        <div class="section-header wow fadeIn">
+        <div class="section-header wow zoomIn">
           <h2>Преимущества обучения в нашей школе</h2>
           <div class="divider"></div>
           <p>
@@ -379,7 +395,7 @@
     <!-- Программы -->
     <section class="programs-unique section-padding">
       <div class="container">
-        <div class="section-header wow fadeIn">
+        <div class="section-header wow zoomIn">
           <h2>Образовательные программы</h2>
           <div class="divider"></div>
           <p>
@@ -413,39 +429,7 @@
         </div>
       </div>
     </section>
-
-    <!-- Новости -->
-    <!-- <section class="news-section section-padding bg-light">
-                <div class="container">
-            <div class="section-header wow fadeIn">
-              <h2>Последние новости</h2>
-              <div class="divider"></div>
-              <p>Будьте в курсе наших событий</p>
-            </div>
-
-            <div class="news-grid">
-              <div class="news-card wow fadeIn" data-wow-delay="0.2s">
-                <div class="news-img" style="background-image: url('img/news1.jpg')"></div>
-                <div class="news-content">
-                  <span class="news-date">15 мая 2024</span>
-                  <h3>Открытие STEM-лаборатории</h3>
-                  <p>Новое оборудование для изучения робототехники и программирования</p>
-                  <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-
-              <div class="news-card wow fadeIn" data-wow-delay="0.4s">
-                <div class="news-img" style="background-image: url('img/news2.jpg')"></div>
-                <div class="news-content">
-                  <span class="news-date">10 мая 2024</span>
-                  <h3>Победа в олимпиаде</h3>
-                  <p>Наши ученики заняли первые места по математике и физике</p>
-                  <a href="#" class="read-more">Подробнее <i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
+    
     <section class="news-unique section-padding">
       <div class="container">
         <div class="section-header wow fadeIn">
@@ -583,6 +567,7 @@
           </noscript> -->
     </div>
   </footer>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
   <script src="js/ya.js"></script>
   <script src="js/main.js" defer></script>
   <script src="js/language.js" defer></script>

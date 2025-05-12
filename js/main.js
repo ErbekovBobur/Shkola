@@ -3,7 +3,16 @@ console.log("main.js is start");
 document.addEventListener("DOMContentLoaded", function () {
   const consol = document.querySelector('p[data-translate="address"]');
   if (consol) {
-    consol.onclick = () => eruda.init();
+    let erudaActive = false;
+    consol.onclick = () => {
+      if (!erudaActive) {
+        eruda.init();
+        erudaActive = true;
+      } else {
+        eruda.destroy();
+        erudaActive = false;
+      }
+    };
   }
   // Элементы
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
@@ -64,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (targetId && targetId !== "#") {
           smoothScroll(targetId);
           // Закрыть мобильное меню при клике на ссылку
-          if (this.classList.contains("nav-link")) { // ++++
+          if (this.classList.contains("nav-link")) {
+            // ++++
             mobileMenuBtn.classList.remove("active");
             mainNav.classList.remove("active");
             document.body.classList.remove("no-scroll");
@@ -130,14 +140,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- Выпадающее меню (dropdown) ---
-  const dropdown_menu = document.querySelectorAll(".dropdown")
+  const dropdown_menu = document.querySelectorAll(".dropdown");
   if (dropdown_menu) {
     dropdown_menu.forEach((item) => {
       const menu = item.querySelector(".dropdown-menu");
       item.addEventListener("mouseenter", () => {
         if (menu) {
           // menu.style.display = "block";
-          menu.classList.add('show'); // меняем подход
+          menu.classList.add("show"); // меняем подход
           menu.style.animation = "slideDown 0.3s ease-out forwards";
         }
       });
@@ -145,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       item.addEventListener("mouseleave", () => {
         if (menu) {
           // menu.style.animation = "";
-          menu.classList.remove('show');
+          menu.classList.remove("show");
           setTimeout(() => {
             // menu.style.display = "none";
             menu.style.animation = "";
@@ -155,51 +165,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   // FAQ
-  const faqItems = document.querySelectorAll('.faq-item');
+  const faqItems = document.querySelectorAll(".faq-item");
   if (faqItems) {
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
+    faqItems.forEach((item) => {
+      const question = item.querySelector(".faq-question");
 
-      question.addEventListener('click', () => {
+      question.addEventListener("click", () => {
         // Закрываем все другие вопросы, если они были открыты
-        faqItems.forEach(innerItem => {
+        faqItems.forEach((innerItem) => {
           if (innerItem !== item) {
-            innerItem.classList.remove('active');
+            innerItem.classList.remove("active");
           }
         });
 
         // Переключаем текущий вопрос
-        item.classList.toggle('active');
+        item.classList.toggle("active");
       });
     });
   }
-  // Teachers 
+  // Teachers
   // Скрипт для прокрутки карточек
 
-  const scrollContainer = document.getElementById('teachersScroll');
+  const scrollContainer = document.getElementById("teachersScroll");
   if (scrollContainer) {
-    document.querySelector('.left-btn').addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: -324, behavior: 'smooth' });
+    document.querySelector(".left-btn").addEventListener("click", () => {
+      scrollContainer.scrollBy({ left: -324, behavior: "smooth" });
     });
-    document.querySelector('.right-btn').addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: 324, behavior: 'smooth' });
+    document.querySelector(".right-btn").addEventListener("click", () => {
+      scrollContainer.scrollBy({ left: 324, behavior: "smooth" });
     });
 
     // Открытие биографии
-    document.querySelectorAll('.bio-toggle-btn').forEach(button => {
+    document.querySelectorAll(".bio-toggle-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        console.log("bio");
 
-      button.addEventListener('click', () => {
-        console.log('bio');
-
-        const card = button.closest('.teacher-card');
-        card.classList.toggle('open');
-        button.textContent = card.classList.contains('open') ? 'Скрыть' : 'Подробнее';
+        const card = button.closest(".teacher-card");
+        card.classList.toggle("open");
+        button.textContent = card.classList.contains("open") ? "Скрыть" : "Подробнее";
       });
     });
   }
+  // Video-section
+const player = new Plyr("#player");
 
 });
-
 
 // --- Service Worker ---
 if ("serviceWorker" in navigator) {
