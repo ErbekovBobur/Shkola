@@ -397,7 +397,7 @@ img[loading="lazy"].loaded {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../img/hero-banner.jpg") center/cover no-repeat;
+  background: url("../img/hero-banner.avif") center/cover no-repeat;
   margin: 40px 0 80px;
 }
 

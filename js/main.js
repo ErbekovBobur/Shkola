@@ -33,10 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenuBtn.addEventListener("click", toggleMenu);
 
     document.addEventListener("click", (e) => {
-      if (
-        !e.target.closest(".main-nav") &&
-        !e.target.closest(".mobile-menu-btn")
-      ) {
+      if (!e.target.closest(".main-nav") && !e.target.closest(".mobile-menu-btn")) {
         mainNav.classList.remove("active");
         mobileMenuBtn.setAttribute("aria-expanded", "false");
         document.body.classList.remove("no-scroll");
@@ -49,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const element = document.querySelector(target);
     if (element) {
       const headerHeight = header ? header.offsetHeight : 0;
-      const offset =
-        element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      const offset = element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
       window.scrollTo({
         top: offset,
@@ -206,64 +202,119 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const card = button.closest(".teacher-card");
         card.classList.toggle("open");
-        button.textContent = card.classList.contains("open")
-          ? "Скрыть"
-          : "Подробнее";
+        button.textContent = card.classList.contains("open") ? "Скрыть" : "Подробнее";
       });
     });
   }
   // Video-section
   // const player = new Plyr("#player");
+  // const myVideoBox = document.getElementById("myVideo-placeholder");
+  // const plyrContainer = document.getElementById("plyr-container");
+  // const playButton = document.querySelector(".video-play-button");
+
+  // let player;
+
+  // let hasPlayed = false; // Было ли уже воспроизведение видео
+
+  // function stopVideo() {
+  //   if (player) {
+  //     // player.destroy();
+  //     player.pause();
+  //     player.currentTime = 0;
+  //     player = null;
+  //     plyrContainer.innerHTML = "";
+  //     plyrContainer.style.display = "none";
+  //     myVideoBox.style.display = "block";
+  //   }
+  // }
+
+  // function playVideo() {
+  //   if (!player) {
+  //     // player = new Plyr(iframe, {
+  //     player = new Plyr(plyrContainer, {
+  //       youtube: {
+  //         noCookie: true,
+  //       },
+  //     });
+  //   }
+  //   hasPlayed = true; // Видео запускалось
+  //   myVideoBox.style.display = "none";
+  //   plyrContainer.style.display = "block";
+
+  //   plyrContainer.innerHTML = `
+  //   <iframe
+  //     src="https://www.youtube.com/embed/T6pMF2MBdtM?autoplay=1&rel=0&showinfo=0"
+  //     allowfullscreen
+  //     allow="autoplay; encrypted-media"
+  //   ></iframe>
+  // `;
+
+  //   const iframe = plyrContainer.querySelector("iframe");
+  // }
+  // if (playButton && myVideoBox) {
+  //   playButton.addEventListener("click", playVideo);
+  // }
+  // const observer = new IntersectionObserver(
+  //   (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (!entry.isIntersecting && hasPlayed) {
+  //         stopVideo();
+  //       }
+  //     });
+  //   },
+  //   { threshold: 0.1 }
+  // );
+
+  // // observer.observe(myVideoBox);
+
+  // observer.observe(plyrContainer);
+
+  //=== Видео-2 ====///
   const myVideoBox = document.getElementById("myVideo-placeholder");
-  const plyrContainer = document.getElementById("plyr-container");
-  const playButton = document.querySelector(".video-play-button");
+const plyrContainer = document.getElementById("plyr-container");
+const playButton = document.querySelector(".video-play-button");
 
-  let player; // для хранения экземпляра Plyr
+let player = new Plyr('#player', {
+  youtube: {
+    noCookie: true,
+  },
+});
 
-  // Функция для остановки видео
-  function stopVideo() {
-    if (player) {
-      player.destroy(); // Останавливаем плеер
-    }
-    plyrContainer.innerHTML = ''; // Очистить контейнер
-    plyrContainer.style.display = "none"; // Скрыть контейнер с видео
-    const myVideo = document.querySelector(".video-placeholder");
-    myVideo.style.display = "block"; // Показать постер
+let hasPlayed = false;
+
+function playVideo() {
+  myVideoBox.style.display = "none";
+  plyrContainer.style.display = "block";
+
+  player.play();
+  hasPlayed = true;
+}
+
+function pauseVideo() {
+  if (player && hasPlayed) {
+    player.pause();
   }
+}
 
-  // Функция для запуска видео
-  function playVideo() {
-    console.log('video-click');
-    const myVideo = document.querySelector(".video-placeholder");
-    myVideo.style.display = "none"; // Скрыть постер
+if (playButton && myVideoBox) {
+  playButton.addEventListener("click", playVideo);
+}
 
-    plyrContainer.style.display = "block"; // Показать контейнер для видео
-    plyrContainer.innerHTML = `
-      <iframe src="https://www.youtube.com/embed/T6pMF2MBdtM?autoplay=1&rel=0&showinfo=0"
-      allowfullscreen allow="autoplay; encrypted-media"></iframe>
-    `;
-
-    // Инициализация плеера
-    player = new Plyr(plyrContainer);
-  }
-
-  // Обработчик для клика по видео
-  if (myVideoBox) {
-    myVideoBox.addEventListener("click", playVideo);
-  }
-
-  // Инициализация Intersection Observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        // Если элемент не виден, останавливаем видео
-        stopVideo();
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      // Если видео вышло за пределы экрана — ставим на паузу
+      if (!entry.isIntersecting && hasPlayed) {
+        pauseVideo();
       }
     });
-  }, { threshold: 0.1 }); // Когда 10% элемента выходит за пределы окна
+  },
+  { threshold: 0.1 }
+);
 
-  // Наблюдаем за видео блоком
-  observer.observe(myVideoBox);
+// Наблюдаем за plyrContainer
+observer.observe(plyrContainer);
+
 });
 
 // --- Service Worker ---
@@ -279,4 +330,3 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
-

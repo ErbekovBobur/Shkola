@@ -37,12 +37,12 @@
 .plyr {
   border-radius: 0;
   font-family: "Arial", sans-serif;
-  --plyr-color-main: var(--secondary-dark);
+  --plyr-color-main: var(--primary-dark); /*hover control*/
   --plyr-control-spacing: 10px;
   --plyr-video-background: #1e212c;
 }
 .plyr__control {
-  background: var(--secondary);
+  background: var(--secondary-dark);/*control color*/
   color: var(--white);
   transition: all 0.3s ease;
 }
@@ -66,7 +66,7 @@
   border-radius: 2px;
 }
 .plyr__progress__bar {
-  background: var(--secondary-dark);
+  background: var(--secondary);
   height: 100%;
   border-radius: 2px;
 }
@@ -109,7 +109,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .plyr__control--overlaid:hover {
-  background: var(--secondary-dark); /* transform: scale(1.1); */
+  background: var(--secondary); /* transform: scale(1.1); */
 }
 .plyr__control--overlaid svg {
   fill: var(--white);
