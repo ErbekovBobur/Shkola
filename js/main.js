@@ -186,26 +186,54 @@ document.addEventListener("DOMContentLoaded", function () {
   // Teachers
   // Скрипт для прокрутки карточек
 
-  const scrollContainer = document.getElementById("teachersScroll");
-  if (scrollContainer) {
-    document.querySelector(".left-btn").addEventListener("click", () => {
-      scrollContainer.scrollBy({ left: -324, behavior: "smooth" });
-    });
-    document.querySelector(".right-btn").addEventListener("click", () => {
-      scrollContainer.scrollBy({ left: 324, behavior: "smooth" });
-    });
+  // const scrollContainer = document.getElementById("teachersScroll");
+  // if (scrollContainer) {
+  //   document.querySelector(".left-btn").addEventListener("click", () => {
+  //     scrollContainer.scrollBy({ left: -324, behavior: "smooth" });
+  //   });
+  //   document.querySelector(".right-btn").addEventListener("click", () => {
+  //     scrollContainer.scrollBy({ left: 324, behavior: "smooth" });
+  //   });
 
-    // Открытие биографии
-    document.querySelectorAll(".bio-toggle-btn").forEach((button) => {
-      button.addEventListener("click", () => {
-        console.log("bio");
+  //   // Открытие биографии
+  //   document.querySelectorAll(".bio-toggle-btn").forEach((button) => {
+  //     button.addEventListener("click", () => {
+  //       console.log("bio");
 
-        const card = button.closest(".teacher-card");
-        card.classList.toggle("open");
-        button.textContent = card.classList.contains("open") ? "Скрыть" : "Подробнее";
-      });
-    });
+  //       const card = button.closest(".teacher-card");
+  //       card.classList.toggle("open");
+  //       button.textContent = card.classList.contains("open") ? "Скрыть" : "Подробнее";
+  //     });
+  //   });
+  // }
+  // =======Teachers-2=======//
+  // Получаем элементы для кнопок и контейнера с карточками
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+const cardsWrapper = document.querySelector('.teacher-cards-wrapper');
+const cards = document.querySelectorAll('.teacher-card');
+
+// Получаем ширину карточки, чтобы прокручивать на одну карточку
+const cardWidth = cards[0].offsetWidth + 20; // Ширина карточки с учетом отступа
+
+let scrollPosition = 0; // Текущая позиция прокрутки
+
+// Функция для прокрутки влево
+leftBtn.addEventListener('click', () => {
+  if (scrollPosition > 0) {
+    scrollPosition -= cardWidth;
+    cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
   }
+});
+
+// Функция для прокрутки вправо
+rightBtn.addEventListener('click', () => {
+  if (scrollPosition < (cards.length - 4) * cardWidth) { // Учитываем 4 видимые карточки
+    scrollPosition += cardWidth;
+    cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+  }
+});
+
   // Video-section
   // const player = new Plyr("#player");
   // const myVideoBox = document.getElementById("myVideo-placeholder");

@@ -2,80 +2,109 @@
 <html lang="ru" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием. Запишитесь на экскурсию." />
+  <meta name="theme-color" content="#1e88e5" />
   <title>School Academy | Ташкент</title>
-  <!-- 🚀 Preload важнейших ресурсов -->
-  <link rel="preload" href="css/style.css" as="style">
+
+  <!--  Иконка и манифест -->
+  <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <!--  Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!--  Preload важнейших ресурсов -->
+  <link rel="preload" href="img/logo-uz.png" as="image" />
+  <link rel="icon" href="img/ico/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="img/ico/favicon-32x32.png" sizes="32x32" type="image/png" />
+
+  <link rel="preload" href="css/style.css" as="style" />
   <link rel="preload" href="css/teachers.css" as="style">
-  <link rel="preload" href="js/main.js" as="script">
+
+  <!-- <link rel="preload" href="js/main.js" as="script" defer>
+  <link rel="preload" href="js/language.js" as="script" defer> -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-    crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="preload" href="img/logo-uz.png" as="image" imagesrcset="img/logo-uz.png 1x, img/logo-uz@2x.png 2x">
+    crossorigin="anonymous" />
 
-  <!-- 🖋️ Стили -->
+  <!-- Стили -->    
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/teachers.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/phone.css">
-  <link rel="stylesheet" href="css/lang.css">
-  <!-- <link rel="stylesheet" href="css/about.css" > -->
   <link rel="stylesheet" href="css/gallery -2.css">
+  <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/faq.css">
-
-  <!-- 🔤 Шрифты -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- 🧭 Иконка и манифест -->
-  <link rel="shortcut icon" href="img/logo-uz.png" type="image/x-icon">
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1e88e5">
+  <!-- <link rel="stylesheet" href="./css/phone.css" > -->
+  <!-- <link rel="stylesheet" href="./css/lang.css" > -->
 
   <!-- WOW.js -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/language.js" defer></script>
 </head>
 
 <body>
-  <!-- Шапка (такая же как на главной) -->
+  <!-- Шапка -->
   <header class="sticky-header">
     <div class="header-container">
       <div class="logo-container">
-        <img src="img/logo-uz.png" alt="School Academy" class="logo">
+        <img src="img/ico/android-chrome-512x512.png" alt="School Academy" class="logo" />
         <div class="school-info">
-          <h1>School Academy</h1>
-          <p>Ташкент, Юнусабадский район</p>
+          <h1 data-translate="school-name">School Academy</h1>
+          <p data-translate="address">Ташкент, Юнусабадский район</p>
         </div>
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a data-translate="nav-home" href="index.html" class="nav-link">Главная</a></li>
+          <li>
+            <a data-translate="nav-home" href="index.html" class="nav-link">Главная</a>
+          </li>
 
           <li class="dropdown">
             <a data-translate="nav-about" href="about.html" class="active nav-link">О школе <i
                 class="fas fa-chevron-down dropdown-icon"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="about.html#history" class="nav-link">История</a></li>
-              <li><a href="about.html#teachers" class="nav-link">Преподаватели</a></li>
-              <li><a href="about.html#gallery" class="nav-link">Галерея</a></li>
-              <li><a href="about.html#mission" class="nav-link">Миссия</a></li>
-              <li><a href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a></li>
+              <li>
+                <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
+              </li>
             </ul>
           </li>
           <li class="dropdown">
             <a data-translate="nav-program" href="program.html" class="nav-link">Учебные программы<i
                 class="fas fa-chevron-down dropdown-icon"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="program.html#elementary" class="nav-link">Начальная школа</a></li>
-              <li><a href="program.html#middle" class="nav-link">Средняя школа</a></li>
-              <li><a href="program.html#kindergarten" class="nav-link">Дополнительные занятия</a></li>
+              <li>
+                <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link">Начальная
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">Средняя
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Дополнительные
+                  занятия</a>
+              </li>
             </ul>
           </li>
-          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
         </ul>
       </nav>
 
@@ -91,9 +120,7 @@
           <div class="phone-pulse-icon">
             <i class="fas fa-phone-alt"></i>
           </div>
-          <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67
-
-          </a>
+          <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67 </a>
         </div>
       </div>
 
@@ -145,29 +172,17 @@
     </section>
 
     <!-- Преподаватели -->
-    <section class="teachers-section" id="teachers">
-      <h2 class="section-title">Наши преподаватели</h2>
-
-      <!-- Кнопки прокрутки -->
-      <button class="teacher-scroll-btn left-btn" aria-label="Назад">&#10094;</button>
-      <button class="teacher-scroll-btn right-btn" aria-label="Вперёд">&#10095;</button>
-
-      <!-- Контейнер с карточками -->
-      <div class="teachers-scroll-container" id="teachersScroll">
-
-        <!-- Пример карточки -->
+    <div class="teachers-section">
+      <h2 class="section-title">Наши Преподаватели</h2>
+      <!-- <div class="teachers-scroll-container" id="teachersScroll"> -->
+        <button class="teacher-scroll-btn left-btn">&#9664;</button>
+        <div class="teacher-cards-wrapper">
         <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
+          <img src="img/teachers/teacher1.jpg" alt="Преподаватель 1" class="teacher-photo" />
+          <h3 class="teacher-name">Иван Иванов</h3>
           <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
+          <p class="teacher-bio-preview">Биография преподавателя...</p>
           <button class="bio-toggle-btn">Подробнее</button>
-
           <div class="social-links">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -175,17 +190,11 @@
           </div>
         </div>
         <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
+          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+          <h3 class="teacher-name">Мария Петрова</h3>
+          <p class="teacher-subject">Физика</p>
+          <p class="teacher-bio-preview">Биография преподавателя...</p>
           <button class="bio-toggle-btn">Подробнее</button>
-
           <div class="social-links">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -193,17 +202,11 @@
           </div>
         </div>
         <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
+          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+          <h3 class="teacher-name">Мария Петрова</h3>
+          <p class="teacher-subject">Физика</p>
+          <p class="teacher-bio-preview">Биография преподавателя...</p>
           <button class="bio-toggle-btn">Подробнее</button>
-
           <div class="social-links">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -211,17 +214,11 @@
           </div>
         </div>
         <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
+          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+          <h3 class="teacher-name">Мария Петрова</h3>
+          <p class="teacher-subject">Физика</p>
+          <p class="teacher-bio-preview">Биография преподавателя...</p>
           <button class="bio-toggle-btn">Подробнее</button>
-
           <div class="social-links">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -229,82 +226,25 @@
           </div>
         </div>
         <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
+          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+          <h3 class="teacher-name">Мария Петрова</h3>
+          <p class="teacher-subject">Физика</p>
+          <p class="teacher-bio-preview">Биография преподавателя...</p>
           <button class="bio-toggle-btn">Подробнее</button>
-
           <div class="social-links">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-        <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
-          <button class="bio-toggle-btn">Подробнее</button>
-
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
+        <!-- Добавьте другие карточки -->
         </div>
-        <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
-          <button class="bio-toggle-btn">Подробнее</button>
-
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Алексей Иванов" class="teacher-photo">
-          <h3 class="teacher-name">Алексей Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Кандидат наук, 10+ лет опыта, индивидуальный подход.</p>
-          <div class="teacher-bio-full">
-            Алексей — кандидат физ.-мат. наук, окончил МГУ, опыт более 10 лет, готовит к ЕГЭ, олимпиадам и
-            поступлению.
-          </div>
-
-          <button class="bio-toggle-btn">Подробнее</button>
-
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-
-        <!-- Добавь ещё карточки по образцу -->
-
-      </div>
-    </section>
+        <button class="teacher-scroll-btn right-btn">&#9654;</button>
+      <!-- </div> -->
+      <!-- <button class="teacher-scroll-btn left-btn">&#8249;</button>
+      <button class="teacher-scroll-btn right-btn">&#8250;</button> -->
+    </div>
+    
 
 
 
@@ -541,7 +481,7 @@
     </div>
   </footer>
   <script src="js/ya.js"></script>
-  <script src="js/main.js" defer></script>
+  <!-- <script src="js/main.js" defer></script> -->
   <script src="js/language.js" defer></script>
   <script src="js/about.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

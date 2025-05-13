@@ -18,35 +18,43 @@
 /* Контейнер с горизонтальной прокруткой */
 .teachers-scroll-container {
   display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px;
+  gap: 20px;
+  overflow: hidden; /* Прячем прокручиваемую часть */
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  scrollbar-width: none;
 }
 
 .teachers-scroll-container::-webkit-scrollbar {
   display: none;
 }
+.teacher-cards-wrapper {
+  display: flex;
+  max-width: 70%;
+  gap: 20px; /* Расстояние между карточками */
+  transition: transform 0.5s ease; /* Добавляем анимацию для прокрутки */
+}
 
 /* Карточки */
 .teacher-card {
-  flex: 0 0 300px;
-  background: #fff;
-  border-radius: 12px;
-  /* box-shadow: var(--shadow); */
-  padding: 24px;
+  flex: 0 0 calc(33% - 40px); /* 4 карточки, с отступами */
+  background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+  border-radius: 16px;
+  padding: 20px;
   text-align: left;
-  font-family: "Inter", sans-serif;
-  color: #1c1c1c;
-  transition: transform 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  border: 1px solid var(--gray);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 
 .teacher-card:hover {
-  transform: translateY(-4px);
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
 }
 
 .teacher-photo {
@@ -55,21 +63,26 @@
   margin-bottom: 16px;
 }
 
+.teacher-card:hover .teacher-photo {
+  filter: brightness(1); /* Фото светлеет при наведении */
+}
+
 .teacher-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f1c40f; /* Желтый акцент */
 }
 
 .teacher-subject {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #ecf0f1;
+  margin-bottom: 15px;
 }
 
 .teacher-bio-preview {
-  font-size: 0.95rem;
-  color: #444;
+  font-size: 1rem;
+  color: #bdc3c7;
   font-style: italic;
 }
 
@@ -79,9 +92,9 @@
   opacity: 0;
   transition: max-height 0.4s ease, opacity 0.4s ease;
   margin-top: 10px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
-  color: #333;
+  color: #ecf0f1;
 }
 
 .teacher-card.open .teacher-bio-full {
@@ -93,16 +106,15 @@
   margin-top: 10px;
   background: none;
   border: none;
-  color: #0056b3;
+  color: #f1c40f;
   font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
-  padding: 0;
   text-decoration: underline;
 }
 
 .bio-toggle-btn:hover {
-  color: #003974;
+  color: #d35400;
 }
 
 .social-links {
@@ -111,13 +123,13 @@
 
 .social-links a {
   margin-right: 10px;
-  color: #555;
+  color: #f1c40f;
   font-size: 1.1rem;
   transition: color 0.2s ease;
 }
 
 .social-links a:hover {
-  color: #0077b5;
+  color: #ecf0f1;
 }
 
 /* Кнопки прокрутки */
@@ -147,12 +159,26 @@
 }
 
 /* Адаптивность */
-@media (max-width: 768px) {
-  .scroll-btn {
-    display: none;
-  }
-
+@media (max-width: 1024px) {
   .teachers-scroll-container {
-    padding: 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .teachers-scroll-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-card {
+    flex: 0 0 calc(33.33% - 20px); /* 3 карточки на планшетах */
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-card {
+    flex: 0 0 100%; /* 1 карточка на мобильных устройствах */
   }
 }
