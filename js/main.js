@@ -168,25 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-  // FAQ
-  const faqItems = document.querySelectorAll(".faq-item");
-  if (faqItems) {
-    faqItems.forEach((item) => {
-      const question = item.querySelector(".faq-question");
 
-      question.addEventListener("click", () => {
-        // Закрываем все другие вопросы, если они были открыты
-        faqItems.forEach((innerItem) => {
-          if (innerItem !== item) {
-            innerItem.classList.remove("active");
-          }
-        });
-
-        // Переключаем текущий вопрос
-        item.classList.toggle("active");
-      });
-    });
-  }
   // Teachers
   // Скрипт для прокрутки карточек
 
@@ -210,100 +192,164 @@ document.addEventListener("DOMContentLoaded", function () {
   //     });
   //   });
   // }
-  // =======Teachers-2=======//
-  // Получаем элементы для кнопок и контейнера с карточками
-  // const leftBtn = document.querySelector(".left-btn");
-  // const rightBtn = document.querySelector(".right-btn");
-  // const cardsWrapper = document.querySelector(".teacher-cards-wrapper");
-  // const cards = document.querySelectorAll(".teacher-card");
-let cards
-  if (cards) {
-    // Получаем ширину карточки, чтобы прокручивать на одну карточку
-    const cardWidth = cards[0].offsetWidth + 20; // Ширина карточки с учетом отступа
-    let scrollPosition = 0; // Текущая позиция прокрутки
+  if (window.location.pathname === "/about.html") {
+    console.log(window.location.pathname);
+    // =======Teachers-2=======//
+    // Получаем элементы для кнопок и контейнера с карточками
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+    const cardsWrapper = document.querySelector(".teacher-cards-wrapper");
+    const cards = document.querySelectorAll(".teacher-card");
 
-    // Функция для прокрутки влево
-    leftBtn.addEventListener("click", () => {
-      if (scrollPosition > 0) {
-        scrollPosition -= cardWidth;
-        cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+    if (cards) {
+      // Получаем ширину карточки, чтобы прокручивать на одну карточку
+      const cardWidth = cards[0].offsetWidth + 20; // Ширина карточки с учетом отступа
+      let scrollPosition = 0; // Текущая позиция прокрутки
+
+      // Функция для прокрутки влево
+      leftBtn.addEventListener("click", () => {
+        if (scrollPosition > 0) {
+          scrollPosition -= cardWidth;
+          cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+        }
+      });
+
+      // Функция для прокрутки вправо
+      rightBtn.addEventListener("click", () => {
+        if (scrollPosition < (cards.length - 4) * cardWidth) {
+          // Учитываем 4 видимые карточки
+          scrollPosition += cardWidth;
+          cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+        }
+      });
+    }
+    // FAQ
+    const faqItems = document.querySelectorAll(".faq-item");
+    if (faqItems) {
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+          // Закрываем все другие вопросы, если они были открыты
+          faqItems.forEach((innerItem) => {
+            if (innerItem !== item) {
+              innerItem.classList.remove("active");
+            }
+          });
+
+          // Переключаем текущий вопрос
+          item.classList.toggle("active");
+        });
+      });
+    }
+    const galleryRow = document.getElementById("galleryRow");
+    const btnPrev = document.getElementById("galleryPrev");
+    const btnNext = document.getElementById("galleryNext");
+
+    let autoScroll = true;
+    let scrollSpeed = 0.5;
+    let pauseTimeout;
+    let currentIndex = 0;
+
+    // Функция непрерывной прокрутки
+    function continuousScroll() {
+      if (autoScroll) {
+        galleryRow.scrollLeft += scrollSpeed;
+
+        // Циклическая прокрутка
+        if (
+          galleryRow.scrollLeft + galleryRow.clientWidth >=
+          galleryRow.scrollWidth
+        ) {
+          galleryRow.scrollLeft = 0;
+        }
       }
+      requestAnimationFrame(continuousScroll);
+    }
+
+    // Функция паузы автопрокрутки
+    function pauseAutoScroll() {
+      autoScroll = false;
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(() => {
+        autoScroll = true;
+      }, 4000); // пауза 4 сек
+    }
+
+    // Открытие модального окна
+    function openModal(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = img.src; // Устанавливаем изображение в модале
+      lightbox.style.display = "flex"; // Показываем модальное окно
+      currentIndex = Array.from(
+        document.querySelectorAll(".gallery-card img")
+      ).indexOf(img); // Устанавливаем текущий индекс
+    }
+
+    // Закрытие модального окна
+    function closeModal() {
+      const lightbox = document.getElementById("lightbox");
+      lightbox.style.display = "none"; // Скрываем модальное окно
+    }
+
+    // Изменение изображения в модальном окне
+    function changeImage(direction) {
+      const images = document.querySelectorAll(".gallery-card img");
+      currentIndex = (currentIndex + direction + images.length) % images.length; // Циклическое переключение
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = images[currentIndex].src; // Обновляем изображение
+    }
+
+    // Привязка событий для кнопок
+    btnPrev.addEventListener("click", () => {
+      galleryRow.scrollBy({ left: -300, behavior: "smooth" });
+      pauseAutoScroll();
     });
 
-    // Функция для прокрутки вправо
-    rightBtn.addEventListener("click", () => {
-      if (scrollPosition < (cards.length - 4) * cardWidth) {
-        // Учитываем 4 видимые карточки
-        scrollPosition += cardWidth;
-        cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
-      }
+    btnNext.addEventListener("click", () => {
+      galleryRow.scrollBy({ left: 300, behavior: "smooth" });
+      pauseAutoScroll();
+    });
+
+    // Привязка обработчика события клика к каждому изображению
+    const images = document.querySelectorAll(".gallery-card img");
+    images.forEach((img) => {
+      img.addEventListener("click", () => openModal(img));
+    });
+
+    // Пользовательская прокрутка мышью/тачем
+    galleryRow.addEventListener("mousedown", pauseAutoScroll);
+    galleryRow.addEventListener("touchstart", pauseAutoScroll);
+    galleryRow.addEventListener("wheel", pauseAutoScroll);
+
+    // Закрытие модального окна при клике
+    document
+      .querySelector(".lightbox-close")
+      .addEventListener("click", closeModal);
+
+    // const lightbox = document.getElementById("lightbox").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     if (e.target.id === "lightbox") {
+    //       closeModal();
+    //     }
+    //   },
+    //   { capture: true }
+    // );
+    document
+      .querySelector(".lightbox-nav.left")
+      .addEventListener("click", () => changeImage(-1));
+    document
+      .querySelector(".lightbox-nav.right")
+      .addEventListener("click", () => changeImage(1));
+
+    // Запуск непрерывной прокрутки
+    window.addEventListener("DOMContentLoaded", () => {
+      requestAnimationFrame(continuousScroll);
     });
   }
   // Video-section
-  // const player = new Plyr("#player");
-  // const myVideoBox = document.getElementById("myVideo-placeholder");
-  // const plyrContainer = document.getElementById("plyr-container");
-  // const playButton = document.querySelector(".video-play-button");
-
-  // let player;
-
-  // let hasPlayed = false; // Было ли уже воспроизведение видео
-
-  // function stopVideo() {
-  //   if (player) {
-  //     // player.destroy();
-  //     player.pause();
-  //     player.currentTime = 0;
-  //     player = null;
-  //     plyrContainer.innerHTML = "";
-  //     plyrContainer.style.display = "none";
-  //     myVideoBox.style.display = "block";
-  //   }
-  // }
-
-  // function playVideo() {
-  //   if (!player) {
-  //     // player = new Plyr(iframe, {
-  //     player = new Plyr(plyrContainer, {
-  //       youtube: {
-  //         noCookie: true,
-  //       },
-  //     });
-  //   }
-  //   hasPlayed = true; // Видео запускалось
-  //   myVideoBox.style.display = "none";
-  //   plyrContainer.style.display = "block";
-
-  //   plyrContainer.innerHTML = `
-  //   <iframe
-  //     src="https://www.youtube.com/embed/T6pMF2MBdtM?autoplay=1&rel=0&showinfo=0"
-  //     allowfullscreen
-  //     allow="autoplay; encrypted-media"
-  //   ></iframe>
-  // `;
-
-  //   const iframe = plyrContainer.querySelector("iframe");
-  // }
-  // if (playButton && myVideoBox) {
-  //   playButton.addEventListener("click", playVideo);
-  // }
-  // const observer = new IntersectionObserver(
-  //   (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (!entry.isIntersecting && hasPlayed) {
-  //         stopVideo();
-  //       }
-  //     });
-  //   },
-  //   { threshold: 0.1 }
-  // );
-
-  // // observer.observe(myVideoBox);
-
-  // observer.observe(plyrContainer);
-
-  //=== Видео-2 ====///
-  console.log(1);
 
   const myVideoBox = document.getElementById("myVideo-placeholder");
   const plyrContainer = document.getElementById("plyr-container");
