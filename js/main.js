@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenuBtn.addEventListener("click", toggleMenu);
 
     document.addEventListener("click", (e) => {
-      if (!e.target.closest(".main-nav") && !e.target.closest(".mobile-menu-btn")) {
+      if (
+        !e.target.closest(".main-nav") &&
+        !e.target.closest(".mobile-menu-btn")
+      ) {
         mainNav.classList.remove("active");
         mobileMenuBtn.setAttribute("aria-expanded", "false");
         document.body.classList.remove("no-scroll");
@@ -46,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const element = document.querySelector(target);
     if (element) {
       const headerHeight = header ? header.offsetHeight : 0;
-      const offset = element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      const offset =
+        element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
       window.scrollTo({
         top: offset,
@@ -208,32 +212,33 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
   // =======Teachers-2=======//
   // Получаем элементы для кнопок и контейнера с карточками
-const leftBtn = document.querySelector('.left-btn');
-const rightBtn = document.querySelector('.right-btn');
-const cardsWrapper = document.querySelector('.teacher-cards-wrapper');
-const cards = document.querySelectorAll('.teacher-card');
+  // const leftBtn = document.querySelector(".left-btn");
+  // const rightBtn = document.querySelector(".right-btn");
+  // const cardsWrapper = document.querySelector(".teacher-cards-wrapper");
+  // const cards = document.querySelectorAll(".teacher-card");
+let cards
+  if (cards) {
+    // Получаем ширину карточки, чтобы прокручивать на одну карточку
+    const cardWidth = cards[0].offsetWidth + 20; // Ширина карточки с учетом отступа
+    let scrollPosition = 0; // Текущая позиция прокрутки
 
-// Получаем ширину карточки, чтобы прокручивать на одну карточку
-const cardWidth = cards[0].offsetWidth + 20; // Ширина карточки с учетом отступа
+    // Функция для прокрутки влево
+    leftBtn.addEventListener("click", () => {
+      if (scrollPosition > 0) {
+        scrollPosition -= cardWidth;
+        cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+      }
+    });
 
-let scrollPosition = 0; // Текущая позиция прокрутки
-
-// Функция для прокрутки влево
-leftBtn.addEventListener('click', () => {
-  if (scrollPosition > 0) {
-    scrollPosition -= cardWidth;
-    cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+    // Функция для прокрутки вправо
+    rightBtn.addEventListener("click", () => {
+      if (scrollPosition < (cards.length - 4) * cardWidth) {
+        // Учитываем 4 видимые карточки
+        scrollPosition += cardWidth;
+        cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+      }
+    });
   }
-});
-
-// Функция для прокрутки вправо
-rightBtn.addEventListener('click', () => {
-  if (scrollPosition < (cards.length - 4) * cardWidth) { // Учитываем 4 видимые карточки
-    scrollPosition += cardWidth;
-    cardsWrapper.style.transform = `translateX(-${scrollPosition}px)`;
-  }
-});
-
   // Video-section
   // const player = new Plyr("#player");
   // const myVideoBox = document.getElementById("myVideo-placeholder");
@@ -298,51 +303,54 @@ rightBtn.addEventListener('click', () => {
   // observer.observe(plyrContainer);
 
   //=== Видео-2 ====///
+  console.log(1);
+
   const myVideoBox = document.getElementById("myVideo-placeholder");
-const plyrContainer = document.getElementById("plyr-container");
-const playButton = document.querySelector(".video-play-button");
+  const plyrContainer = document.getElementById("plyr-container");
+  const playButton = document.querySelector(".video-play-button");
 
-let player = new Plyr('#player', {
-  youtube: {
-    noCookie: true,
-  },
-});
+  let player = new Plyr("#player", {
+    youtube: {
+      noCookie: true,
+    },
+  });
 
-let hasPlayed = false;
+  let hasPlayed = false;
 
-function playVideo() {
-  myVideoBox.style.display = "none";
-  plyrContainer.style.display = "block";
+  function playVideo() {
+    console.log(1);
 
-  player.play();
-  hasPlayed = true;
-}
+    myVideoBox.style.display = "none";
+    plyrContainer.style.display = "block";
 
-function pauseVideo() {
-  if (player && hasPlayed) {
-    player.pause();
+    player.play();
+    hasPlayed = true;
   }
-}
 
-if (playButton && myVideoBox) {
-  playButton.addEventListener("click", playVideo);
-}
+  function pauseVideo() {
+    if (player && hasPlayed) {
+      player.pause();
+    }
+  }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      // Если видео вышло за пределы экрана — ставим на паузу
-      if (!entry.isIntersecting && hasPlayed) {
-        pauseVideo();
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+  if (playButton && myVideoBox) {
+    playButton.addEventListener("click", playVideo);
+  }
 
-// Наблюдаем за plyrContainer
-observer.observe(plyrContainer);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // Если видео вышло за пределы экрана — ставим на паузу
+        if (!entry.isIntersecting && hasPlayed) {
+          pauseVideo();
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
+  // Наблюдаем за plyrContainer
+  observer.observe(plyrContainer);
 });
 
 // --- Service Worker ---
