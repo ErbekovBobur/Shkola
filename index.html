@@ -1,555 +1,515 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием. Запишитесь на экскурсию."
-    />
-    <meta name="theme-color" content="#1e88e5" />
-    <meta property="og:title" content="School Academy | Ташкент" />
-    <meta
-      property="og:description"
-      content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием."
-    />
-    <meta property="og:image" content="https://erbekovbobur.github.io/Shkola/img/logo-uz.png" />
-    <meta property="og:image:width" content="856" />
-    <meta property="og:image:height" content="944" />
-    <meta property="og:url" content="https://erbekovbobur.github.io/Shkola/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="School Academy" />
-    <meta property="og:locale" content="ru_RU" />
-    <!-- Если есть узбекская версия, добавьте uz_UZ -->
-    <title>School Academy | Ташкент</title>
 
-    <!--  Иконка и манифест -->
-    <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием. Запишитесь на экскурсию." />
+  <meta name="theme-color" content="#1e88e5" />
+  <meta property="og:title" content="School Academy | Ташкент" />
+  <meta property="og:description"
+    content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием." />
+  <meta property="og:image" content="https://erbekovbobur.github.io/Shkola/img/logo-uz.png" />
+  <meta property="og:image:width" content="856" />
+  <meta property="og:image:height" content="944" />
+  <meta property="og:url" content="https://erbekovbobur.github.io/Shkola/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="School Academy" />
+  <meta property="og:locale" content="ru_RU" />
 
-    <!--  Шрифты -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <!-- Если есть узбекская версия, добавьте uz_UZ -->
+  <title>School Academy | Ташкент</title>
 
-    <!--  Preload важнейших ресурсов -->
-    <link rel="preload" href="img/logo-uz.png" as="image" />
-    <link rel="icon" href="img/ico/favicon-16x16.png" sizes="16x16" type="image/png" />
-    <link rel="icon" href="img/ico/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <!--  Иконка и манифест -->
+  <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/ico/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="img/ico/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="manifest" href="manifest.webmanifest" />
 
-    <link rel="preload" href="css/style.css" as="style" />
+  <!--  Шрифты -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 
-    <!-- Стили -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  <!--  Preload важнейших ресурсов -->
+  <link rel="preload" href="img/logo-uz.png" as="image" />
+
+  <link rel="preload" href="css/style.css" as="style" />
+
+  <!-- Стили -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous" /> -->
-    <link rel="dns-prefetch" href="https://cdn.plyr.io" />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" crossorigin="anonymous" />
+  <link rel="dns-prefetch" href="https://cdn.plyr.io" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="css/video.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <!-- <link rel="stylesheet" href="./css/phone.css" > -->
-    <!-- <link rel="stylesheet" href="./css/lang.css" > -->
+  <link rel="stylesheet" href="css/video.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <!-- <link rel="stylesheet" href="./css/phone.css" > -->
+  <!-- <link rel="stylesheet" href="./css/lang.css" > -->
 
-    <!-- WOW.js -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="js/main.js" defer></script>
-    <script src="js/language.js" defer></script>
-  </head>
+  <!-- WOW.js -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer ></script>
 
-  <body>
-    <!-- Шапка -->
-    <header class="sticky-header">
-      <div class="header-container">
-        <div class="logo-container">
-          <img src="img/ico/android-chrome-512x512.png" alt="School Academy" class="logo" />
-          <div class="school-info">
-            <h1 data-translate="school-name">School Academy</h1>
-            <p data-translate="address">Ташкент, Юнусабадский район</p>
-          </div>
+  <script src="js/main.js" defer></script>
+  <script src="js/language.js" defer></script>
+</head>
+
+<body>
+  <!-- Шапка -->
+  <header class="sticky-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="img/ico/android-chrome-512x512.png" alt="School Academy" class="logo" />
+        <div class="school-info">
+          <h1 data-translate="school-name">School Academy</h1>
+          <p data-translate="address">Ташкент, Юнусабадский район</p>
         </div>
-        <nav class="main-nav">
-          <ul>
-            <li>
-              <a data-translate="nav-home" href="index.html" class="active nav-link">Главная</a>
-            </li>
-
-            <li class="dropdown">
-              <a data-translate="nav-about" href="about.html" class="nav-link"
-                >О школе <i class="fas fa-chevron-down dropdown-icon"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a data-translate="nav-program" href="program.html" class="nav-link"
-                >Учебные программы<i class="fas fa-chevron-down dropdown-icon"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link"
-                    >Начальная школа</a
-                  >
-                </li>
-                <li>
-                  <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link"
-                    >Средняя школа</a
-                  >
-                </li>
-                <li>
-                  <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link"
-                    >Дополнительные занятия</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
-          </ul>
-        </nav>
-
-        <div class="header-right">
-          <!-- Переключатель языка на этот код -->
-          <div class="language-switcher">
-            <button class="lang-btn active" data-lang="ru" aria-label="Русский язык">РУ</button>
-            <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
-            <span class="lang-slider"></span>
-          </div>
-          <!-- ========= Телефон ====== -->
-          <div class="minimal-phone">
-            <div class="phone-pulse-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67 </a>
-          </div>
-        </div>
-
-        <button class="mobile-menu-btn">
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-        </button>
       </div>
-    </header>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li>
+            <a data-translate="nav-home" href="index.html" class="active nav-link">Главная</a>
+          </li>
 
-    <!-- Основной контент -->
-    <main class="content-wrapper">
-      <!-- Баннер -->
-      <section class="hero-banner">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
-          <h1 class="wow fadeInUp" data-wow-delay="0.6s">
-            <span class="banner-content-title" data-translate="hero-title">Качественное образование</span>
-            <span class="banner-content-accent" data-translate="hero-title-accent">в Ташкенте</span>
-          </h1>
-          <a
-            href="https://t.me/Shkolnayakademiya"
-            class="cta-button wow fadeInUp"
-            data-translate="hero-button"
-            data-wow-delay="0.6s"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Записаться на экскурсию
+          <li class="dropdown">
+            <a data-translate="nav-about" href="about.html" class="nav-link">О школе <i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-translate="nav-program" href="program.html" class="nav-link">Учебные программы<i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link">Начальная
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">Средняя
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Дополнительные
+                  занятия</a>
+              </li>
+            </ul>
+          </li>
+          <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <!-- Переключатель языка на этот код -->
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="ru" aria-label="Русский язык" lang="ru">RU</button>
+          <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili" lang="uz">UZ</button>
+          <span class="lang-slider"></span>
+        </div>
+        <!-- ========= Телефон ====== -->
+        <div class="minimal-phone">
+          <div class="phone-pulse-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <a href="tel:+998711234567" class="bouncing-phone-number" aria-label="Позвонить: +998 (71) 123-45-67">+998
+            (71) 123-45-67
           </a>
         </div>
-        <div class="scroll-down">
-          <div class="mouse">
-            <div class="scroller"></div>
-          </div>
-        </div>
-      </section>
-      <section class="video-section">
-        <div class="container">
-          <div class="section-header video-section__title wow zoomIn" data-key="video_title">
-            <h2>Школьная академия</h2>
-            <div class="divider"></div>
-            <p class="video-section__descr" data-key="video_description">Наши ключевые преимущества</p>
-          </div>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Открыть мобильное меню" aria-expanded="false">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+  </header>
 
-          <!-- Заглушка -->
-          <div
-            class="video-placeholder"
-            id="myVideo-placeholder"
-            style="position: relative; cursor: pointer; max-width: 100%; margin: 0 auto"
-          >
-            <div class="banner-overlay"></div>
-            <img src="img/Poster-video.avif" alt="Постер видео" style="width: 100%; height: auto; display: block" />
-            <button class="video-play-button" aria-label="Воспроизвести видео">▶</button>
-          </div>
-
-          <!-- Видео (изначально скрыто) -->
-          <div id="plyr-container" style="display: none">
-            <div class="plyr__video-embed" id="player">
-              <iframe
-                src="https://www.youtube.com/embed/T6pMF2MBdtM?rel=0&showinfo=0"
-                allowfullscreen
-                allow="autoplay; encrypted-media"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Поему мы -->
-      <section class="why-us-section section-padding">
-        <div class="container">
-          <div class="section-header wow zoomIn">
-            <h2>Почему выбирают нас?</h2>
-            <div class="divider"></div>
-            <p>Наши ключевые преимущества</p>
-          </div>
-
-          <!-- Блок 1 -->
-          <div class="why-us-row wow fadeInLeft">
-            <div class="why-us-image">
-              <img src="img/sections/why-us-personal.avif" alt="Индивидуальная траектория обучения" loading="lazy" />
-            </div>
-            <div class="why-us-text">
-              <h3>Индивидуальная образовательная программа</h3>
-              <p>
-                Каждый ученик — уникален. Мы выстраиваем персонализированную образовательную стратегию, адаптированную
-                под уровень знаний, темп восприятия и интересы ребёнка. Наши педагоги используют гибкие методики,
-                позволяющие раскрывать потенциал учеников без стресса и давления. Это помогает сохранить мотивацию к
-                обучению и прививает уверенность в собственных силах.
-              </p>
-            </div>
-          </div>
-
-          <!-- Блок 2 -->
-          <div class="why-us-row reverse wow fadeInRight">
-            <div class="why-us-image">
-              <img src="img/sections/why-us-program.avif" alt="Актуальное расписание занятий" loading="lazy" />
-            </div>
-            <div class="why-us-text">
-              <h3>С любовью к каждому аспекту развития</h3>
-              <p>
-                В нашей школе особое внимание уделяется гармоничному развитию ребёнка. Под руководством опытного
-                методиста, каждое занятие выстроено так, чтобы дети получали не только знания, но и росли психологически
-                устойчивыми, активными и любознательными. Учебный план направлен на развитие интеллекта, физической
-                активности и эмоционального интеллекта. Актуальное расписание занятий доступно родителям в
-                онлайн-формате через социальные сети.
-              </p>
-            </div>
-          </div>
-
-          <!-- Блок 3 -->
-          <div class="why-us-row wow fadeInLeft">
-            <div class="why-us-image">
-              <img src="img/sections/why-us-eats.png" alt="Полноценное питание в течение дня" loading="lazy" />
-            </div>
-            <div class="why-us-text">
-              <h3>Полноценное питание в течение дня</h3>
-              <p>
-                Здоровое питание — один из важнейших факторов успешной учёбы. Мы предлагаем пятиразовое меню,
-                составленное диетологами с учётом возрастных норм. В рационе — свежие овощи, фрукты, крупы, мясо и
-                молочные продукты. Всё приготовлено в школьной кухне, с контролем качества на каждом этапе. Особое
-                внимание уделяется пищевым аллергиям и индивидуальным особенностям детей.
-              </p>
-            </div>
-          </div>
-
-          <!-- Блок 4 -->
-          <div class="why-us-row reverse wow fadeInRight">
-            <div class="why-us-image">
-              <img src="img/sections/why-us-early.png" alt="Обучение с раннего возраста до выпускного" loading="lazy" />
-            </div>
-            <div class="why-us-text">
-              <h3>Обучение с раннего возраста до выпускного</h3>
-              <p>
-                Наш образовательный путь начинается с двух лет и продолжается до окончания школы. Это обеспечивает
-                стабильность, преемственность программ и глубокую адаптацию к школьной среде. Дети растут в знакомой
-                атмосфере, а педагоги наблюдают развитие каждого ученика на всех этапах. Такой подход способствует
-                академической устойчивости и формированию полноценной личности.
-              </p>
-            </div>
-          </div>
-
-          <!-- Блок 5 -->
-          <div class="why-us-row wow fadeInLeft">
-            <div class="why-us-image">
-              <img src="img/sections/why-us-admission.avif" alt="Комплексная подготовка к поступлению" loading="lazy" />
-            </div>
-            <div class="why-us-text">
-              <h3>Комплексная подготовка к поступлению</h3>
-              <p>
-                Мы сопровождаем старшеклассников на всех этапах подготовки к поступлению — от профориентации до подачи
-                документов. Поддержка включает индивидуальные консультации, подготовку к экзаменам (SAT, IELTS,
-                A-Level), написание мотивационных писем, тренировку интервью. Благодаря системному подходу наши
-                выпускники поступают в лучшие университеты Европы, США и Азии.
-              </p>
-            </div>
-          </div>
-
-          <!-- Блок 6 -->
-          <div class="why-us-row reverse wow fadeInRight">
-            <div class="why-us-image">
-              <img src="img/sections/why-us-safe.png" alt="Комфорт и безопасность — приоритет" loading="lazy" />
-            </div>
-            <div class="why-us-text">
-              <h3>Комфорт и безопасность — приоритет</h3>
-              <p>
-                Мы обеспечиваем полную безопасность на территории школы: круглосуточная охрана, система видеонаблюдения,
-                контроль доступа. Есть медицинский кабинет с дежурным персоналом, регулярные проверки санитарных норм и
-                протоколы реагирования на ЧС. Безопасная и комфортная среда — основа уверенности родителей и спокойствия
-                учеников.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- О школе -->
-      <section class="about-section section-padding">
-        <div class="container">
-          <div class="section-header wow zoomIn">
-            <h2>Преимущества обучения в нашей школе</h2>
-            <div class="divider"></div>
-            <p>Уникальное пространство для развития</p>
-          </div>
-
-          <div class="features-grid">
-            <div class="feature-card wow fadeIn" data-wow-delay="0.2s">
-              <div class="feature-icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <h3>Индивидуальный подход</h3>
-              <p>Программы адаптированы под способности каждого ученика</p>
-            </div>
-
-            <div class="feature-card wow fadeIn" data-wow-delay="0.4s">
-              <div class="feature-icon">
-                <i class="fas fa-laptop-code"></i>
-              </div>
-              <h3>Комплексное развитие личности</h3>
-              <p>
-                Особый акцент на гармоничное и многогранное развитие каждого ребенка. Дети в течение дня получают
-                полноценное физическое, психологическое и интеллектуальное развитие.
-              </p>
-            </div>
-
-            <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
-              <div class="feature-icon">
-                <i class="fas fa-utensils"></i>
-              </div>
-              <h3>Пятиразовое питание</h3>
-              <p>Мы заботимся о здоровой атмосфере и том, чтобы школьники правильно и вкусно питались.</p>
-            </div>
-
-            <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <h3>Образование для детей от 2 до 18 лет.</h3>
-              <p>
-                Образование в школе начинается с двух лет и продолжается до совершеннолетия, обеспечивая ребенку прочную
-                академическую базу.
-              </p>
-            </div>
-
-            <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
-              <div class="feature-icon">
-                <i class="fas fa-medal"></i>
-              </div>
-              <h3>Подготовка в вузы</h3>
-              <p>
-                Мы помогаем школьникам выбрать профессию, университет и пройти все этапы поступления. Выпускники успешно
-                поступают в ведущие вузы мира.
-              </p>
-            </div>
-
-            <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
-              <div class="feature-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h3>Безопасная территория</h3>
-              <p>Мы заботимся о безопасности каждого ученика и учителя</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Программы -->
-      <section class="programs-unique section-padding">
-        <div class="container">
-          <div class="section-header wow zoomIn">
-            <h2>Образовательные программы</h2>
-            <div class="divider"></div>
-            <p>Обучение на каждом этапе детства — от первого шага до выпускного бала</p>
-          </div>
-
-          <div class="programs-grid">
-            <div class="program-card wow fadeIn" data-wow-delay="0.2s">
-              <h3>Детский сад</h3>
-              <p>Забота, игра и первые шаги в мир знаний — программа для детей от 2 до 6 лет.</p>
-            </div>
-            <div class="program-card wow fadeIn" data-wow-delay="0.4s">
-              <h3>Начальная школа</h3>
-              <p>Развитие мышления, творчества и коммуникативных навыков у детей 6–11 лет.</p>
-            </div>
-            <div class="program-card wow fadeIn" data-wow-delay="0.6s">
-              <h3>Средняя школа</h3>
-              <p>Глубокое изучение предметов, подготовка к экзаменам и выбор будущего пути.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Дейстия -->
-      <section class="cta-wow section-padding">
-        <div class="container">
-          <div class="cta-box wow fadeIn">
-            <h2>Посетите нашу школу</h2>
-            <p>Запишитесь на экскурсию, чтобы увидеть, как проходят занятия и познакомиться с преподавателями.</p>
-            <a href="#" class="cta-wow-btn">Записаться</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Новости -->
-      <section class="news-unique section-padding">
-        <div class="container">
-          <div class="section-header wow fadeIn">
-            <h2>Новости и события</h2>
-            <div class="divider"></div>
-            <p>Самое свежее из жизни нашей школы</p>
-          </div>
-
-          <div class="news-grid">
-            <div class="news-card wow fadeIn" data-wow-delay="0.2s">
-              <div class="news-thumb">
-                <img src="img/news1.jpg" alt="Школьная ярмарка" loading="lazy" />
-                <span class="news-date">01.05.2025</span>
-              </div>
-              <div class="news-content">
-                <h3>Школьная ярмарка 2025</h3>
-                <p>Праздник знаний и творчества с участием учеников, родителей и преподавателей.</p>
-                <a href="#">Подробнее</a>
-              </div>
-            </div>
-
-            <div class="news-card wow fadeIn" data-wow-delay="0.4s">
-              <div class="news-thumb">
-                <img src="img/news2.jpg" alt="Олимпиада" loading="lazy" />
-                <span class="news-date">18.04.2025</span>
-              </div>
-              <div class="news-content">
-                <h3>Победа на олимпиаде</h3>
-                <p>Наши ученики заняли 1-е место на региональной олимпиаде по математике.</p>
-                <a href="#">Подробнее</a>
-              </div>
-            </div>
-
-            <div class="news-card wow fadeIn" data-wow-delay="0.6s">
-              <div class="news-thumb">
-                <img src="img/news1.jpg" alt="Новый корпус" loading="lazy" />
-                <span class="news-date">05.03.2025</span>
-              </div>
-              <div class="news-content">
-                <h3>Открытие нового корпуса</h3>
-                <p>Современные лаборатории, медиацентр и коворкинги для учеников средней школы.</p>
-                <a href="#">Подробнее</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Подвал -->
-    <footer class="main-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>Часы работы</h3>
-            <p>Пн-Пт: 8:00 - 18:00</p>
-            <!-- <p>Сб: 9:00 - 14:00</p> -->
-            <p>Вс: выходной</p>
-          </div>
-          <div class="footer-column">
-            <h3>Адрес</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
-          </div>
-          <div class="footer-column">
-            <h3>Контакты</h3>
-            <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
-            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
-          </div>
-          <div class="footer-column">
-            <h3>Соцсети</h3>
-            <div class="social-links">
-              <a href="https://t.me/Shkolnayakademiya"><i class="fab fa-telegram"></i></a>
-              <a href="https://www.instagram.com/shkolnayakademiya/"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-            </div>
-          </div>
-          <!-- <div class="footer-column"></div> -->
-        </div>
-        <!-- <div class="footer-column" style="position: relative"> -->
-
-        <div class="footer-map">
-          <h3>Наша локация</h3>
-          <div class="divider"></div>
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
-            width="702"
-            height="579"
-            frameborder="0"
-          ></iframe>
+  <!-- Основной контент -->
+  <main class="content-wrapper">
+    <!-- Баннер -->
+    <section class="hero-banner">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <h1 class="wow fadeInUp" data-wow-delay="0.6s">
+          <span class="banner-content-title" data-translate="hero-title">Качественное образование</span>
+          <span class="banner-content-accent" data-translate="hero-title-accent">в Ташкенте</span>
+        </h1>
+        <a href="https://t.me/Shkolnayakademiya" class="cta-button wow fadeInUp" data-translate="hero-button"
+          data-wow-delay="0.6s" target="_blank" rel="noopener noreferrer" aria-label="Записаться на экскурсию">
+          Записаться на экскурсию
+        </a>
+      </div>
+      <div class="scroll-down">
+        <div class="mouse">
+          <div class="scroller"></div>
         </div>
       </div>
-      <div class="copyright">
-        <p>© 2025 School Academy. Все права защищены.</p>
-        <!-- Yandex Metrika -->
-        <!-- <noscript>
+    </section>
+    <section class="video-section">
+      <div class="container">
+        <div class="section-header video-section__title wow zoomIn" data-key="video_title">
+          <h2>Школьная академия</h2>
+          <div class="divider"></div>
+          <p class="video-section__descr" data-key="video_description">Наши ключевые преимущества</p>
+        </div>
+
+        <!-- Заглушка -->
+        <div class="video-placeholder" id="myVideo-placeholder"
+          style="position: relative; cursor: pointer; max-width: 100%; margin: 0 auto">
+          <div class="banner-overlay"></div>
+          <img src="img/Poster-video.avif" alt="Школьная академия — видео о школе"
+            style="width: 100%; height: auto; display: block" />
+          <button class="video-play-button" aria-label="Воспроизвести видео">▶</button>
+        </div>
+
+        <!-- Видео (изначально скрыто) -->
+        <div id="plyr-container" style="display: none">
+          <div class="plyr__video-embed" id="player">
+            <iframe src="https://www.youtube.com/embed/T6pMF2MBdtM?rel=0&showinfo=0" allowfullscreen
+              allow="autoplay; encrypted-media" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Поему мы -->
+    <section class="why-us-section section-padding">
+      <div class="container">
+        <div class="section-header wow zoomIn">
+          <h2>Почему выбирают нас?</h2>
+          <div class="divider"></div>
+          <p>Наши ключевые преимущества</p>
+        </div>
+
+        <!-- Блок 1 -->
+        <div class="why-us-row wow fadeInLeft">
+          <div class="why-us-image">
+            <img src="img/sections/why-us-personal.avif" alt="Индивидуальная траектория обучения" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Индивидуальная образовательная программа</h3>
+            <p>
+              Каждый ученик — уникален. Мы выстраиваем персонализированную образовательную стратегию, адаптированную
+              под уровень знаний, темп восприятия и интересы ребёнка. Наши педагоги используют гибкие методики,
+              позволяющие раскрывать потенциал учеников без стресса и давления. Это помогает сохранить мотивацию к
+              обучению и прививает уверенность в собственных силах.
+            </p>
+          </div>
+        </div>
+
+        <!-- Блок 2 -->
+        <div class="why-us-row reverse wow fadeInRight">
+          <div class="why-us-image">
+            <img src="img/sections/why-us-program.avif" alt="Актуальное расписание занятий" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>С любовью к каждому аспекту развития</h3>
+            <p>
+              В нашей школе особое внимание уделяется гармоничному развитию ребёнка. Под руководством опытного
+              методиста, каждое занятие выстроено так, чтобы дети получали не только знания, но и росли психологически
+              устойчивыми, активными и любознательными. Учебный план направлен на развитие интеллекта, физической
+              активности и эмоционального интеллекта. Актуальное расписание занятий доступно родителям в
+              онлайн-формате через социальные сети.
+            </p>
+          </div>
+        </div>
+
+        <!-- Блок 3 -->
+        <div class="why-us-row wow fadeInLeft">
+          <div class="why-us-image">
+            <img src="img/sections/why-us-eats.png" alt="Полноценное питание в течение дня" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Полноценное питание в течение дня</h3>
+            <p>
+              Здоровое питание — один из важнейших факторов успешной учёбы. Мы предлагаем пятиразовое меню,
+              составленное диетологами с учётом возрастных норм. В рационе — свежие овощи, фрукты, крупы, мясо и
+              молочные продукты. Всё приготовлено в школьной кухне, с контролем качества на каждом этапе. Особое
+              внимание уделяется пищевым аллергиям и индивидуальным особенностям детей.
+            </p>
+          </div>
+        </div>
+
+        <!-- Блок 4 -->
+        <div class="why-us-row reverse wow fadeInRight">
+          <div class="why-us-image">
+            <img src="img/sections/why-us-early.png" alt="Обучение с раннего возраста до выпускного" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Обучение с раннего возраста до выпускного</h3>
+            <p>
+              Наш образовательный путь начинается с двух лет и продолжается до окончания школы. Это обеспечивает
+              стабильность, преемственность программ и глубокую адаптацию к школьной среде. Дети растут в знакомой
+              атмосфере, а педагоги наблюдают развитие каждого ученика на всех этапах. Такой подход способствует
+              академической устойчивости и формированию полноценной личности.
+            </p>
+          </div>
+        </div>
+
+        <!-- Блок 5 -->
+        <div class="why-us-row wow fadeInLeft">
+          <div class="why-us-image">
+            <img src="img/sections/why-us-admission.avif" alt="Комплексная подготовка к поступлению" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Комплексная подготовка к поступлению</h3>
+            <p>
+              Мы сопровождаем старшеклассников на всех этапах подготовки к поступлению — от профориентации до подачи
+              документов. Поддержка включает индивидуальные консультации, подготовку к экзаменам (SAT, IELTS,
+              A-Level), написание мотивационных писем, тренировку интервью. Благодаря системному подходу наши
+              выпускники поступают в лучшие университеты Европы, США и Азии.
+            </p>
+          </div>
+        </div>
+
+        <!-- Блок 6 -->
+        <div class="why-us-row reverse wow fadeInRight">
+          <div class="why-us-image">
+            <img src="img/sections/why-us-safe.png" alt="Комфорт и безопасность — приоритет" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Комфорт и безопасность — приоритет</h3>
+            <p>
+              Мы обеспечиваем полную безопасность на территории школы: круглосуточная охрана, система видеонаблюдения,
+              контроль доступа. Есть медицинский кабинет с дежурным персоналом, регулярные проверки санитарных норм и
+              протоколы реагирования на ЧС. Безопасная и комфортная среда — основа уверенности родителей и спокойствия
+              учеников.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- О школе -->
+    <section class="about-section section-padding">
+      <div class="container">
+        <div class="section-header wow zoomIn">
+          <h2>Преимущества обучения в нашей школе</h2>
+          <div class="divider"></div>
+          <p>Уникальное пространство для развития</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card wow fadeIn" data-wow-delay="0.2s">
+            <div class="feature-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Индивидуальный подход</h3>
+            <p>Программы адаптированы под способности каждого ученика</p>
+          </div>
+
+          <div class="feature-card wow fadeIn" data-wow-delay="0.4s">
+            <div class="feature-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Комплексное развитие личности</h3>
+            <p>
+              Особый акцент на гармоничное и многогранное развитие каждого ребенка. Дети в течение дня получают
+              полноценное физическое, психологическое и интеллектуальное развитие.
+            </p>
+          </div>
+
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h3>Пятиразовое питание</h3>
+            <p>Мы заботимся о здоровой атмосфере и том, чтобы школьники правильно и вкусно питались.</p>
+          </div>
+
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Образование для детей от 2 до 18 лет.</h3>
+            <p>
+              Образование в школе начинается с двух лет и продолжается до совершеннолетия, обеспечивая ребенку прочную
+              академическую базу.
+            </p>
+          </div>
+
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3>Подготовка в вузы</h3>
+            <p>
+              Мы помогаем школьникам выбрать профессию, университет и пройти все этапы поступления. Выпускники успешно
+              поступают в ведущие вузы мира.
+            </p>
+          </div>
+
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Безопасная территория</h3>
+            <p>Мы заботимся о безопасности каждого ученика и учителя</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Программы -->
+    <section class="programs-unique section-padding">
+      <div class="container">
+        <div class="section-header wow zoomIn">
+          <h2>Образовательные программы</h2>
+          <div class="divider"></div>
+          <p>Обучение на каждом этапе детства — от первого шага до выпускного бала</p>
+        </div>
+
+        <div class="programs-grid">
+          <div class="program-card wow fadeIn" data-wow-delay="0.2s">
+            <h3>Детский сад</h3>
+            <p>Забота, игра и первые шаги в мир знаний — программа для детей от 2 до 6 лет.</p>
+          </div>
+          <div class="program-card wow fadeIn" data-wow-delay="0.4s">
+            <h3>Начальная школа</h3>
+            <p>Развитие мышления, творчества и коммуникативных навыков у детей 6–11 лет.</p>
+          </div>
+          <div class="program-card wow fadeIn" data-wow-delay="0.6s">
+            <h3>Средняя школа</h3>
+            <p>Глубокое изучение предметов, подготовка к экзаменам и выбор будущего пути.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Дейстия -->
+    <section class="cta-wow section-padding">
+      <div class="container">
+        <div class="cta-box wow fadeIn">
+          <h2>Посетите нашу школу</h2>
+          <p>Запишитесь на экскурсию, чтобы увидеть, как проходят занятия и познакомиться с преподавателями.</p>
+          <a href="#" class="cta-wow-btn" aria-label="Записаться на экскурсию по школе">Записаться</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Новости -->
+    <section class="news-unique section-padding">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Новости и события</h2>
+          <div class="divider"></div>
+          <p>Самое свежее из жизни нашей школы</p>
+        </div>
+
+        <div class="news-grid">
+          <div class="news-card wow fadeIn" data-wow-delay="0.2s">
+            <div class="news-thumb">
+              <img src="img/news1.jpg" alt="Школьная ярмарка" loading="lazy" />
+              <span class="news-date">01.05.2025</span>
+            </div>
+            <div class="news-content">
+              <h3>Школьная ярмарка 2025</h3>
+              <p>Праздник знаний и творчества с участием учеников, родителей и преподавателей.</p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="news-card wow fadeIn" data-wow-delay="0.4s">
+            <div class="news-thumb">
+              <img src="img/news2.jpg" alt="Олимпиада" loading="lazy" />
+              <span class="news-date">18.04.2025</span>
+            </div>
+            <div class="news-content">
+              <h3>Победа на олимпиаде</h3>
+              <p>Наши ученики заняли 1-е место на региональной олимпиаде по математике.</p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="news-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="news-thumb">
+              <img src="img/news1.jpg" alt="Новый корпус" loading="lazy" />
+              <span class="news-date">05.03.2025</span>
+            </div>
+            <div class="news-content">
+              <h3>Открытие нового корпуса</h3>
+              <p>Современные лаборатории, медиацентр и коворкинги для учеников средней школы.</p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Часы работы</h3>
+          <p>Пн-Пт: 8:00 - 18:00</p>
+          <p>Сб: выходной</p>
+          <p>Вс: выходной</p>
+        </div>
+        <div class="footer-column">
+          <h3>Адрес</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
+        </div>
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <p>
+            <i class="fas fa-phone-alt"></i><a href="tel:+998711234567" aria-label="Позвонить: +998 (71) 123-45-67">+998
+              (71) 123-45-67 </a>
+          </p>
+          <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+        </div>
+        <div class="footer-column">
+          <h3>Соцсети</h3>
+          <div class="social-links">
+            <a href="https://t.me/Shkolnayakademiya" aria-label="Перейти в Telegram" title="Наш Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/shkolnayakademiya/" aria-label="Перейти в Instagram" title="Наш Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU" aria-label="Перейти в Facebook" title="Наш Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>        
+      </div>
+      <div class="footer-map">
+        <h3>Наша локация</h3>
+        <div class="divider"></div>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
+          width="702" height="579" frameborder="0" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 School Academy. Все права защищены.</p>
+      <!-- Yandex Metrika -->
+      <!-- <noscript>
             <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" ></div>
           </noscript> -->
-      </div>
-    </footer>
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-      new WOW({
-        boxClass: "wow",
-        animateClass: "animated",
-        offset: 50,
-        mobile: true,
-      }).init();
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-22ZG2NQ22L"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-22ZG2NQ22L");
-    </script>
-    <script src="https://unpkg.com/eruda"></script>
-    <script src="js/ya.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22ZG2NQ22L"></script>  
+  <script src="https://unpkg.com/eruda"></script>
+  <script src="js/ya.js"></script>
+</body>
 </html>

@@ -1,6 +1,22 @@
 console.log("main.js is start");
 
 document.addEventListener("DOMContentLoaded", function () {
+  //  wow анимации
+  new WOW({
+    boxClass: "wow",
+    animateClass: "animated",
+    offset: 50,
+    mobile: true,
+  }).init();
+  // google analitics
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-22ZG2NQ22L");
+
+  // консоль eruda
   const consol = document.querySelector('p[data-translate="address"]');
   if (consol) {
     let erudaActive = false;
@@ -33,10 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenuBtn.addEventListener("click", toggleMenu);
 
     document.addEventListener("click", (e) => {
-      if (
-        !e.target.closest(".main-nav") &&
-        !e.target.closest(".mobile-menu-btn")
-      ) {
+      if (!e.target.closest(".main-nav") && !e.target.closest(".mobile-menu-btn")) {
         mainNav.classList.remove("active");
         mobileMenuBtn.setAttribute("aria-expanded", "false");
         document.body.classList.remove("no-scroll");
@@ -49,8 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const element = document.querySelector(target);
     if (element) {
       const headerHeight = header ? header.offsetHeight : 0;
-      const offset =
-        element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      const offset = element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
       window.scrollTo({
         top: offset,
@@ -257,10 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
         galleryRow.scrollLeft += scrollSpeed;
 
         // Циклическая прокрутка
-        if (
-          galleryRow.scrollLeft + galleryRow.clientWidth >=
-          galleryRow.scrollWidth
-        ) {
+        if (galleryRow.scrollLeft + galleryRow.clientWidth >= galleryRow.scrollWidth) {
           galleryRow.scrollLeft = 0;
         }
       }
@@ -282,9 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const lightboxImg = document.getElementById("lightbox-img");
       lightboxImg.src = img.src; // Устанавливаем изображение в модале
       lightbox.style.display = "flex"; // Показываем модальное окно
-      currentIndex = Array.from(
-        document.querySelectorAll(".gallery-card img")
-      ).indexOf(img); // Устанавливаем текущий индекс
+      currentIndex = Array.from(document.querySelectorAll(".gallery-card img")).indexOf(img); // Устанавливаем текущий индекс
     }
 
     // Закрытие модального окна
@@ -324,9 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryRow.addEventListener("wheel", pauseAutoScroll);
 
     // Закрытие модального окна при клике
-    document
-      .querySelector(".lightbox-close")
-      .addEventListener("click", closeModal);
+    document.querySelector(".lightbox-close").addEventListener("click", closeModal);
 
     // const lightbox = document.getElementById("lightbox").addEventListener(
     //   "click",
@@ -337,12 +342,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //   },
     //   { capture: true }
     // );
-    document
-      .querySelector(".lightbox-nav.left")
-      .addEventListener("click", () => changeImage(-1));
-    document
-      .querySelector(".lightbox-nav.right")
-      .addEventListener("click", () => changeImage(1));
+    document.querySelector(".lightbox-nav.left").addEventListener("click", () => changeImage(-1));
+    document.querySelector(".lightbox-nav.right").addEventListener("click", () => changeImage(1));
 
     // Запуск непрерывной прокрутки
     window.addEventListener("DOMContentLoaded", () => {
