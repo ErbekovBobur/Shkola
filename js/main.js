@@ -1,34 +1,44 @@
-console.log("main.js is start");
 
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("main.js is start");
   //  wow анимации
-  new WOW({
-    boxClass: "wow",
-    animateClass: "animated",
-    offset: 50,
-    mobile: true,
-  }).init();
+  if (typeof WOW !== "undefined") {
+    new WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 50,
+      mobile: true,
+    }).init();
+  } else {
+    console.warn("WOW.js не загружен");
+  }
   // google analitics
   window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
+  window.gtag =
+    window.gtag ||
+    function () {
+      dataLayer.push(arguments);
+    };
   gtag("js", new Date());
   gtag("config", "G-22ZG2NQ22L");
 
   // консоль eruda
   const consol = document.querySelector('p[data-translate="address"]');
-  if (consol) {
+  if (consol && typeof eruda !== "undefined") {
     let erudaActive = false;
-    consol.onclick = () => {
-      if (!erudaActive) {
-        eruda.init();
-        erudaActive = true;
-      } else {
-        eruda.destroy();
-        erudaActive = false;
+    consol.addEventListener("click", () => {
+      try {
+        if (!erudaActive) {
+          eruda.init();
+          erudaActive = true;
+        } else {
+          eruda.destroy();
+          erudaActive = false;
+        }
+      } catch (error) {
+        console.error("Ошибка при работе с Eruda:", error);
       }
-    };
+    });
   }
   // Элементы
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
@@ -46,13 +56,18 @@ document.addEventListener("DOMContentLoaded", function () {
       mainNav.classList.toggle("active");
       document.body.classList.toggle("no-scroll");
     }
+    function closeMenu() {
+      if (mainNav.classList.contains("active")) {
+        mainNav.classList.remove("active");
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
+      }
+    }
     mobileMenuBtn.addEventListener("click", toggleMenu);
 
     document.addEventListener("click", (e) => {
       if (!e.target.closest(".main-nav") && !e.target.closest(".mobile-menu-btn")) {
-        mainNav.classList.remove("active");
-        mobileMenuBtn.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("no-scroll");
+        closeMenu();
       }
     });
   }
@@ -79,19 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  if (anchors) {
+  if (anchors.length > 0) {
     anchors.forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
         const targetId = this.getAttribute("href");
         if (targetId && targetId !== "#") {
           smoothScroll(targetId);
-          // Закрыть мобильное меню при клике на ссылку
           if (this.classList.contains("nav-link")) {
-            // ++++
-            mobileMenuBtn.classList.remove("active");
-            mainNav.classList.remove("active");
-            document.body.classList.remove("no-scroll");
+            closeMenu();
           }
         }
       });
@@ -122,35 +133,35 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       lastScroll = currentScroll;
-    }, 15)
+    }, 50)
   );
 
   // --- Анимация карточек при наведении ---
   const feature_card = document.querySelectorAll(".feature-card");
-if (feature_card) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.transform = "translateY(0)";
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+  if (feature_card.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transform = "translateY(0)";
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  feature_card.forEach((card) => {
-    card.style.transform = "translateY(20px)";
-    observer.observe(card);
-    card.addEventListener("mouseenter", () => {
-      card.style.transform = "translateY(-10px)";
+    feature_card.forEach((card) => {
+      card.style.transform = "translateY(20px)";
+      observer.observe(card);
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-10px)";
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)";
+      });
     });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "translateY(0)";
-    });
-  });
-}
+  }
 
   // --- Инициализация календаря --- его пока нет в html
   // if (dateInput) {
@@ -169,14 +180,12 @@ if (feature_card) {
 
   // --- Выпадающее меню (dropdown) ---
   const dropdown_menu = document.querySelectorAll(".dropdown");
-  if (dropdown_menu) {
+  if (dropdown_menu && false) {
     dropdown_menu.forEach((item) => {
       const menu = item.querySelector(".dropdown-menu");
       item.addEventListener("mouseenter", () => {
         if (menu) {
-          // menu.style.display = "block";
           menu.classList.add("show"); // меняем подход
-          menu.style.animation = "slideDown 0.3s ease-out forwards";
         }
       });
 
@@ -184,10 +193,6 @@ if (feature_card) {
         if (menu) {
           // menu.style.animation = "";
           menu.classList.remove("show");
-          setTimeout(() => {
-            // menu.style.display = "none";
-            menu.style.animation = "";
-          }, 300);
         }
       });
     });
@@ -206,16 +211,14 @@ if (feature_card) {
   //   });
 
   // }
-  // if (window.location.pathname === "/about.html") {
-  if (window.location.pathname.includes("about.html")) {
-    console.log(window.location.pathname);
+
+  if (document.body.classList.contains("page-about")) {    
     // =======Teachers-2=======//
     // Получаем элементы для кнопок и контейнера с карточками
-    const teachersSection = document.querySelector(".teachers-section");
-    const cardsWrapper = teachersSection.querySelector(".teacher-cards-wrapper");
-    const leftBtn = teachersSection.querySelector(".left-btn");
-    const rightBtn = teachersSection.querySelector(".right-btn");
-    const cards = teachersSection.querySelectorAll(".teacher-card");
+    const cardsWrapper = document.querySelector(".teacher-cards-wrapper");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+    const cards = document.querySelectorAll(".teacher-card");
 
     if (cardsWrapper && cards && leftBtn && rightBtn) {
       // Получаем ширину карточки, чтобы прокручивать на одну карточку
@@ -267,13 +270,13 @@ if (feature_card) {
           item.classList.toggle("active");
         });
       });
-    }
+    };
+
     // Gallery
-    const gallery = document.getElementById("gallery");
-    const galleryRow = gallery.getElementById("galleryRow");
-    const btnPrev = gallery.getElementById("galleryPrev");
-    const btnNext = gallery.getElementById("galleryNext");
-    if (gallery && galleryRow && btnNext && btnPrev) {
+    const galleryRow = document.getElementById("galleryRow");
+    const btnPrev = document.getElementById("galleryPrev");
+    const btnNext = document.getElementById("galleryNext");
+    if (galleryRow && btnNext && btnPrev) {
       let autoScroll = true;
       let scrollSpeed = 0.5;
       let pauseTimeout;
@@ -281,9 +284,8 @@ if (feature_card) {
 
       // Функция непрерывной прокрутки
       function continuousScroll() {
-        if (autoScroll) {
+        if (autoScroll && galleryRow.getBoundingClientRect().top < window.innerHeight) {
           galleryRow.scrollLeft += scrollSpeed;
-
           // Циклическая прокрутка
           if (galleryRow.scrollLeft + galleryRow.clientWidth >= galleryRow.scrollWidth) {
             galleryRow.scrollLeft = 0;
@@ -356,15 +358,6 @@ if (feature_card) {
           }
         });
       }
-      // const lightbox = document.getElementById("lightbox").addEventListener(
-      //   "click",
-      //   (e) => {
-      //     if (e.target.id === "lightbox") {
-      //       closeModal();
-      //     }
-      //   },
-      //   { capture: true }
-      // );
       document.querySelector(".lightbox-nav.left").addEventListener("click", () => changeImage(-1));
       document.querySelector(".lightbox-nav.right").addEventListener("click", () => changeImage(1));
 
@@ -374,8 +367,7 @@ if (feature_card) {
       });
     }
   }
-  if (window.location.pathname.includes("index.html")) {
-    alert(window.location.pathname);
+  if (document.body.classList.contains("page-index")) {    
     // Video-section
     const myVideoBox = document.getElementById("myVideo-placeholder");
     const plyrContainer = document.getElementById("plyr-container");
@@ -423,15 +415,18 @@ if (feature_card) {
   }
   // --- Service Worker ---
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          console.log("ServiceWorker зарегистрирован:", registration.scope);
-        })
-        .catch((error) => {
-          console.log("Ошибка регистрации ServiceWorker:", error);
-        });
+    window.addEventListener("load", async () => {
+      try {
+        const response = await fetch("/sw.js");
+        if (!response.ok) {
+          console.warn("Файл ServiceWorker не найден");
+          return;
+        }
+        const registration = await navigator.serviceWorker.register("/sw.js");
+        console.log("ServiceWorker зарегистрирован:", registration.scope);
+      } catch (error) {
+        console.error("Ошибка регистрации ServiceWorker:", error);
+      }
     });
   }
 });

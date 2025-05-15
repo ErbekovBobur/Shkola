@@ -142,17 +142,19 @@ img {
   background: var(--white);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  padding: 15px 0;
-  /* display: none; */
+  padding: 15px 0;  
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: var(--transition);
   z-index: 100;
 }
-
-.dropdown:hover .dropdown-menu {
-  /* display: block; */
+.dropdown-menu.show {
+  opacity: 0;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown:hover .dropdown-menu {  
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -209,7 +211,7 @@ img {
 }
 
 [aria-expanded="true"] .menu-line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
+  transform: rotate(45deg) translate(5px, 10px);
 }
 
 [aria-expanded="true"] .menu-line:nth-child(2) {
@@ -217,7 +219,7 @@ img {
 }
 
 [aria-expanded="true"] .menu-line:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -6px);
+  transform: rotate(-45deg) translate(5px, -10px);
 }
 /*  -- lang start  --  */
 
@@ -871,19 +873,6 @@ img[loading="lazy"].loaded {
 
 .address i {
   color: var(--primary);
-}
-
-/* Новые стили для доступности */
-[aria-expanded="true"] .menu-line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
-}
-
-[aria-expanded="true"] .menu-line:nth-child(2) {
-  opacity: 0;
-}
-
-[aria-expanded="true"] .menu-line:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -6px);
 }
 
 /* Ленивая загрузка */

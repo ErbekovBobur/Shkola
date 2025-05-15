@@ -62,7 +62,7 @@
   <script src="js/language.js" defer></script>
 </head>
 
-<body>
+<body class="page-index">
   <!-- Шапка -->
   <header class="sticky-header">
     <div class="header-container">
@@ -177,7 +177,7 @@
         </div>
 
         <!-- Заглушка -->
-        <div class="video-placeholder" id="myVideo-placeholder"
+        <div class="video-placeholder wow zoomIn" id="myVideo-placeholder" data-wow-delay="0.2s"
           style="position: relative; cursor: pointer; max-width: 100%; margin: 0 auto">
           <div class="banner-overlay"></div>
           <img src="img/Poster-video.avif" alt="Школьная академия — видео о школе"
@@ -188,7 +188,7 @@
         <!-- Видео (изначально скрыто) -->
         <div id="plyr-container" style="display: none">
           <div class="plyr__video-embed" id="player">
-            <iframe src="https://www.youtube.com/embed/T6pMF2MBdtM?rel=0&showinfo=0" allowfullscreen
+            <iframe src="https://www.youtube.com/embed/rjj1ECWiEQk?si=vB-IP5SesbOz6s6i" allowfullscreen
               allow="autoplay; encrypted-media" loading="lazy"></iframe>
           </div>
         </div>
@@ -198,14 +198,14 @@
     <!-- Поему мы -->
     <section class="why-us-section section-padding">
       <div class="container">
-        <div class="section-header wow zoomIn">
+        <div class="section-header wow zoomIn" data-wow-delay="0.2s">
           <h2>Почему выбирают нас?</h2>
           <div class="divider"></div>
           <p>Наши ключевые преимущества</p>
         </div>
 
         <!-- Блок 1 -->
-        <div class="why-us-row wow fadeInLeft">
+        <div class="why-us-row wow fadeInLeft" data-wow-delay="0.4s">
           <div class="why-us-image">
             <img src="img/sections/why-us-personal.avif" alt="Индивидуальная траектория обучения"  />
           </div>
@@ -221,7 +221,7 @@
         </div>
 
         <!-- Блок 2 -->
-        <div class="why-us-row reverse wow fadeInRight">
+        <div class="why-us-row reverse wow fadeInRight" data-wow-delay="0.6s">
           <div class="why-us-image">
             <img src="img/sections/why-us-program.avif" alt="Актуальное расписание занятий"  />
           </div>
@@ -401,7 +401,7 @@
     <!-- Дейстия -->
     <section class="cta-wow section-padding">
       <div class="container">
-        <div class="cta-box wow fadeIn">
+        <div class="cta-box wow fadeIn" data-wow-delay="1.2s">
           <h2>Посетите нашу школу</h2>
           <p>Запишитесь на экскурсию, чтобы увидеть, как проходят занятия и познакомиться с преподавателями.</p>
           <a href="#" class="cta-wow-btn" aria-label="Записаться на экскурсию по школе">Записаться</a>
