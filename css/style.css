@@ -382,15 +382,6 @@ img {
   will-change: transform, opacity;
 }
 
-img[loading="lazy"] {
-  transition: opacity 0.3s;
-  opacity: 0;
-}
-
-img[loading="lazy"].loaded {
-  opacity: 1;
-}
-
 /* ===== Герой баннер ===== */
 .hero-banner {
   position: relative;
@@ -850,7 +841,7 @@ img[loading="lazy"].loaded {
 
 /* =========== */
 /* Стили для карты */
-.map-container {
+/*.map-container {
   margin-top: 50px;
   padding: 70px;
 }
@@ -871,6 +862,7 @@ img[loading="lazy"].loaded {
   margin: 15px 0;
 }
 
+*/
 .address i {
   color: var(--primary);
 }
@@ -884,7 +876,13 @@ img[loading="lazy"] {
 img[loading="lazy"].loaded {
   opacity: 1;
 }
-
+iframe[loading="lazy"] {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+iframe[loading="lazy"].loaded {
+  opacity: 1;
+}
 /*для формы обратной связи */
 /* Стили для формы записи */
 .appointment-form {
@@ -959,6 +957,19 @@ textarea:focus {
 
 /* Темная тема */
 @media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: var(--white);
+  }
+  .sticky-header {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .nav-link {
+    color: var(--white);
+  }
+  .feature-card {
+    background: #2c2c2c;
+  }
   .language-switcher {
     background: rgba(255, 255, 255, 0.1);
   }
