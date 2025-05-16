@@ -1,155 +1,177 @@
-/* Преподаватели */
-.teacher-filter {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.filter-btn {
-  background-color: #1e88e5;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.filter-btn.active {
-  background-color: #0d6efd;
-}
-
-.teachers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+/* Обновляем переменные для тёмной темы */
+:root {
+  --primary: #1e90ff;
+  --primary-dark: #1560bd;
+  --secondary: #cd0074;
+  --secondary-dark: #27ae60;
+  --dark: #2c3e50;
+  --light: #fbf4f6;
+  --white: #ffffff;
+  --gray: #95a5a6;
+  --background: #ffffff; /* Добавляем для фона */
+  --text-color: #2c3e50; /* Добавляем для текста */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  --radius: 8px;
+  --radius-btn: 50px;
 }
 
-.teacher-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s;
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text-color: #ffffff;
+  --white: #2c2c2c; /* Для элементов, которые были белыми */
+  --dark: #ffffff; /* Для текста, который был тёмным */
+  --gray: #b0b0b0; /* Для серого текста */
+  --light: #333333; /* Для светлых фонов */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.teacher-card:hover {
-  transform: scale(1.05);
+body {
+  background: var(--background);
+  color: var(--text-color);
+  transition: var(--transition);
 }
 
-.teacher-img {
-  height: 200px;
+.sticky-header {
+  background: var(--white);
+}
+
+[data-theme="dark"] .sticky-header {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="dark"] .school-info h1 {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .school-info p {
+  color: var(--gray);
+}
+
+[data-theme="dark"] .logo {
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0) 85%);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--gray);
+}
+
+[data-theme="dark"] .feature-card {
+  background: var(--white);
+}
+
+[data-theme="dark"] .program-card {
+  background: linear-gradient(145deg, #000, var(--light));
+  color: var(--gray);
+}
+
+[data-theme="dark"] .language-switcher {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .lang-btn {
+  color: var(--gray);
+}
+
+[data-theme="dark"] .lang-btn:not(.active):hover {
+  color: var(--primary-dark);
+}
+
+[data-theme="dark"] .minimal-phone {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .bouncing-phone-number {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .news-card {
+  background: var(--white);
+}
+
+[data-theme="dark"] .main-footer {
+  background: #111111;
+}
+
+[data-theme="dark"] .cta-wow {
+  background: url("../img/sections/cta-invite-2-dark.jpg") no-repeat center; /* Если есть тёмная версия изображения */
   background-size: cover;
-  background-position: center;
 }
 
-.teacher-info {
-  padding: 20px;
+[data-theme="dark"] .appointment-form {
+  background: var(--white);
 }
 
-.teacher-social {
-  margin-top: 10px;
-}
-
-.teacher-social a {
-  margin-right: 10px;
-  font-size: 1.5rem;
-  color: #1e88e5;
-}
-
-.teacher-social a:hover {
-  color: #0d6efd;
-}
-
-.education {
-  font-style: italic;
-  color: #777;
-}
-/* Галарея */
-
-.gallery-filter {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.filter-btn {
-  background-color: #1e88e5;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.filter-btn.active {
-  background-color: #0d6efd;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.gallery-item:hover {
-  transform: scale(1.05);
-}
-
-.gallery-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  transition: opacity 0.3s;
-}
-
-/* Модальное окно */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
+/* Стили для переключателя темы */
+.theme-switcher {
+  display: inline-flex;
   align-items: center;
-  z-index: 1000;
+  gap: 10px;
+  padding: 4px;
+  background: var(--white);
+  border-radius: 50px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
 }
 
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 3rem;
-  color: white;
+.theme-btn {
+  width: 48px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  outline: none;
 }
 
-.lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
+.theme-btn.active {
+  color: var(--white);
+  animation: pulse-active 3s infinite ease-in-out;
 }
 
-/* Анимации для появления */
-.wow {
-  visibility: hidden;
+.theme-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 48px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 50px;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
 }
 
-.wow.fadeIn {
-  animation: fadeIn 1s forwards;
+.theme-switcher[data-theme="dark"] .theme-slider {
+  transform: translateX(100%);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.theme-btn:not(.active):hover {
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+@keyframes pulse-active {
+  0%, 100% {
+    transform: scale(1);
   }
-  to {
-    opacity: 1;
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+.theme-switcher:hover .theme-btn.active {
+  animation: none;
+}
+
+/* Адаптивность для переключателя */
+@media (max-width: 575px) {
+  .theme-switcher {
+    display: none;
   }
 }

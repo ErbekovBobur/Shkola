@@ -10,8 +10,23 @@
   --gray: #95a5a6;
   --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  
   --radius: 8px;
   --radius-btn: 50px;
+}
+
+:root[data-theme="dark"] {
+  --primary: #90caf9;
+  --primary-dark: #42a5f5;
+  --secondary: #f06292;
+  --secondary-dark: #c2185b;
+  --dark: #ecf0f1;
+  --light: #2c3e50;
+  --white: #1a1a1a;
+  --gray: #bdc3c7;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -61,7 +76,7 @@ img {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.98);
+  background: var(--light);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
@@ -221,8 +236,51 @@ img {
 [aria-expanded="true"] .menu-line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -10px);
 }
-/*  -- lang start  --  */
+.header-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+/* Theme- */
+.theme-switcher {  
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  background: var(--white);
+  border-radius: 50px;
+  padding: 8px;
+  box-shadow: var(--shadow-inset);  
+  align-items: center;
+  justify-content: center;  
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--dark);
+  transition: var(--transition);
+}
+#theme-toggle:hover {
+  /* transform: scale(1.2); */
+}
+#theme-toggle.dark {
+  color: var(--primary);
+}
+.fa-moon{
+  display: inline-block;
+}
+.fa-sun{
+  display: none;
+}
+#theme-toggle.dark .fa-moon {
+  display: none;
+}
+#theme-toggle.dark .fa-sun {
+  display: inline-block;
+}
 
+/*  -- lang start  --  */
 .language-switcher {
   position: relative;
   display: inline-flex;
@@ -230,7 +288,7 @@ img {
   border-radius: 50px;
   padding: 4px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
 
 .lang-btn {
@@ -321,7 +379,7 @@ img {
 
 .bouncing-phone-number {
   font-weight: 600;
-  color: var(--dark) !important;
+  color: var(--dark);
   font-size: 16px;
   text-decoration: none;
   animation: bounce 1.5s infinite ease-in-out;
@@ -956,7 +1014,7 @@ textarea:focus {
 }
 
 /* Темная тема */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background: #1a1a1a;
     color: var(--white);
@@ -964,8 +1022,21 @@ textarea:focus {
   .sticky-header {
     background: rgba(0, 0, 0, 0.9);
   }
+  .school-info h1{
+    color: var(--light);
+  }
+  .program-card {
+    background: linear-gradient(145deg, #000, var(--dark));
+    color: var(--gray);
+  }
+  .school-info p {
+    color: var(--gray);
+  }
+  .logo {    
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0) 85%);    
+  }
   .nav-link {
-    color: var(--white);
+    color: var(--gray);
   }
   .feature-card {
     background: #2c2c2c;
@@ -976,7 +1047,6 @@ textarea:focus {
   .lang-btn {
     color: var(--gray);
   }
-
   .lang-btn:not(.active):hover {
     color: var(--primary-dark);
   }
@@ -987,7 +1057,10 @@ textarea:focus {
   .bouncing-phone-number {
     color: var(--white);
   }
-}
+  .news-card {
+    background: var(--dark);
+  }
+} */
 /* ===== Адаптивность ===== */
 @media (min-width: 992px) {
   .features-grid {

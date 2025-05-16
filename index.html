@@ -46,7 +46,7 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"  />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 
   <link rel="stylesheet" href="css/video.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -56,7 +56,7 @@
 
   <!-- WOW.js -->
   <script src="https://cdn.plyr.io/3.7.8/plyr.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
 
   <script src="js/main.js" defer></script>
   <script src="js/language.js" defer></script>
@@ -123,6 +123,13 @@
       </nav>
 
       <div class="header-right">
+        <!-- Темы  -->
+         <div class="theme-switcher">
+           <button id="theme-toggle" aria-label="Toggle Theme">
+             <i class="fas fa-sun"></i>
+             <i class="fas fa-moon"></i>
+            </button>
+          </div>
         <!-- Переключатель языка на этот код -->
         <div class="language-switcher">
           <button class="lang-btn active" data-lang="ru" aria-label="Русский язык" lang="ru">RU</button>
@@ -188,8 +195,8 @@
         <!-- Видео (изначально скрыто) -->
         <div id="plyr-container" style="display: none">
           <div class="plyr__video-embed" id="player">
-            <iframe src="https://www.youtube.com/embed/rjj1ECWiEQk?si=vB-IP5SesbOz6s6i&vq=hd1080" allowfullscreen data-plyr-provider="youtube"
-              allow="autoplay; encrypted-media" loading="lazy">
+            <iframe src="https://www.youtube.com/embed/rjj1ECWiEQk?si=vB-IP5SesbOz6s6i&vq=hd1080" allowfullscreen
+              data-plyr-provider="youtube" allow="autoplay; encrypted-media" loading="lazy">
             </iframe>
           </div>
         </div>
@@ -208,7 +215,7 @@
         <!-- Блок 1 -->
         <div class="why-us-row wow fadeInLeft" data-wow-delay="0.4s">
           <div class="why-us-image">
-            <img src="img/sections/why-us-personal.avif" alt="Индивидуальная траектория обучения"  loading="lazy"/>
+            <img src="img/sections/why-us-personal.avif" alt="Индивидуальная траектория обучения" loading="lazy" />
           </div>
           <div class="why-us-text">
             <h3>Индивидуальная образовательная программа</h3>
@@ -241,7 +248,7 @@
         <!-- Блок 3 -->
         <div class="why-us-row wow fadeInLeft">
           <div class="why-us-image">
-            <img src="img/sections/why-us-eats.png" alt="Полноценное питание в течение дня"  loading="lazy"/>
+            <img src="img/sections/why-us-eats.png" alt="Полноценное питание в течение дня" loading="lazy" />
           </div>
           <div class="why-us-text">
             <h3>Полноценное питание в течение дня</h3>
@@ -257,7 +264,7 @@
         <!-- Блок 4 -->
         <div class="why-us-row reverse wow fadeInRight">
           <div class="why-us-image">
-            <img src="img/sections/why-us-early.png" alt="Обучение с раннего возраста до выпускного"  loading="lazy"/>
+            <img src="img/sections/why-us-early.png" alt="Обучение с раннего возраста до выпускного" loading="lazy" />
           </div>
           <div class="why-us-text">
             <h3>Обучение с раннего возраста до выпускного</h3>
@@ -273,7 +280,7 @@
         <!-- Блок 5 -->
         <div class="why-us-row wow fadeInLeft">
           <div class="why-us-image">
-            <img src="img/sections/why-us-admission.avif" alt="Комплексная подготовка к поступлению"  loading="lazy"/>
+            <img src="img/sections/why-us-admission.avif" alt="Комплексная подготовка к поступлению" loading="lazy" />
           </div>
           <div class="why-us-text">
             <h3>Комплексная подготовка к поступлению</h3>
@@ -289,7 +296,7 @@
         <!-- Блок 6 -->
         <div class="why-us-row reverse wow fadeInRight">
           <div class="why-us-image">
-            <img src="img/sections/why-us-safe.png" alt="Комфорт и безопасность — приоритет" loading="lazy"/>
+            <img src="img/sections/why-us-safe.png" alt="Комфорт и безопасность — приоритет" loading="lazy" />
           </div>
           <div class="why-us-text">
             <h3>Комфорт и безопасность — приоритет</h3>
@@ -483,13 +490,14 @@
         <div class="footer-column">
           <h3>Соцсети</h3>
           <div class="social-links">
-            <a href="https://t.me/Shkolnayakademiya" aria-label="Перейти в Telegram" title="Наш Telegram"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.instagram.com/shkolnayakademiya/" aria-label="Перейти в Instagram" title="Наш Instagram"><i
-                class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU" aria-label="Перейти в Facebook" title="Наш Facebook"><i
-                class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/Shkolnayakademiya" aria-label="Перейти в Telegram" title="Наш Telegram"><i
+                class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/shkolnayakademiya/" aria-label="Перейти в Instagram"
+              title="Наш Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU" aria-label="Перейти в Facebook"
+              title="Наш Facebook"><i class="fab fa-facebook-f"></i></a>
           </div>
-        </div>        
+        </div>
       </div>
       <div class="footer-map">
         <h3>Наша локация</h3>
@@ -507,9 +515,11 @@
           </noscript> -->
     </div>
   </footer>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22ZG2NQ22L"></script>  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22ZG2NQ22L"></script>
   <script src="https://unpkg.com/eruda"></script>
   <script src="js/ya.js"></script>
 </body>
+
 </html>
+
 </html>
