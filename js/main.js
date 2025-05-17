@@ -100,8 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   // Ленивая загрузка изображений
-  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
-    console.log(img.complete);
+  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {    
     // Если изображение уже загружено (например, из кэша)
     if (img.complete) {
       img.classList.add("loaded");
@@ -360,8 +359,6 @@ document.addEventListener("DOMContentLoaded", function () {
       //   // Открытие биографии- пока не работате
       cardsWrapper.querySelectorAll(".bio-toggle-btn").forEach((button) => {
         button.addEventListener("click", () => {
-          console.log("bio");
-
           const card = button.closest(".teacher-card");
           card.classList.toggle("open");
           button.textContent = card.classList.contains("open") ? "Скрыть" : "Подробнее";

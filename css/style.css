@@ -455,7 +455,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../img/hero-banner.avif") center/cover no-repeat;
+    background: url("../img/hero-banner2--.webp") center/cover no-repeat;
     margin: 40px 0 80px;
 }
 
@@ -776,7 +776,7 @@ img {
 /* === CTA === */
 .cta-wow {
     background: linear-gradient(135deg, var(--dark), var(--gray));
-    background: url("../img/sections/cta-invite-2.jpg") no-repeat center;
+    background: url("../img/sections/cta-invite-2.webp") no-repeat center;
     background-size: cover;
     color: var(--light);
     text-align: center;
