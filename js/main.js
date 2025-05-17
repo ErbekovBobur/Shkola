@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeToggleBtn = document.querySelector("#theme-toggle");
 
   // Проверка текущей темы из localStorage
-  if (localStorage.getItem("theme") === "dark") {
+  if (localStorage.getItem("theme") === "dark" && false) {
     document.documentElement.setAttribute("data-theme", "dark");
     themeToggleBtn?.classList.add("dark");
   }
