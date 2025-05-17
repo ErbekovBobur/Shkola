@@ -19,8 +19,8 @@
 :root[data-theme="dark"] {
     --primary: #90caf9;
     --primary-dark: #42a5f5;
-    --secondary: #f06292;
-    --secondary-dark: #c2185b;
+    --secondary:  #ff1b9c;
+    --secondary-dark: #4bd786;
     --dark: #ecf0f1;
     --light: #2c3e50;
     --white: #1a1a1a;
@@ -241,6 +241,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    padding: 0 10px;
 }
 /* Theme- */
 .theme-switcher {
@@ -262,24 +263,27 @@ img {
     cursor: pointer;
     color: var(--primary);
     transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #theme-toggle:hover {
     /* transform: scale(1.2); */
 }
 #theme-toggle.dark {
-    color: var(--white);
+    background: var(--white);
 }
-.fa-moon {
+.light-mode {
     display: inline-block;
 }
-.fa-sun {
+.dark-mode {
+    display: none !important;
+}
+#theme-toggle.dark .light-mode {
     display: none;
 }
-#theme-toggle.dark .fa-moon {
-    display: none;
-}
-#theme-toggle.dark .fa-sun {
-    display: inline-block;
+#theme-toggle.dark .dark-mode {
+    display: inline-block !important;
 }
 
 /*  -- lang start  --  */
