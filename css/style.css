@@ -11,11 +11,9 @@
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-
     --radius: 8px;
     --radius-btn: 50px;
 }
-
 :root[data-theme="dark"] {
     --primary: #90caf9;
     --primary-dark: #42a5f5;
@@ -28,13 +26,11 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: "Open Sans", sans-serif;
     color: var(--dark);
@@ -42,7 +38,6 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
 h1,
 h2,
 h3,
@@ -50,25 +45,21 @@ h4 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
-
 a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 .container {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 /* ===== Шапка ===== */
 .sticky-header {
     position: fixed;
@@ -80,7 +71,6 @@ img {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
-
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -88,46 +78,38 @@ img {
     padding: 15px 5px;
     position: relative;
 }
-
 .logo-container {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .logo {
     height: 50px;
     transition: var(--transition);
 }
-
 .school-info h1 {
     font-size: 1.4rem;
     margin-bottom: 3px;
     color: var(--dark);
 }
-
 .school-info p {
     font-size: 0.8rem;
     color: var(--primary);
 }
-
 .main-nav ul {
     display: flex;
     list-style: none;
     gap: 25px;
 }
-
 .main-nav li {
     position: relative;
 }
-
 .nav-link {
     position: relative;
     padding: 8px 0;
     font-weight: 500;
     color: var(--dark);
 }
-
 .nav-link::after {
     content: "";
     position: absolute;
@@ -138,7 +120,6 @@ img {
     background: var(--primary);
     transition: var(--transition);
 }
-
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
@@ -520,7 +501,7 @@ img {
     margin: auto;
 }
 /* ======== */
-.social-links {
+.footer-column .social-links {
     display: flex;
     gap: 15px;
 }
@@ -532,7 +513,7 @@ img {
     align-items: center;
 }
 
-.social-links a {
+.footer-column .social-links a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -543,7 +524,7 @@ img {
     transition: var(--transition);
 }
 
-.social-links a:hover {
+.footer-column .social-links a:hover {
     background: var(--primary);
     transform: translateY(-3px);
 }
@@ -775,64 +756,11 @@ textarea:focus {
         transform: rotate(-45deg) translate(0px, -9px);
     }
 }
-@media (max-width: 768px) {
-    .banner-content h1 {
-        font-size: 2rem;
-    }
-    .feature-card {
-        padding: 30px 20px;
-    }
-    .feature-card p {
-        font-size: 0.95rem;
-    }
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    .feature-card h3 {
-        font-size: 1.1rem;
-    }
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-    .news-thumb {
-        height: 160px;
-    }
-    .news-content h3 {
-        font-size: 1.15rem;
-    }
-}
 @media (max-width: 575px) {
     .language-switcher,
     .minimal-phone {
         display: none;
-    }
-    .news-content {
-        padding: 15px;
-    }
-    .news-content p {
-        font-size: 0.9rem;
-    }
-    .news-thumb {
-        height: 140px;
-    }
-
-    .news-date {
-        font-size: 0.7rem;
-        padding: 3px 8px;
-    }
-    .feature-card {
-        padding: 25px 15px;
-    }
-    .feature-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
+    }    
     .section-header h2 {
         font-size: 1.8rem;
     }

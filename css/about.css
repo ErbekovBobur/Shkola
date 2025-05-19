@@ -1,177 +1,404 @@
-/* Обновляем переменные для тёмной темы */
-:root {
-  --primary: #1e90ff;
-  --primary-dark: #1560bd;
-  --secondary: #cd0074;
-  --secondary-dark: #27ae60;
-  --dark: #2c3e50;
-  --light: #fbf4f6;
-  --white: #ffffff;
-  --gray: #95a5a6;
-  --background: #ffffff; /* Добавляем для фона */
-  --text-color: #2c3e50; /* Добавляем для текста */
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-  --radius: 8px;
-  --radius-btn: 50px;
+/* Раздел Teachers */
+.teachers-section {
+  position: relative;
+  padding: 60px 20px;
+  background-color: var(--white);
+  text-align: center;
+  overflow: hidden;
 }
 
-[data-theme="dark"] {
-  --background: #1a1a1a;
-  --text-color: #ffffff;
-  --white: #2c2c2c; /* Для элементов, которые были белыми */
-  --dark: #ffffff; /* Для текста, который был тёмным */
-  --gray: #b0b0b0; /* Для серого текста */
-  --light: #333333; /* Для светлых фонов */
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
 }
 
-body {
-  background: var(--background);
-  color: var(--text-color);
-  transition: var(--transition);
+/* Контейнер с горизонтальной прокруткой */
+.teachers-scroll-container {
+  display: flex;
+  gap: 20px;
+  overflow: hidden; /* Прячем прокручиваемую часть */
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.sticky-header {
-  background: var(--white);
+.teachers-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.teacher-cards-wrapper {
+  display: flex;
+  max-width: 70%;
+  gap: 20px; /* Расстояние между карточками */
+  transition: transform 0.5s ease; /* Добавляем анимацию для прокрутки */
 }
 
-[data-theme="dark"] .sticky-header {
-  background: rgba(0, 0, 0, 0.9);
+/* Карточки */
+.teacher-card {
+  flex: 0 0 calc(33% - 40px); /* 4 карточки, с отступами */
+  background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 
-[data-theme="dark"] .school-info h1 {
-  color: var(--text-color);
+.teacher-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .school-info p {
-  color: var(--gray);
+.teacher-photo {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 16px;
 }
 
-[data-theme="dark"] .logo {
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 5%, rgba(255,255,255,0) 85%);
+.teacher-card:hover .teacher-photo {
+  filter: brightness(1); /* Фото светлеет при наведении */
 }
 
-[data-theme="dark"] .nav-link {
-  color: var(--gray);
+.teacher-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f1c40f; /* Желтый акцент */
 }
 
-[data-theme="dark"] .feature-card {
-  background: var(--white);
+.teacher-subject {
+  font-size: 1rem;
+  color: #ecf0f1;
+  margin-bottom: 15px;
 }
 
-[data-theme="dark"] .program-card {
-  background: linear-gradient(145deg, #000, var(--light));
-  color: var(--gray);
+.teacher-bio-preview {
+  font-size: 1rem;
+  color: #bdc3c7;
+  font-style: italic;
 }
 
-[data-theme="dark"] .language-switcher {
-  background: rgba(255, 255, 255, 0.1);
+.teacher-bio-full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ecf0f1;
 }
 
-[data-theme="dark"] .lang-btn {
-  color: var(--gray);
+.teacher-card.open .teacher-bio-full {
+  max-height: 300px;
+  opacity: 1;
 }
 
-[data-theme="dark"] .lang-btn:not(.active):hover {
-  color: var(--primary-dark);
-}
-
-[data-theme="dark"] .minimal-phone {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-[data-theme="dark"] .bouncing-phone-number {
-  color: var(--text-color);
-}
-
-[data-theme="dark"] .news-card {
-  background: var(--white);
-}
-
-[data-theme="dark"] .main-footer {
-  background: #111111;
-}
-
-[data-theme="dark"] .cta-wow {
-  background: url("../img/sections/cta-invite-2-dark.jpg") no-repeat center; /* Если есть тёмная версия изображения */
-  background-size: cover;
-}
-
-[data-theme="dark"] .appointment-form {
-  background: var(--white);
-}
-
-/* Стили для переключателя темы */
-.theme-switcher {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 4px;
-  background: var(--white);
-  border-radius: 50px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-right: 15px;
-}
-
-.theme-btn {
-  width: 48px;
-  height: 32px;
+.bio-toggle-btn {
+  margin-top: 10px;
+  background: none;
   border: none;
-  background: transparent;
-  color: var(--text-color);
-  font-weight: 600;
-  font-size: 14px;
+  color: #f1c40f;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bio-toggle-btn:hover {
+  color: #d35400;
+}
+
+.teacher-card .social-links {
+  margin-top: 14px;
+}
+
+.teacher-card .social-links a {
+  margin-right: 10px;
+  color: #f1c40f;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+.teacher-card .social-links a:hover {
+  color: #ecf0f1;
+}
+/* Кнопки прокрутки */
+.teacher-scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
   cursor: pointer;
   z-index: 2;
-  transition: all 0.3s ease;
-  border-radius: 50px;
-  outline: none;
+}
+.teacher-scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.teachers-section .left-btn {
+  left: 10px;
+}
+.teachers-section .right-btn {
+  right: 10px;
 }
 
-.theme-btn.active {
-  color: var(--white);
-  animation: pulse-active 3s infinite ease-in-out;
+/* === Gallery === */
+.gallery-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
 }
-
-.theme-slider {
+.gallery-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+.gallery-card {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery-card:hover {
+  transform: scale(1.05);
+}
+/* .scroll-btn {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 48px;
-  height: 32px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  border-radius: 50px;
-  z-index: 1;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffffdd;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+} */
+/* .scroll-btn.left {
+  left: 0;
+}
+.scroll-btn.right {
+  right: 0;
+} */
+/* Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 48px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.lightbox-nav.left {
+  left: 30px;
+}
+.lightbox-nav.right {
+  right: 30px;
+}
+.gallery-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.gallery-row::-webkit-scrollbar {
+  display: none;
+}
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+.gallery-nav.left {
+  left: 10px;
+}
+.gallery-nav.right {
+  right: 10px;
 }
 
-.theme-switcher[data-theme="dark"] .theme-slider {
-  transform: translateX(100%);
+/* ===== FAQ ===== */
+.faq-section {
+  background-color: var(--light);
+  padding: 80px 0;
 }
-
-.theme-btn:not(.active):hover {
-  color: var(--primary);
-  transform: translateY(-1px);
+.faq-container {
+  margin-top: 40px;
 }
-
-@keyframes pulse-active {
-  0%, 100% {
-    transform: scale(1);
+.faq-item {
+  margin-bottom: 20px;
+}
+.faq-question {
+  background: var(--primary);
+  color: var(--white);
+  padding: 15px 25px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-question:hover {
+  background-color: var(--primary-dark);
+}
+.faq-answer {
+  display: none;
+  padding: 15px 25px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.faq-answer p {
+  color: var(--dark);
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+/* Иконка стрелки вниз */
+.faq-question i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+/* ======================== */
+/* Адаптивность для экранов более 992px */
+@media (min-width: 992px) {
+  .faq-question {
+    font-size: 1.3rem;
   }
-  50% {
-    transform: scale(0.95);
+  .faq-answer p {
+    font-size: 1.1rem;
+  }
+}
+/* Адаптивность для экранов менее 992px */
+@media (max-width: 992px) {
+  .teachers-scroll-container {
+    width: 90%;
+  }
+  .faq-question {
+    font-size: 1.1rem;
+  }
+  .faq-answer p {
+    font-size: 1rem;
+  }
+  .faq-item {
+    margin-bottom: 15px;
   }
 }
 
-.theme-switcher:hover .theme-btn.active {
-  animation: none;
+/* Адаптивность для экранов менее 768px */
+@media (max-width: 768px) {
+  .teachers-scroll-container {
+    width: 100%;
+  }
+  .teacher-card {
+    flex: 0 0 calc(33.33% - 20px); /* 3 карточки на планшетах */
+  }
+  .gallery-card {
+    width: 200px;
+    height: 140px;
+  }  
+  .scroll-btn {
+    font-size: 20px;
+  }  
+  .lightbox-nav {
+    font-size: 36px;
+  }
+  .faq-question {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  .faq-answer p {
+    font-size: 0.95rem;
+  }
+  .faq-item {
+    margin-bottom: 12px;
+  }
 }
-
-/* Адаптивность для переключателя */
+/* Адаптивность для экранов менее 575px */
 @media (max-width: 575px) {
-  .theme-switcher {
-    display: none;
+  .teacher-card {
+    flex: 0 0 100%; /* 1 карточка на мобильных устройствах */
+  }
+  .faq-question {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+  .faq-answer p {
+    font-size: 0.9rem;
+  }
+  .faq-item {
+    margin-bottom: 10px;
   }
 }

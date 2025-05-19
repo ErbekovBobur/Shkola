@@ -26,19 +26,20 @@
   <link rel="preload" href="css/style.css" as="style" />
   <link rel="preload" href="css/teachers.css" as="style">
 
-  <!-- <link rel="preload" href="js/main.js" as="script" defer>
-  <link rel="preload" href="js/language.js" as="script" defer> -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
     crossorigin="anonymous" />
 
   <!-- Стили -->    
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/teachers.css">
-  <link rel="stylesheet" href="css/gallery -2.css">
   <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/about.css">
+  <!-- <link rel="stylesheet" href="css/teachers.css"> -->
+  <!-- <link rel="stylesheet" href="css/gallery -2.css"> -->
+  <!-- <link rel="stylesheet" href="css/faq.css"> -->
   <!-- <link rel="stylesheet" href="./css/phone.css" > -->
   <!-- <link rel="stylesheet" href="./css/lang.css" > -->
 
@@ -51,88 +52,99 @@
 <body class="page-about">
   <!-- Шапка -->
   <header class="sticky-header">
-    <div class="header-container">
-      <div class="logo-container">
-        <img src="img/ico/android-chrome-512x512.png" alt="School Academy" class="logo" />
-        <div class="school-info">
-          <h1 data-translate="school-name">School Academy</h1>
-          <p data-translate="address">Ташкент, Юнусабадский район</p>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li>
-            <a data-translate="nav-home" href="index.html" class="nav-link">Главная</a>
-          </li>
-
-          <li class="dropdown">
-            <a data-translate="nav-about" href="about.html" class="active nav-link">О школе <i
-                class="fas fa-chevron-down dropdown-icon"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
-              </li>
-              <li>
-                <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
-              </li>
-              <li>
-                <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
-              </li>
-              <li>
-                <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
-              </li>
-              <li>
-                <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a data-translate="nav-program" href="program.html" class="nav-link">Учебные программы<i
-                class="fas fa-chevron-down dropdown-icon"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link">Начальная
-                  школа</a>
-              </li>
-              <li>
-                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">Средняя
-                  школа</a>
-              </li>
-              <li>
-                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Дополнительные
-                  занятия</a>
-              </li>
-            </ul>
-          </li>
-          <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-right">
-        <!-- Тема -->
-        <button id="theme-toggle" aria-label="Toggle Theme">🌞/🌙</button>
-        <!-- Переключатель языка на этот код -->
-        <div class="language-switcher">
-          <button class="lang-btn active" data-lang="ru" aria-label="Русский язык">РУ</button>
-          <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
-          <span class="lang-slider"></span>
-        </div>
-        <!-- ========= Телефон ====== -->
-        <div class="minimal-phone">
-          <div class="phone-pulse-icon">
-            <i class="fas fa-phone-alt"></i>
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="img/logo-uz.webp" alt="School Academy" class="logo" />
+          <div class="school-info">
+            <h1 data-translate="school-name">School Academy</h1>
+            <p data-translate="address">Ташкент, Юнусабадский район</p>
           </div>
-          <a href="tel:+998711234567" class="bouncing-phone-number">+998 (71) 123-45-67 </a>
         </div>
-      </div>
+        <nav class="main-nav" role="navigation">
+          <ul>
+            <li>
+              <a data-translate="nav-home" href="index.html" class="nav-link">Главная</a>
+            </li>
 
-      <button class="mobile-menu-btn">
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-      </button>
-    </div>
-  </header>
+            <li class="dropdown">
+              <a data-translate="nav-about" href="about.html" class="active nav-link"
+                >О школе <i class="fas fa-chevron-down dropdown-icon"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
+                </li>
+                <li>
+                  <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
+                </li>
+                <li>
+                  <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
+                </li>
+                <li>
+                  <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
+                </li>
+                <li>
+                  <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-translate="nav-program" href="program.html" class="nav-link"
+                >Учебные программы<i class="fas fa-chevron-down dropdown-icon"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link"
+                    >Начальная школа</a
+                  >
+                </li>
+                <li>
+                  <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link"
+                    >Средняя школа</a
+                  >
+                </li>
+                <li>
+                  <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link"
+                    >Дополнительные занятия</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <!-- Темы  -->
+          <div class="theme-switcher">
+            <button id="theme-toggle" aria-label="Toggle Theme">
+              <span class="material-icons dark-mode"> light_mode </span>
+              <span class="material-icons light-mode"> nightlight_round </span>
+            </button>
+          </div>
+          <!-- Переключатель языка на этот код -->
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="ru" aria-label="Русский язык" lang="ru">RU</button>
+            <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili" lang="uz">UZ</button>
+            <span class="lang-slider"></span>
+          </div>
+          <!-- ========= Телефон ====== -->
+          <div class="minimal-phone">
+            <div class="phone-pulse-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <a href="tel:+998711234567" class="bouncing-phone-number" aria-label="Позвонить: +998 (71) 123-45-67"
+              >+998 (71) 123-45-67
+            </a>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header>
 
   <!-- Основной контент -->
   <main class="content-wrapper">
@@ -144,7 +156,6 @@
           <div class="divider"></div>
           <p>Как все начиналось</p>
         </div>
-
         <div class="timeline">
           <div class="timeline-item wow fadeInLeft">
             <div class="timeline-year">2010</div>
@@ -247,13 +258,7 @@
       <button class="teacher-scroll-btn right-btn">&#8250;</button> -->
     </div>
     
-
-
-
-
-
     <!-- Галерея -->
-
     <section id="gallery" class="section-padding bg-light">
       <div class="container">
         <div class="section-header wow fadeIn">
@@ -261,7 +266,6 @@
           <div class="divider"></div>
           <p>Погрузитесь в мир наших проектов</p>
         </div>
-
         <!-- Горизонтальный скролл -->
         <div class="gallery-wrapper">
           <button class="gallery-nav left" id="galleryPrev">&#10094;</button>
@@ -434,54 +438,69 @@
   <!-- Подвал -->
   <!-- Подвал -->
   <footer class="main-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Часы работы</h3>
-          <p>Пн-Пт: 8:00 - 18:00</p>
-          <!-- <p>Сб: 9:00 - 14:00</p> -->
-          <p>Вс: выходной</p>
-        </div>
-        <div class="footer-column">
-          <h3>Адрес</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
-        </div>
-        <div class="footer-column">
-          <h3>Контакты</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район</p>
-          <p><i class="fas fa-phone-alt"></i> +998 (71) 123-45-67</p>
-          <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
-        </div>
-        <div class="footer-column">
-          <h3>Соцсети</h3>
-          <div class="social-links">
-            <a href="https://t.me/Shkolnayakademiya"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.instagram.com/shkolnayakademiya/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"><i class="fab fa-facebook-f"></i></a>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Часы работы</h3>
+            <p>Пн-Пт: 8:00 - 18:00</p>
+            <p>Сб: выходной</p>
+            <p>Вс: выходной</p>
+          </div>
+          <div class="footer-column">
+            <h3>Адрес</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
+          </div>
+          <div class="footer-column">
+            <h3>Контакты</h3>
+            <p>
+              <i class="fas fa-phone-alt"></i
+              ><a href="tel:+998711234567" aria-label="Позвонить: +998 (71) 123-45-67">+998 (71) 123-45-67 </a>
+            </p>
+            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+          </div>
+          <div class="footer-column">
+            <h3>Соцсети</h3>
+            <div class="social-links">
+              <a href="https://t.me/Shkolnayakademiya" rel="noopener noreferrer" aria-label="Перейти в Telegram" title="Наш Telegram"
+                ><i class="fab fa-telegram"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/shkolnayakademiya/"
+                rel="noopener noreferrer"
+                aria-label="Перейти в Instagram"
+                title="Наш Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"
+                rel="noopener noreferrer"
+                aria-label="Перейти в Facebook"
+                title="Наш Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
           </div>
         </div>
-        <!-- <div class="footer-column"></div> -->
+        <div class="footer-map">
+          <h3>Наша локация</h3>
+          <div class="divider"></div>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
+            width="702"
+            height="579"
+            frameborder="0"
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
-      <!-- <div class="footer-column" style="position: relative"> -->
-
-      <div class="footer-map">
-        <h3>Наша локация</h3>
-        <div class="divider"></div>
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
-          width="702" height="579" frameborder="0"></iframe>
+      <div class="copyright">
+        <p>© 2025 School Academy. Все права защищены.</p>
+        <!-- Yandex Metrika -->
+        <!-- <noscript>
+            <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" ></div>
+          </noscript> -->
       </div>
-
-    </div>
-    <div class="copyright">
-      <p>© 2025 School Academy. Все права защищены.</p>
-      <!-- Yandex Metrika -->
-      <!-- <noscript>
-      <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" ></div>
-    </noscript> -->
-
-    </div>
-  </footer>
+    </footer>
   <script src="js/ya.js"></script>
   <!-- <script src="js/main.js" defer></script> -->
   <script src="js/language.js" defer></script>
