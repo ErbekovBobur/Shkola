@@ -29,14 +29,14 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
     crossorigin="anonymous" />
 
-  <!-- Стили -->    
+  <!-- Стили -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/teachers.css">
   <!-- <link rel="stylesheet" href="css/teachers.css"> -->
   <!-- <link rel="stylesheet" href="css/gallery -2.css"> -->
   <!-- <link rel="stylesheet" href="css/faq.css"> -->
@@ -52,102 +52,128 @@
 <body class="page-about">
   <!-- Шапка -->
   <header class="sticky-header">
-      <div class="header-container">
-        <div class="logo-container">
-          <img src="img/logo-uz.webp" alt="School Academy" class="logo" />
-          <div class="school-info">
-            <h1 data-translate="school-name">School Academy</h1>
-            <p data-translate="address">Ташкент, Юнусабадский район</p>
-          </div>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="img/logo-uz.webp" alt="School Academy" class="logo" />
+        <div class="school-info">
+          <h1 data-translate="school-name">School Academy</h1>
+          <p data-translate="address">Ташкент, Юнусабадский район</p>
         </div>
-        <nav class="main-nav" role="navigation">
-          <ul>
-            <li>
-              <a data-translate="nav-home" href="index.html" class="nav-link">Главная</a>
-            </li>
-
-            <li class="dropdown">
-              <a data-translate="nav-about" href="about.html" class="active nav-link"
-                >О школе <i class="fas fa-chevron-down dropdown-icon"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
-                </li>
-                <li>
-                  <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a data-translate="nav-program" href="program.html" class="nav-link"
-                >Учебные программы<i class="fas fa-chevron-down dropdown-icon"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link"
-                    >Начальная школа</a
-                  >
-                </li>
-                <li>
-                  <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link"
-                    >Средняя школа</a
-                  >
-                </li>
-                <li>
-                  <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link"
-                    >Дополнительные занятия</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
-          </ul>
-        </nav>
-
-        <div class="header-right">
-          <!-- Темы  -->
-          <div class="theme-switcher">
-            <button id="theme-toggle" aria-label="Toggle Theme">
-              <span class="material-icons dark-mode"> light_mode </span>
-              <span class="material-icons light-mode"> nightlight_round </span>
-            </button>
-          </div>
-          <!-- Переключатель языка на этот код -->
-          <div class="language-switcher">
-            <button class="lang-btn active" data-lang="ru" aria-label="Русский язык" lang="ru">RU</button>
-            <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili" lang="uz">UZ</button>
-            <span class="lang-slider"></span>
-          </div>
-          <!-- ========= Телефон ====== -->
-          <div class="minimal-phone">
-            <div class="phone-pulse-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <a href="tel:+998711234567" class="bouncing-phone-number" aria-label="Позвонить: +998 (71) 123-45-67"
-              >+998 (71) 123-45-67
-            </a>
-          </div>
-        </div>
-        <button class="mobile-menu-btn" aria-label="Открыть мобильное меню" aria-expanded="false">
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-        </button>
       </div>
-    </header>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li>
+            <a data-translate="nav-home" href="index.html" class="nav-link">Главная</a>
+          </li>
+
+          <li class="dropdown">
+            <a data-translate="nav-about" href="about.html" class="active nav-link">О школе <i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-translate="nav-program" href="program.html" class="nav-link">Учебные программы<i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link">Начальная
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">Средняя
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Дополнительные
+                  занятия</a>
+              </li>
+            </ul>
+          </li>
+          <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <!-- Темы  -->
+        <div class="theme-switcher">
+          <button id="theme-toggle" aria-label="Toggle Theme">
+            <span class="material-icons dark-mode"> light_mode </span>
+            <span class="material-icons light-mode"> nightlight_round </span>
+          </button>
+        </div>
+        <!-- Переключатель языка на этот код -->
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="ru" aria-label="Русский язык" lang="ru">RU</button>
+          <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili" lang="uz">UZ</button>
+          <span class="lang-slider"></span>
+        </div>
+        <!-- ========= Телефон ====== -->
+        <div class="minimal-phone">
+          <div class="phone-pulse-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <a href="tel:+998711234567" class="bouncing-phone-number" aria-label="Позвонить: +998 (71) 123-45-67">+998
+            (71) 123-45-67
+          </a>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Открыть мобильное меню" aria-expanded="false">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+  </header>
 
   <!-- Основной контент -->
   <main class="content-wrapper">
+    <!-- Миссия -->
+    <section id="mission" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Наша миссия</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="mission-content wow fadeIn">
+          <p>
+            Мы стремимся создать среду, где каждый ученик может раскрыть свой потенциал, получить качественное
+            образование и воспитать в себе лидерские качества, необходимые для успеха в современном мире.
+          </p>
+
+          <div class="mission-values">
+            <div class="value-item">
+              <i class="fas fa-graduation-cap"></i>
+              <h4>Качество образования</h4>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-users"></i>
+              <h4>Индивидуальный подход</h4>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-globe"></i>
+              <h4>Глобальное мышление</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- История школы -->
     <section id="history" class="section-padding">
       <div class="container">
@@ -186,78 +212,139 @@
 
     <!-- Преподаватели -->
     <div class="teachers-section">
-      <h2 class="section-title">Наши Преподаватели</h2>
-      <!-- <div class="teachers-scroll-container" id="teachersScroll"> -->
-        <button class="teacher-scroll-btn left-btn">&#9664;</button>
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Наши Преподаватели</h2>
+          <div class="divider"></div>
+          <p>Погрузитесь в мир наших проектов</p>
+        </div>
+        <!-- <div class="teachers-scroll-container" id="teachersScroll"> -->
+        <button class="teacher-scroll-btn left-btn">&#10094;</button>
         <div class="teacher-cards-wrapper">
-        <div class="teacher-card">
-          <img src="img/teachers/teacher1.jpg" alt="Преподаватель 1" class="teacher-photo" />
-          <h3 class="teacher-name">Иван Иванов</h3>
-          <p class="teacher-subject">Математика</p>
-          <p class="teacher-bio-preview">Биография преподавателя...</p>
-          <button class="bio-toggle-btn">Подробнее</button>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="teacher-card">
+            <img src="img/teachers/teacher1.jpg" alt="Преподаватель 1" class="teacher-photo" />
+            <h3 class="teacher-name">Иван Иванов</h3>
+            <p class="teacher-subject">Математика</p>
+            <p class="teacher-bio-preview">Биография преподавателя...</p>
+            <button class="bio-toggle-btn">Подробнее</button>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="teacher-card">
-          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-          <h3 class="teacher-name">Мария Петрова</h3>
-          <p class="teacher-subject">Физика</p>
-          <p class="teacher-bio-preview">Биография преподавателя...</p>
-          <button class="bio-toggle-btn">Подробнее</button>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="teacher-card">
+            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+            <h3 class="teacher-name">Мария Петрова</h3>
+            <p class="teacher-subject">Физика</p>
+            <p class="teacher-bio-preview">Биография преподавателя...</p>
+            <button class="bio-toggle-btn">Подробнее</button>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="teacher-card">
-          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-          <h3 class="teacher-name">Мария Петрова</h3>
-          <p class="teacher-subject">Физика</p>
-          <p class="teacher-bio-preview">Биография преподавателя...</p>
-          <button class="bio-toggle-btn">Подробнее</button>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="teacher-card">
+            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+            <h3 class="teacher-name">Мария Петрова</h3>
+            <p class="teacher-subject">Физика</p>
+            <p class="teacher-bio-preview">Биография преподавателя...</p>
+            <button class="bio-toggle-btn">Подробнее</button>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="teacher-card">
-          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-          <h3 class="teacher-name">Мария Петрова</h3>
-          <p class="teacher-subject">Физика</p>
-          <p class="teacher-bio-preview">Биография преподавателя...</p>
-          <button class="bio-toggle-btn">Подробнее</button>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="teacher-card">
+            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+            <h3 class="teacher-name">Мария Петрова</h3>
+            <p class="teacher-subject">Физика</p>
+            <p class="teacher-bio-preview">Биография преподавателя...</p>
+            <button class="bio-toggle-btn">Подробнее</button>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="teacher-card">
-          <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-          <h3 class="teacher-name">Мария Петрова</h3>
-          <p class="teacher-subject">Физика</p>
-          <p class="teacher-bio-preview">Биография преподавателя...</p>
-          <button class="bio-toggle-btn">Подробнее</button>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="teacher-card">
+            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+            <h3 class="teacher-name">Мария Петрова</h3>
+            <p class="teacher-subject">Физика</p>
+            <p class="teacher-bio-preview">Биография преподавателя...</p>
+            <button class="bio-toggle-btn">Подробнее</button>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
           </div>
+          <div class="teacher-card">
+            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
+            <h3 class="teacher-name">Мария Петрова</h3>
+            <p class="teacher-subject">Физика</p>
+            <p class="teacher-bio-preview">Биография преподавателя...</p>
+            <button class="bio-toggle-btn">Подробнее</button>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- Добавьте другие карточки -->
         </div>
-        <!-- Добавьте другие карточки -->
-        </div>
-        <button class="teacher-scroll-btn right-btn">&#9654;</button>
-      <!-- </div> -->
-      <!-- <button class="teacher-scroll-btn left-btn">&#8249;</button>
+        <button class="teacher-scroll-btn right-btn">&#10095;</button>
+        <!-- </div> -->
+        <!-- <button class="teacher-scroll-btn left-btn">&#8249;</button>
       <button class="teacher-scroll-btn right-btn">&#8250;</button> -->
+      </div>
     </div>
-    
+    <!-- Преподаватели--2 -->
+    <section class="news-section">
+      <div class="container">
+        <h2 class="news-section__title" data-key="news_title">Наши Преподаватели</h2>
+        <p class="news-section__descr" data-key="news_description">Педагоги</p>
+        <div class="news-section__list swiper" id="newsList">
+          <div class="swiper-wrapper" id="newsSwiperWrapper">
+            <div class="swiper-slide news-slide fade-in">
+              <article class="blog-card">
+                <img src="img/sections/news1.webp" alt="new1" class="blog-card__image" loading="lazy">
+                <div class="blog-card__content">
+                  <h3 class="blog-card__title">title</h3>
+                  <p class="blog-card__descr">description</p>
+                  <p class="blog-card__date">date</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- <button class="slider-nav__btn news__prev desktop-only" id="newsPrevSlide" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button> -->
+          <!-- <button class="slider-nav__btn news__next desktop-only" id="newsNextSlide" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button> -->
+        </div>
+        <div class="news-section__pagination" id="newsPagination">
+          <!-- <button class="slider-nav__btn news-pagination__prev" id="newsPrevPage" aria-label="Previous page">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button> -->
+          <div class="news-pagination__numbers" id="paginationNumbers"></div>
+          <!-- <button class="slider-nav__btn news-pagination__next" id="newsNextPage" aria-label="Next page">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button> -->
+        </div>
+      </div>
+    </section>
     <!-- Галерея -->
     <section id="gallery" class="section-padding bg-light">
       <div class="container">
@@ -305,37 +392,7 @@
       </div>
     </section>
 
-    <!-- Миссия -->
-    <section id="mission" class="section-padding bg-light">
-      <div class="container">
-        <div class="section-header wow fadeIn">
-          <h2>Наша миссия</h2>
-          <div class="divider"></div>
-        </div>
 
-        <div class="mission-content wow fadeIn">
-          <p>
-            Мы стремимся создать среду, где каждый ученик может раскрыть свой потенциал, получить качественное
-            образование и воспитать в себе лидерские качества, необходимые для успеха в современном мире.
-          </p>
-
-          <div class="mission-values">
-            <div class="value-item">
-              <i class="fas fa-graduation-cap"></i>
-              <h4>Качество образования</h4>
-            </div>
-            <div class="value-item">
-              <i class="fas fa-users"></i>
-              <h4>Индивидуальный подход</h4>
-            </div>
-            <div class="value-item">
-              <i class="fas fa-globe"></i>
-              <h4>Глобальное мышление</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- FAQ -->
     <section id="faq" class="faq-section section-padding">
       <div class="container">
@@ -438,69 +495,54 @@
   <!-- Подвал -->
   <!-- Подвал -->
   <footer class="main-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>Часы работы</h3>
-            <p>Пн-Пт: 8:00 - 18:00</p>
-            <p>Сб: выходной</p>
-            <p>Вс: выходной</p>
-          </div>
-          <div class="footer-column">
-            <h3>Адрес</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
-          </div>
-          <div class="footer-column">
-            <h3>Контакты</h3>
-            <p>
-              <i class="fas fa-phone-alt"></i
-              ><a href="tel:+998711234567" aria-label="Позвонить: +998 (71) 123-45-67">+998 (71) 123-45-67 </a>
-            </p>
-            <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
-          </div>
-          <div class="footer-column">
-            <h3>Соцсети</h3>
-            <div class="social-links">
-              <a href="https://t.me/Shkolnayakademiya" rel="noopener noreferrer" aria-label="Перейти в Telegram" title="Наш Telegram"
-                ><i class="fab fa-telegram"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/shkolnayakademiya/"
-                rel="noopener noreferrer"
-                aria-label="Перейти в Instagram"
-                title="Наш Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU"
-                rel="noopener noreferrer"
-                aria-label="Перейти в Facebook"
-                title="Наш Facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-            </div>
-          </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Часы работы</h3>
+          <p>Пн-Пт: 8:00 - 18:00</p>
+          <p>Сб: выходной</p>
+          <p>Вс: выходной</p>
         </div>
-        <div class="footer-map">
-          <h3>Наша локация</h3>
-          <div class="divider"></div>
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
-            width="702"
-            height="579"
-            frameborder="0"
-            loading="lazy"
-          ></iframe>
+        <div class="footer-column">
+          <h3>Адрес</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
+        </div>
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <p>
+            <i class="fas fa-phone-alt"></i><a href="tel:+998711234567" aria-label="Позвонить: +998 (71) 123-45-67">+998
+              (71) 123-45-67 </a>
+          </p>
+          <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+        </div>
+        <div class="footer-column">
+          <h3>Соцсети</h3>
+          <div class="social-links">
+            <a href="https://t.me/Shkolnayakademiya" rel="noopener noreferrer" aria-label="Перейти в Telegram"
+              title="Наш Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/shkolnayakademiya/" rel="noopener noreferrer"
+              aria-label="Перейти в Instagram" title="Наш Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU" rel="noopener noreferrer"
+              aria-label="Перейти в Facebook" title="Наш Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>© 2025 School Academy. Все права защищены.</p>
-        <!-- Yandex Metrika -->
-        <!-- <noscript>
+      <div class="footer-map">
+        <h3>Наша локация</h3>
+        <div class="divider"></div>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
+          width="702" height="579" frameborder="0" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 School Academy. Все права защищены.</p>
+      <!-- Yandex Metrika -->
+      <!-- <noscript>
             <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" ></div>
           </noscript> -->
-      </div>
-    </footer>
+    </div>
+  </footer>
   <script src="js/ya.js"></script>
   <!-- <script src="js/main.js" defer></script> -->
   <script src="js/language.js" defer></script>
@@ -529,6 +571,7 @@
 
     gtag("config", "G-22ZG2NQ22L");
   </script>
+  <script src="js/teschers.js"></script>
 </body>
 
 </html>

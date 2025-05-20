@@ -279,20 +279,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Teachers
-  // Скрипт для прокрутки карточек
-
-  // const scrollContainer = document.getElementById("teachersScroll");
-  // if (scrollContainer) {
-  //   document.querySelector(".left-btn").addEventListener("click", () => {
-  //     scrollContainer.scrollBy({ left: -324, behavior: "smooth" });
-  //   });
-  //   document.querySelector(".right-btn").addEventListener("click", () => {
-  //     scrollContainer.scrollBy({ left: 324, behavior: "smooth" });
-  //   });
-
-  // }
-
   if (document.body.classList.contains("page-about")) {
     // Управление темами
     const themeSwitcher = document.querySelector(".theme-switcher");
