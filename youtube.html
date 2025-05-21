@@ -1,83 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация букв</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        overflow: hidden;
-      }
-      .video-container,
-      .video-container2 {
-        width: 100%;
-        /* height: 50vh; */
-        display: flex;
-        /* flex-flow: row wrap; */
-        padding: 20px;
-        gap: 10px;
-        overflow: auto;
-      }
-      .video-box {
-        flex: 0 0 500px;
-        min-width: 100px;
-        max-width: 300px;
-        min-height: 100px;
-        max-height: 500px;
-        border: 1px solid #000;
-        min-width: 100px;
-      }
-
-      .video-box2 {
-        flex: 0 0 300px;
-        aspect-ratio: 16/9;
-        border: 1px solid #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      iframe {
-        max-width: 100%;
-        max-height: 100%;
-      }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .word {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+        .letter {
+            display: inline-block;
+        }
     </style>
-  </head>
-  <body>
-    <div class="video-container">
-      <div class="video-box"></div>
-      <div class="video-box"></div>
-      <div class="video-box"></div>
-      <div class="video-box"></div>
-      <div class="video-box"></div>
-      <div class="video-box"></div>
-      <div class="video-box"></div>
-      <div class="video-box"></div>
-    </div>
-    <div class="video-container2">
-      <div class="video-box2">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/xga5i4xEwdU?si=1Wr24DeSUl1ZGANG"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div class="video-box2"></div>
-      <div class="video-box2"></div>
-      <div class="video-box2"></div>
-      <div class="video-box2"></div>
-      <div class="video-box2"></div>
-      <div class="video-box2"></div>
-      <div class="video-box2"></div>
-    </div>
-  </body>
+</head>
+<body>
+    <div class="word" id="animatedWord">Привет</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        // Разбиваем слово на отдельные буквы
+        const word = document.getElementById('animatedWord');
+        const letters = word.textContent.split('');
+        word.textContent = ''; // Очищаем содержимое
+
+        // Создаем span для каждой буквы
+        letters.forEach(letter => {
+            const span = document.createElement('span');
+            span.textContent = letter;
+            span.className = 'letter';
+            word.appendChild(span);
+        });
+
+        // Анимация с помощью GSAP
+        gsap.from('.letter', {
+            y: 50, // Смещение по оси Y (буквы появляются снизу)
+            opacity: 0, // Начальная прозрачность
+            duration: 0.8, // Длительность анимации
+            stagger: 0.1, // Задержка между анимацией каждой буквы
+            ease: 'power2.out' // Плавность анимации
+        });
+    </script>
+</body>
 </html>

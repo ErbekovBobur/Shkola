@@ -16,6 +16,9 @@
 
   <!--  Шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!--  Preload важнейших ресурсов -->
@@ -32,6 +35,8 @@
   <!-- Стили -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animate.css" />
@@ -211,137 +216,18 @@
     </section>
 
     <!-- Преподаватели -->
-    <div class="teachers-section">
+    <section class="teachers-section">
       <div class="container">
-        <div class="section-header wow fadeIn">
-          <h2>Наши Преподаватели</h2>
-          <div class="divider"></div>
-          <p>Погрузитесь в мир наших проектов</p>
+        <div class="section-header">
+          <h2 data-translate="teachers-title">Наши преподаватели</h2>
+          <p data-translate="teachers-subtitle">Познакомьтесь с нашей командой профессионалов</p>
+          <div class="section-header__divider divider"></div>
         </div>
-        <!-- <div class="teachers-scroll-container" id="teachersScroll"> -->
-        <button class="teacher-scroll-btn left-btn">&#10094;</button>
-        <div class="teacher-cards-wrapper">
-          <div class="teacher-card">
-            <img src="img/teachers/teacher1.jpg" alt="Преподаватель 1" class="teacher-photo" />
-            <h3 class="teacher-name">Иван Иванов</h3>
-            <p class="teacher-subject">Математика</p>
-            <p class="teacher-bio-preview">Биография преподавателя...</p>
-            <button class="bio-toggle-btn">Подробнее</button>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="teacher-card">
-            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-            <h3 class="teacher-name">Мария Петрова</h3>
-            <p class="teacher-subject">Физика</p>
-            <p class="teacher-bio-preview">Биография преподавателя...</p>
-            <button class="bio-toggle-btn">Подробнее</button>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="teacher-card">
-            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-            <h3 class="teacher-name">Мария Петрова</h3>
-            <p class="teacher-subject">Физика</p>
-            <p class="teacher-bio-preview">Биография преподавателя...</p>
-            <button class="bio-toggle-btn">Подробнее</button>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="teacher-card">
-            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-            <h3 class="teacher-name">Мария Петрова</h3>
-            <p class="teacher-subject">Физика</p>
-            <p class="teacher-bio-preview">Биография преподавателя...</p>
-            <button class="bio-toggle-btn">Подробнее</button>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="teacher-card">
-            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-            <h3 class="teacher-name">Мария Петрова</h3>
-            <p class="teacher-subject">Физика</p>
-            <p class="teacher-bio-preview">Биография преподавателя...</p>
-            <button class="bio-toggle-btn">Подробнее</button>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="teacher-card">
-            <img src="img/teachers/teacher2.jpg" alt="Преподаватель 2" class="teacher-photo" />
-            <h3 class="teacher-name">Мария Петрова</h3>
-            <p class="teacher-subject">Физика</p>
-            <p class="teacher-bio-preview">Биография преподавателя...</p>
-            <button class="bio-toggle-btn">Подробнее</button>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <!-- Добавьте другие карточки -->
-        </div>
-        <button class="teacher-scroll-btn right-btn">&#10095;</button>
-        <!-- </div> -->
-        <!-- <button class="teacher-scroll-btn left-btn">&#8249;</button>
-      <button class="teacher-scroll-btn right-btn">&#8250;</button> -->
-      </div>
-    </div>
-    <!-- Преподаватели--2 -->
-    <section class="news-section">
-      <div class="container">
-        <h2 class="news-section__title" data-key="news_title">Наши Преподаватели</h2>
-        <p class="news-section__descr" data-key="news_description">Педагоги</p>
-        <div class="news-section__list swiper" id="newsList">
-          <div class="swiper-wrapper" id="newsSwiperWrapper">
-            <div class="swiper-slide news-slide fade-in">
-              <article class="blog-card">
-                <img src="img/sections/news1.webp" alt="new1" class="blog-card__image" loading="lazy">
-                <div class="blog-card__content">
-                  <h3 class="blog-card__title">title</h3>
-                  <p class="blog-card__descr">description</p>
-                  <p class="blog-card__date">date</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <!-- <button class="slider-nav__btn news__prev desktop-only" id="newsPrevSlide" aria-label="Previous slide">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button> -->
-          <!-- <button class="slider-nav__btn news__next desktop-only" id="newsNextSlide" aria-label="Next slide">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button> -->
-        </div>
-        <div class="news-section__pagination" id="newsPagination">
-          <!-- <button class="slider-nav__btn news-pagination__prev" id="newsPrevPage" aria-label="Previous page">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button> -->
-          <div class="news-pagination__numbers" id="paginationNumbers"></div>
-          <!-- <button class="slider-nav__btn news-pagination__next" id="newsNextPage" aria-label="Next page">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button> -->
+        <div class="swiper teachers-swiper">
+          <div class="swiper-wrapper" id="teachers-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -549,8 +435,6 @@
   <script src="js/about.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/gallery -2.js"></script>
-  ;
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script>
     new WOW({
@@ -571,12 +455,6 @@
 
     gtag("config", "G-22ZG2NQ22L");
   </script>
-  <script src="js/teschers.js"></script>
+  <script src="js/teachers.js"></script>
 </body>
-
 </html>
-<!--
-git add .
-git commit -m "Ваше сообщение о коммите"
-git push origin fixBug
--->
