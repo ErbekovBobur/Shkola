@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log(window.getTranslation);  
+  console.log(window.getTranslation);
   // Подключение Swiper JS
   const script = document.createElement("script");
   script.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Опыт работы 15 лет, специализируется на подготовке к олимпиадам. Автор множества учебных пособий и победитель профессиональных конкурсов.",
         uz: "15 yillik tajriba, olimpiadalarga tayyorlashga ixtisoslashgan. Ko'plab o'quv qo'llanmalar muallifi va professional tanlovlar g'olibi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+1",
+      image: "img/teachers/teacher-1.webp",
     },
     {
       name: { ru: "Игорь Смирнов", uz: "Igor Smirnov" },
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Доктор наук, автор курсов по квантовой физике и динамике. Работает в школе более 10 лет.",
         uz: "Fan doktori, kvant fizika va dinamika bo'yicha kurslar muallifi. 10 yildan ortiq tajriba.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+2",
+      image: "img/teachers/teacher-2.webp",
     },
     {
       name: { ru: "Мария Ким", uz: "Mariya Kim" },
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Ведет лабораторные работы и занимается научным наставничеством учеников.",
         uz: "Laboratoriya ishlarini olib boradi va o'quvchilarga ilmiy rahbarlik qiladi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+3",
+      image: "img/teachers/teacher-3.webp",
     },
     {
       name: { ru: "Денис Абдуллаев", uz: "Denis Abdullayev" },
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Специалист по программированию и робототехнике. Руководит IT-клубом школы.",
         uz: "Dasturlash va robototexnika bo'yicha mutaxassis. Maktabning IT klubini boshqaradi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+4",
+      image: "img/teachers/teacher-4.webp",
     },
     {
       name: { ru: "Светлана Нуреева", uz: "Svetlana Nuriyeva" },
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Магистр педагогики, регулярно проводит разговорные клубы и олимпиады.",
         uz: "Pedagogika magistri, muntazam suhbat klublari va olimpiadalar o'tkazadi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+5",
+      image: "img/teachers/teacher-5.webp",
     },
     {
       name: { ru: "Рустам Саидов", uz: "Rustam Saidov" },
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Опыт полевых исследований, организует экскурсии и проекты по экологии.",
         uz: "Tadqiqot tajribasiga ega, ekologiya bo'yicha ekskursiyalar va loyihalarni tashkil qiladi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+6",
+      image: "img/teachers/teacher-6.webp",
     },
     {
       name: { ru: "Елена Тихонова", uz: "Elena Tixonova" },
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Увлеченный преподаватель, автор учебных программ и пособий по истории Узбекистана.",
         uz: "Tarixiy darsliklar va o‘quv dasturlar muallifi, fidokor ustoz.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+7",
+      image: "img/teachers/teacher-7.webp",
     },
     {
       name: { ru: "Алексей Павлов", uz: "Aleksey Pavlov" },
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Организует географические олимпиады и ведет кружки по картографии.",
         uz: "Geografik olimpiadalar va kartografiya to‘garaklarini tashkil qiladi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+8",
+      image: "img/teachers/teacher-8.webp",
     },
     {
       name: { ru: "Наталья Сергеева", uz: "Natalya Sergeeva" },
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Проводит театральные постановки и творческие мастерские по литературе.",
         uz: "Adabiyot bo‘yicha ijodiy mahorat darslari va sahna ko‘rinishlarini tashkil qiladi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+9",
+      image: "img/teachers/teacher-9.webp",
     },
     {
       name: { ru: "Шавкат Исмоилов", uz: "Shavkat Ismoilov" },
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ru: "Тренер школьной сборной, участник международных спортивных мероприятий.",
         uz: "Maktab sport jamoasi murabbiyi, xalqaro sport tadbirlari ishtirokchisi.",
       },
-      image: "https://via.placeholder.com/300x300?text=Teacher+10",
+      image: "img/teachers/teacher-10.webp",
     },
   ];
 
@@ -208,21 +208,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
+loadImg();
   }
 
   // Интеграция с language.js: обновление карточек при смене языка
-  // document.querySelectorAll(".lang-btn").forEach((btn) => {
-  //   btn.addEventListener("click", function () {
-  //     const lang = this.getAttribute("data-lang");
-  //     generateTeacherCards(lang);
-  //     // Переинициализация Swiper после обновления карточек
-  //     if (window.Swiper) {
-  //       const swiper = document.querySelector(".teachers-swiper").swiper;
-  //       if (swiper) swiper.destroy(true, true);
-  //       initializeSwiper();
-  //     }
-  //   });
-  // });
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       const lang = this.getAttribute("data-lang");
@@ -240,7 +229,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
+  function waitForTranslationInit(callback) {
+    if (window.getTranslation && typeof window.getTranslation === "function") {
+      callback();
+    } else {
+      setTimeout(() => waitForTranslationInit(callback), 100); // повтор каждые 50мс
+    }
+  }
   // Первичная генерация карточек
-  initializeSwiper();
+  waitForTranslationInit(() => {
+    initializeSwiper(); // теперь точно после инициализации переводов    
+  });
+  window.addEventListener("load", () => {
+    loadImg();
+  });
+  function loadImg() {
+      document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        if (img.complete) {
+          img.classList.add("loaded");
+        } else {
+          img.addEventListener("load", () => {
+            img.classList.add("loaded");
+          });
+        }
+      });
+  }
 });

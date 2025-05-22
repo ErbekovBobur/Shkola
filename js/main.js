@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   // Ленивая загрузка изображений
-  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {    
+  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
     // Если изображение уже загружено (например, из кэша)
     if (img.complete) {
       img.classList.add("loaded");
