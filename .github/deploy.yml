@@ -3,7 +3,7 @@ name: Deploy Vite app to GitHub Pages
 on:
   push:
     branches:
-      - main   # или ваша основная ветка, например master
+      - main  # или у тебя может быть master, проверь
 
 jobs:
   build-and-deploy:
@@ -16,10 +16,10 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: '18'   # или версия Node.js, которую вы используете
+          node-version: '18'
 
       - name: Install dependencies
-        run: npm ci   # или npm install, если не используете package-lock.json
+        run: npm ci
 
       - name: Build the project
         run: npm run build
@@ -30,7 +30,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          # optional:
-          # user_name: 'github-actions[bot]'
-          # user_email: 'github-actions[bot]@users.noreply.github.com'
-
