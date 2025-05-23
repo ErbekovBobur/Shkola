@@ -1,3 +1,184 @@
+.teachers-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+.teachers-swiper {
+  padding-bottom: 50px;
+}
+.teacher-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  text-align: center;
+  height: 460px; /* Фиксированная высота карточки */
+  display: flex;
+  flex-direction: column;
+}
+.teacher-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+.teacher-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--primary);
+}
+.teacher-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.teacher-info h3 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.teacher-info .position {
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.teacher-info .bio {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Ограничение на 2 строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.teacher-info .more-btn {
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-btn);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.teacher-info .more-btn:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-2px);
+}
+/* Модальное окно */
+.teacher-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.teacher-modal.show {
+  display: flex;
+}
+.modal-content {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  position: relative;
+  max-width: 300px; /* Соответствует ширине карточки */
+  width: 100%;
+  text-align: center;
+}
+.modal-content h3 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.modal-content .position {
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.modal-content p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.modal-content .close-btn {
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-btn);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.modal-content .close-btn:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-2px);
+}
+/* Swiper Navigation and Pagination */
+.swiper-button-prev,
+.swiper-button-next {
+   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+}
+.swiper-pagination-bullet {
+  background: var(--gray);
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background: var(--primary);
+  opacity: 1;
+}
+/* Темная тема */
+:root[data-theme="dark"] .teacher-card,
+:root[data-theme="dark"] .modal-content {
+  background: var(--white);
+}
+:root[data-theme="dark"] .teacher-info h3,
+:root[data-theme="dark"] .modal-content h3 {
+  color: var(--dark);
+}
+:root[data-theme="dark"] .teacher-info .bio,
+:root[data-theme="dark"] .modal-content p {
+  color: var(--gray);
+}
+:root[data-theme="dark"] .swiper-button-prev,
+:root[data-theme="dark"] .swiper-button-next {
+  background: var(--light);
+}
+:root[data-theme="dark"] .swiper-button-prev:hover,
+:root[data-theme="dark"] .swiper-button-next:hover {
+  background: var(--primary-dark);
+}
 /* === Gallery === */
 #gallery {
   padding: 20px 0;
@@ -9,10 +190,11 @@
 }
 .gallery-row {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .gallery-card {
   flex: 0 0 auto;
@@ -33,25 +215,6 @@
 .gallery-card:hover {
   transform: scale(1.05);
 }
-/* .scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #ffffffdd;
-  border-radius: 50%;
-  padding: 10px 15px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  user-select: none;
-} */
-/* .scroll-btn.left {
-  left: 0;
-}
-.scroll-btn.right {
-  right: 0;
-} */
 /* Modal */
 .lightbox {
   display: none;
@@ -96,14 +259,6 @@
 }
 .lightbox-nav.right {
   right: 30px;
-}
-.gallery-row {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 .gallery-row::-webkit-scrollbar {
   display: none;
@@ -195,8 +350,11 @@
 }
 /* Адаптивность для экранов менее 992px */
 @media (max-width: 992px) {
-  .teachers-scroll-container {
-    width: 90%;
+  .teachers-swiper .swiper-slide {
+    width: 50%;
+  }
+  .modal-content {
+    max-width: 90%;
   }
   .faq-question {
     font-size: 1.1rem;
@@ -208,14 +366,13 @@
     margin-bottom: 15px;
   }
 }
-
 /* Адаптивность для экранов менее 768px */
 @media (max-width: 768px) {
-  .teachers-scroll-container {
+  .teachers-swiper .swiper-slide {
     width: 100%;
   }
-  .teacher-card {
-    flex: 0 0 calc(33.33% - 20px); /* 3 карточки на планшетах */
+  .modal-content {
+    max-width: 80%;
   }
   .gallery-card {
     width: 200px;
@@ -240,8 +397,41 @@
 }
 /* Адаптивность для экранов менее 575px */
 @media (max-width: 575px) {
+  .teachers-section {
+    padding: 40px 0;
+  }
   .teacher-card {
-    flex: 0 0 100%; /* 1 карточка на мобильных устройствах */
+    height: 400px;
+  }
+  .teacher-card img {
+    height: 200px;
+  }
+  .teacher-info h3 {
+    font-size: 1.3rem;
+  }
+  .teacher-info .position {
+    font-size: 0.85rem;
+  }
+  .teacher-info .bio,
+  .modal-content p {
+    font-size: 0.8rem;
+  }
+  .teacher-info .more-btn,
+  .modal-content .close-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+  }
+  .modal-content {
+    max-width: 90%;
   }
   .faq-question {
     font-size: 1rem;

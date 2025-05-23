@@ -1,43 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("main.js is start");
 
-  //   автоопределение, переключение, сохранение):
-  //   function applyTheme(theme) {
-  //     document.documentElement.setAttribute("data-theme", theme);
-  //   }
-
-  //   function detectSystemTheme() {
-  //     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  //   }
-
-  //   function initTheme() {
-  //     const savedTheme = localStorage.getItem("theme");
-
-  //     if (savedTheme === "light" || savedTheme === "dark") {
-  //       applyTheme(savedTheme);
-  //     } else {
-  //       applyTheme(detectSystemTheme());
-  //     }
-
-  //     // Слушаем системные изменения, если тема не была выбрана вручную
-  //     if (!savedTheme) {
-  //       window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-  //         applyTheme(e.matches ? "dark" : "light");
-  //       });
-  //     }
-  //   }
-
-  //   document.getElementById("toggle-theme").addEventListener("click", () => {
-  //     const current = document.documentElement.getAttribute("data-theme");
-  //     const newTheme = current === "dark" ? "light" : "dark";
-  //     applyTheme(newTheme);
-  //     localStorage.setItem("theme", newTheme);
-  //   });
-
-  //   initTheme();
-  
-  //==================///========================//
-  // вариант-2
   const themeToggleBtn = document.querySelector("#theme-toggle");
 
   // Проверка текущей темы из localStorage
@@ -45,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.setAttribute("data-theme", "dark");
     themeToggleBtn?.classList.add("dark");
   }
-
   // Переключение темы
   themeToggleBtn?.addEventListener("click", () => {
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
@@ -59,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
       themeToggleBtn.classList.add("dark");
     }
   });
-
   //  wow анимации
   if (typeof WOW !== "undefined") {
     new WOW({
@@ -243,21 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-
-  // --- Инициализация календаря --- его пока нет в html
-  // if (dateInput) {
-  //   dateInput.addEventListener("input", function () {
-  //     const selectedDate = new Date(this.value);
-  //     const day = selectedDate.getDay();
-  //     if (day === 0 || day === 6) {
-  //       this.setCustomValidity("Выберите будний день");
-  //       this.reportValidity();
-  //       this.value = "";
-  //     } else {
-  //       this.setCustomValidity("");
-  //     }
-  //   });
-  // }
 
   // --- Выпадающее меню (dropdown) ---
   const dropdown_menu = document.querySelectorAll(".dropdown");

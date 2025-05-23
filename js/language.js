@@ -1,7 +1,18 @@
-// language.js - полностью заменить содержимое файла
 document.addEventListener("DOMContentLoaded", function () {
-   // 1. Словарь всех переводов
-  const translations = {
+  // 1. Словарь всех переводов
+  let translations = {};
+
+fetch("data/translations.json")
+  .then((res) => res.json())
+  .then((data) => {
+    translations = data;
+    initLanguage(); // вызов после загрузки
+  })
+  .catch((err) => {
+    console.error("Ошибка загрузки translations.json", err);
+  });
+
+  const reserve = {
     "school-name": {
       ru: "Школьная академия",
       uz: "School Academy",
@@ -86,29 +97,56 @@ document.addEventListener("DOMContentLoaded", function () {
       ru: "Закрыть",
       uz: "Yopish",
     },
-    // Добавьте другие фразы по аналогии
+    // Добавляй сюда новые ключи по мере необходимости
   };
 
+  // 2. Получение перевода
   function getTranslation(key, lang) {
     const entry = translations[key];
-    if (!entry) return key;
+    if (!entry) {
+      console.warn(`❗ Отсутствует перевод для ключа: "${key}"`);
+      return key;
+    }
     return entry[lang] || entry["ru"] || key;
   }
 
+  // 3. Установка текста по типу (text, html, placeholder и т.д.)
+  function setElementContent(element, key, lang) {
+    const type = element.dataset.translateType || "text";
+    const value = getTranslation(key, lang);
+
+    switch (type) {
+      case "html":
+        element.innerHTML = value;
+        break;
+      case "placeholder":
+        element.placeholder = value;
+        break;
+      case "value":
+        element.value = value;
+        break;
+      case "title":
+        element.title = value;
+        break;
+      case "alt":
+        element.alt = value;
+        break;
+      default:
+        element.textContent = value;
+    }
+  }
+
+  // 4. Применение языка ко всей странице
   function applyLanguage(lang) {
     document.querySelectorAll("[data-translate]").forEach((element) => {
-      const key = element.getAttribute("data-translate");
-      element.textContent = getTranslation(key, lang);
-    });
-
-    document.querySelectorAll("[data-translate-placeholder]").forEach((input) => {
-      const key = input.getAttribute("data-translate-placeholder");
-      input.placeholder = getTranslation(key, lang);
+      const key = element.dataset.translate;
+      setElementContent(element, key, lang);
     });
 
     document.documentElement.lang = lang;
   }
 
+  // 5. Инициализация языка (по localStorage или браузеру)
   function initLanguage() {
     const savedLang = localStorage.getItem("selectedLang");
     const browserLang = navigator.language.slice(0, 2);
@@ -116,11 +154,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const lang = savedLang || defaultLang;
 
     applyLanguage(lang);
+    updateLanguageUI(lang);
+  }
 
+  // 6. Обновление состояния кнопок и слайдера
+  function updateLanguageUI(lang) {
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       const btnLang = btn.getAttribute("data-lang");
-      btn.classList.toggle("active", btnLang === lang);
-      btn.setAttribute("aria-pressed", btnLang === lang ? "true" : "false");
+      const isActive = btnLang === lang;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", isActive.toString());
     });
 
     const slider = document.querySelector(".lang-slider");
@@ -129,27 +172,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // 7. Обработчик смены языка
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       const lang = this.getAttribute("data-lang");
       localStorage.setItem("selectedLang", lang);
       applyLanguage(lang);
-
-      document.querySelectorAll(".lang-btn").forEach((b) => {
-        b.classList.toggle("active", b === this);
-        b.setAttribute("aria-pressed", b === this ? "true" : "false");
-      });
-
-      const slider = document.querySelector(".lang-slider");
-      if (slider) {
-        slider.style.transform = lang === "uz" ? "translateX(100%)" : "translateX(0)";
-      }
+      updateLanguageUI(lang);
     });
   });
 
+  // 8. Инициализация
   initLanguage();
 
-  // Экспорт для использования в других скриптах
+  // 9. Экспорт функций для других скриптов
   window.getTranslation = getTranslation;
   window.translatePage = applyLanguage;
+  window.initLanguage = initLanguage;
 });
