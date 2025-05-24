@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", async () => {
       try {
-        const response = await fetch("/sw.js");
+        const response = await fetch("./sw.js");
         if (!response.ok) {
           console.warn("Файл ServiceWorker не найден");
           return;
