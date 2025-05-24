@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let teachers = [];
 
   function initializeApp() {
-    fetch("data/teachers.json")
+    fetch("./data/teachers.json")
       .then((res) => res.json())
       .then((data) => {
         teachers = data;

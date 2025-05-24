@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 1. Словарь всех переводов
   let translations = {};
 
-fetch("data/translations.json")
+fetch("./data/translations.json")
   .then((res) => res.json())
   .then((data) => {
     translations = data;
