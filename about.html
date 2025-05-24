@@ -4,15 +4,29 @@
 <head>
   <!-- Meta -->
   <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием. Запишитесь на экскурсию." />
   <meta name="theme-color" content="#1e88e5" />
+  <meta property="og:title" content="School Academy | Ташкент" />
+  <meta property="og:description"
+    content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием." />
+  <meta property="og:image" content="https://erbekovbobur.github.io/Shkola/img/logo-uz.webp" />
+  <meta property="og:image:width" content="856" />
+  <meta property="og:image:height" content="944" />
+  <meta property="og:url" content="https://erbekovbobur.github.io/Shkola/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="School Academy" />
+  <meta property="og:locale" content="ru_RU" />
   <title>School Academy | Ташкент</title>
 
   <!--  Иконка и манифест -->
-  <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon" />
-  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="shortcut icon" href="./img/ico/favicon.ico" type="image/x-icon" />
+  <link rel="preload" href="./img/logo-uz.webp" as="image" />
+  <link rel="icon" href="./img/ico/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="./img/ico/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
 
   <!--  Шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,12 +36,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!--  Preload важнейших ресурсов -->
-  <link rel="preload" href="img/logo-uz.png" as="image" />
-  <link rel="icon" href="img/ico/favicon-16x16.png" sizes="16x16" type="image/png" />
-  <link rel="icon" href="img/ico/favicon-32x32.png" sizes="32x32" type="image/png" />
 
-  <link rel="preload" href="css/style.css" as="style" />
-  <link rel="preload" href="css/teachers.css" as="style">
+  <link rel="preload" href="./css/style.css" as="style" />
+  <link rel="preload" href="./css/teachers.css" as="style">
 
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
     crossorigin="anonymous" />
@@ -38,14 +49,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animate.css" />
+  <link rel="stylesheet" href="./css/about.css">
 
   <!-- Скрипты -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/language.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/language.js" defer></script>
 </head>
 
 <body class="page-about">
@@ -53,7 +64,7 @@
   <header class="sticky-header">
     <div class="header-container">
       <div class="logo-container">
-        <img src="img/logo-uz.webp" alt="School Academy" class="logo" />
+        <img src="./img/logo-uz.webp" alt="School Academy" class="logo" />
         <div class="school-info">
           <h1 data-translate="school-name">School Academy</h1>
           <p data-translate="address">Ташкент, Юнусабадский район</p>
@@ -238,23 +249,23 @@
           <button class="gallery-nav left" id="galleryPrev">&#10094;</button>
           <div class="gallery-row" id="galleryRow">
             <!-- Карточки галереи -->
-            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 1" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image1.jpg" alt="Проект 1" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 2" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image2.jpg" alt="Проект 2" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 3" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image3.jpg" alt="Проект 3" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 4" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image4.jpg" alt="Проект 4" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image4.jpg" alt="Проект 5" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image4.jpg" alt="Проект 5" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image1.jpg" alt="Проект 5" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image1.jpg" alt="Проект 5" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image3.jpg" alt="Проект 5" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image3.jpg" alt="Проект 5" onclick="openModal(this)">
             </div>
-            <div class="gallery-card"><img src="img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)">
+            <div class="gallery-card"><img src="./img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)">
             </div>
             <!-- Добавим больше карточек -->
           </div>
@@ -423,12 +434,12 @@
           </noscript> -->
     </div>
   </footer>
-  <script src="js/ya.js"></script>
-  <!-- <script src="js/main.js" defer></script> -->
-  <script src="js/language.js" defer></script>
-  <script src="js/about.js"></script>
+  <script src="./js/ya.js"></script>
+  <!-- <script src="./js/main.js" defer></script> -->
+  <script src="./js/language.js" defer></script>
+  <script src="./js/about.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/gallery -2.js"></script>
+  <script src="./js/gallery -2.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script>
     new WOW({
@@ -449,6 +460,7 @@
 
     gtag("config", "G-22ZG2NQ22L");
   </script>
-  <script src="js/about.js" defer></script>
+  <script src="./js/about.js" defer></script>
 </body>
+
 </html>
