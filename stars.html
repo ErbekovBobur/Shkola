@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.mission-section {
+  padding: 80px 0;
+  background: radial-gradient(circle at center, #0a0a23, #1b1b32);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.mission-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(30, 144, 255, 0.2), transparent);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  z-index: 0;
+}
+
+.mission-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><circle cx="5" cy="5" r="2" fill="rgba(255,255,255,0.3)"/></svg>') repeat;
+  opacity: 0.3;
+  animation: twinkle 5s infinite ease-in-out;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.mission-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-description span {
+  display: inline-block;
+  text-shadow: 0 0 10px var(--primary);
+  color: var(--white);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .mission-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .mission-section {
+    padding: 40px 0;
+  }
+  .mission-description {
+    font-size: 1rem;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .divider {
+    width: 60px;
+  }
+}
+
+/* Темная тема */
+:root[data-theme="dark"] .mission-section {
+  background: radial-gradient(circle at center, #1a1a1a, #2c3e50);
+}
+
+:root[data-theme="dark"] .mission-section::before {
+  background: linear-gradient(45deg, transparent, rgba(144, 202, 249, 0.2), transparent);
+}
+
+:root[data-theme="dark"] .mission-description span {
+  text-shadow: 0 0 10px var(--primary-dark);
+  color: var(--gray);
+}
+</style>
+
+</head>
+<body>
+    <section class="mission-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-translate="mission-title">Наша миссия</h2>
+      <div class="divider"></div>
+    </div>
+    <p class="mission-description" data-translate="mission-description">Обеспечить качественное образование, которое вдохновляет, развивает критическое мышление и готовит к вызовам будущего.</p>
+  </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const description = document.querySelector('.mission-description');
+  if (!description) return;
+
+  let isInView = false;
+  let timeoutId;
+
+  function splitText() {
+    const text = description.textContent;
+    description.innerHTML = '';
+    text.split('').forEach(char => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.style.position = 'relative';
+      description.appendChild(span);
+    });
+  }
+
+  splitText();
+
+  const spans = description.querySelectorAll('span');
+
+  function setScattered() {
+    spans.forEach(span => {
+      const x = (Math.random() - 0.5) * 1000;
+      const y = (Math.random() - 0.5) * 1000;
+      const rotation = (Math.random() - 0.5) * 360;
+      gsap.set(span, { x: x, y: y, rotation: rotation, opacity: 0 });
+    });
+  }
+
+  setScattered();
+
+  function assembleText() {
+    gsap.to(spans, {
+      x: 0,
+      y: 0,
+      rotation: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.05,
+      ease: "power2.out"
+    });
+  }
+
+  function disintegrateText() {
+    spans.forEach(span => {
+      const x = (Math.random() - 0.5) * 1000;
+      const y = (Math.random() - 0.5) * 1000;
+      const rotation = (Math.random() - 0.5) * 360;
+      gsap.to(span, {
+        x: x,
+        y: y,
+        rotation: rotation,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.in"
+      });
+    });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        isInView = true;
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(assembleText, 2000);
+      } else {
+        isInView = false;
+        clearTimeout(timeoutId);
+        disintegrateText();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(description);
+
+  const originalApplyLanguage = window.applyLanguage;
+  window.applyLanguage = function(lang) {
+    if (originalApplyLanguage) {
+      originalApplyLanguage(lang);
+    }
+    splitText();
+    setScattered();
+    if (isInView) {
+      timeoutId = setTimeout(assembleText, 2000);
+    }
+  };
+});
+</script>
+</body>
+</html>

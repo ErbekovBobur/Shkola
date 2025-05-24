@@ -82,5 +82,14 @@
   "close-btn": {
     "ru": "Закрыть",
     "uz": "Yopish"
-  }
+  },
+
+  "mission-title": {
+      "ru": "Наша миссия",
+      "uz": "Bizning vazifamiz"
+    },
+    "mission-description": {
+      "ru": "Обеспечить качественное образование, которое вдохновляет, развивает критическое мышление и готовит к вызовам будущего.",
+      "uz": "Ilhomlantiruvchi, tanqidiy fikrlashni rivojlantiruvchi va kelajak sinovlariga tayyorlaydigan sifatli ta'limga ega bo'lish imkoniyatini ta'minlash."
+    }
 }
