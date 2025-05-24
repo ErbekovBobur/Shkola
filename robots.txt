@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://erbekovbobur.github.io/Shkola/sitemap.xml
