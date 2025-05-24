@@ -1,8 +1,11 @@
 {
   "name": "School Academy",
   "short_name": "SchoolAcademy",
+  "lang": "ru",
   "start_url": ".",
+  "scope": ".",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#1e88e5",
   "icons": [
