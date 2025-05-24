@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // 1. Словарь всех переводов
   let translations = {};
 
-fetch("./data/translations.json")
-  .then((res) => res.json())
-  .then((data) => {
-    translations = data;
-    initLanguage(); // вызов после загрузки
-  })
-  .catch((err) => {
-    console.error("Ошибка загрузки translations.json", err);
-  });
+  fetch("./data/translations.json")
+    .then((res) => res.json())
+    .then((data) => {
+      translations = data;
+      initLanguage(); // вызов после загрузки
+    })
+    .catch((err) => {
+      console.error("Ошибка загрузки translations.json", err);
+    });
 
   const reserve = {
     "school-name": {
