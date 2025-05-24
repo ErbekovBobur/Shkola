@@ -1,0 +1,86 @@
+{
+  "school-name": {
+    "ru": "Школьная академия",
+    "uz": "School Academy"
+  },
+  "address": {
+    "ru": "Ташкент, Юнусабадский район",
+    "uz": "Toshkent, Yunusobod tumani"
+  },
+  "nav-home": {
+    "ru": "Главная",
+    "uz": "Bosh sahifa"
+  },
+  "nav-about": {
+    "ru": "О школе",
+    "uz": "Maktab haqida"
+  },
+  "nav-about-history": {
+    "ru": "История",
+    "uz": "Tarix"
+  },
+  "nav-about-teachers": {
+    "ru": "Преподаватели",
+    "uz": "Ustozlar"
+  },
+  "nav-about-gallery": {
+    "ru": "Галарея",
+    "uz": "Galareya"
+  },
+  "nav-about-mission": {
+    "ru": "Наша миссия",
+    "uz": "Bizning maqsadlarimiz"
+  },
+  "nav-about-faq": {
+    "ru": "Часто задаваемые вопросы",
+    "uz": "Savol-javoblar"
+  },
+  "nav-program": {
+    "ru": "Учебные программы",
+    "uz": "O'quv dasturlari"
+  },
+  "nav-program-primary-school": {
+    "ru": "Начальная школа",
+    "uz": "Boshlang'ich maktab"
+  },
+  "nav-program-high-school": {
+    "ru": "Средняя школа",
+    "uz": "O'rta maktab"
+  },
+  "nav-program-clubs": {
+    "ru": "Дополнительные занятия",
+    "uz": "Qo'shimcha mashg'ulotlar"
+  },
+  "nav-contact": {
+    "ru": "Контакты",
+    "uz": "Aloqa"
+  },
+  "hero-title": {
+    "ru": "Качественное образование",
+    "uz": "Zamonaviy va sifatli taʼlim"
+  },
+  "hero-title-accent": {
+    "ru": "в Ташкенте",
+    "uz": "Toshkentda"
+  },
+  "hero-button": {
+    "ru": "Записаться на экскурсию",
+    "uz": "Ekskursiyaga yoziling"
+  },
+  "teachers-title": {
+    "ru": "Наши преподаватели",
+    "uz": "Bizning o'qituvchilarimiz"
+  },
+  "teachers-subtitle": {
+    "ru": "Познакомьтесь с нашей командой профессионалов",
+    "uz": "Bizning professional jamoamiz bilan tanishing"
+  },
+  "more-btn": {
+    "ru": "Подробнее",
+    "uz": "Batafsil"
+  },
+  "close-btn": {
+    "ru": "Закрыть",
+    "uz": "Yopish"
+  }
+}
