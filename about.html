@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием. Запишитесь на экскурсию." />
+  <meta name="theme-color" content="#1e88e5" />
+  <meta property="og:title" content="School Academy | Ташкент" />
+  <meta property="og:description"
+    content="Частная школа в Ташкенте с индивидуальным подходом и пятиразовым питанием." />
+  <meta property="og:image" content="https://erbekovbobur.github.io/Shkola/img/logo-uz.webp" />
+  <meta property="og:image:width" content="856" />
+  <meta property="og:image:height" content="944" />
+  <meta property="og:url" content="https://erbekovbobur.github.io/Shkola/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="School Academy" />
+  <meta property="og:locale" content="ru_RU" />
+  <title>School Academy | Ташкент</title>
+
+  <!--  Иконка и манифест -->
+  <link rel="shortcut icon" href="./img/ico/favicon.ico" type="image/x-icon" />
+  <link rel="preload" href="./img/logo-uz.webp" as="image" />
+  <link rel="icon" href="./img/ico/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="./img/ico/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+  <!--  Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!--  Preload важнейших ресурсов -->
+
+  <link rel="preload" href="./css/style.css" as="style" />
+  <link rel="preload" href="./css/teachers.css" as="style">
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+    crossorigin="anonymous" />
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animate.css" />
+  <link rel="stylesheet" href="./css/about.css">
+
+  <!-- Скрипты -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/language.js" defer></script>
+</head>
+
+<body class="page-about">
+  <!-- Шапка -->
+  <header class="sticky-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="./img/logo-uz.webp" alt="School Academy" class="logo" />
+        <div class="school-info">
+          <h1 data-translate="school-name">School Academy</h1>
+          <p data-translate="address">Ташкент, Юнусабадский район</p>
+        </div>
+      </div>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li>
+            <a data-translate="nav-home" href="index.html" class="nav-link">Главная</a>
+          </li>
+
+          <li class="dropdown">
+            <a data-translate="nav-about" href="about.html" class="active nav-link">О школе <i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-about-history" href="about.html#history" class="nav-link">История</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Преподаватели</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Галерея</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Миссия</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Часто задаваемые вопросы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-translate="nav-program" href="program.html" class="nav-link">Учебные программы<i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-program-primary-school" href="program.html#elementary" class="nav-link">Начальная
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">Средняя
+                  школа</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Дополнительные
+                  занятия</a>
+              </li>
+            </ul>
+          </li>
+          <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <!-- Темы  -->
+        <div class="theme-switcher">
+          <button id="theme-toggle" aria-label="Toggle Theme">
+            <span class="material-icons dark-mode"> light_mode </span>
+            <span class="material-icons light-mode"> nightlight_round </span>
+          </button>
+        </div>
+        <!-- Переключатель языка на этот код -->
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="ru" aria-label="Русский язык" lang="ru">RU</button>
+          <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili" lang="uz">UZ</button>
+          <span class="lang-slider"></span>
+        </div>
+        <!-- ========= Телефон ====== -->
+        <div class="minimal-phone">
+          <div class="phone-pulse-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <a href="tel:+998711234567" class="bouncing-phone-number" aria-label="Позвонить: +998 (71) 123-45-67">+998
+            (71) 123-45-67
+          </a>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Открыть мобильное меню" aria-expanded="false">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="content-wrapper">
+    <!-- Миссия -->
+    <section id="mission" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Наша миссия</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="mission-content wow fadeIn">
+          <p>
+            Мы стремимся создать среду, где каждый ученик может раскрыть свой потенциал, получить качественное
+            образование и воспитать в себе лидерские качества, необходимые для успеха в современном мире.
+          </p>
+
+          <div class="mission-values">
+            <div class="value-item">
+              <i class="fas fa-graduation-cap"></i>
+              <h4>Качество образования</h4>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-users"></i>
+              <h4>Индивидуальный подход</h4>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-globe"></i>
+              <h4>Глобальное мышление</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- История школы -->
+    <section id="history" class="section-padding">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Наша история</h2>
+          <div class="divider"></div>
+          <p>Как все начиналось</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item wow fadeInLeft">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content">
+              <h3>Основание школы</h3>
+              <p>Школа открыла свои двери для первых 50 учеников начальных классов</p>
+            </div>
+          </div>
+
+          <div class="timeline-item wow fadeInRight">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+              <h3>Расширение</h3>
+              <p>Построено новое здание для средней школы и спортивный комплекс</p>
+            </div>
+          </div>
+
+          <div class="timeline-item wow fadeInLeft">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+              <h3>Современные технологии</h3>
+              <p>Оснащение классов интерактивными досками и компьютерными лабораториями</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преподаватели -->
+    <section class="teachers-section" id="teachers">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-translate="teachers-title">Наши преподаватели</h2>
+          <p data-translate="teachers-subtitle">Познакомьтесь с нашей командой профессионалов</p>
+          <div class="section-header__divider divider"></div>
+        </div>
+        <div class="swiper teachers-swiper">
+          <div class="swiper-wrapper" id="teachers-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Галерея -->
+    <section id="gallery" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Галерея</h2>
+          <div class="divider"></div>
+          <p>Погрузитесь в мир наших проектов</p>
+        </div>
+        <!-- Горизонтальный скролл -->
+        <div class="gallery-wrapper">
+          <button class="gallery-nav left" id="galleryPrev">&#10094;</button>
+          <div class="gallery-row" id="galleryRow">
+            <!-- Карточки галереи -->
+            <div class="gallery-card"><img src="./img/gallery/image1.jpg" alt="Проект 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image2.jpg" alt="Проект 2" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image3.jpg" alt="Проект 3" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image4.jpg" alt="Проект 4" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image4.jpg" alt="Проект 5" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image1.jpg" alt="Проект 5" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image3.jpg" alt="Проект 5" onclick="openModal(this)">
+            </div>
+            <div class="gallery-card"><img src="./img/gallery/image2.jpg" alt="Проект 5" onclick="openModal(this)">
+            </div>
+            <!-- Добавим больше карточек -->
+          </div>
+          <button class="gallery-nav right" id="galleryNext">&#10095;</button>
+        </div>
+      </div>
+      </div>
+
+      <!-- Модальное окно -->
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeModal()">&times;</span>
+        <button class="lightbox-nav left" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="">
+        <button class="lightbox-nav right" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Часто задаваемые вопросы</h2>
+          <div class="divider"></div>
+          <p>Здесь вы найдете ответы на самые распространенные вопросы о нашей школе</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              Как записаться в школу?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Записаться в нашу школу можно несколькими способами. Вы можете заполнить онлайн-заявку на нашем сайте,
+                указав все необходимые данные, или обратиться в наш приемный отдел для получения консультации по всем
+                вопросам, связанным с поступлением. Наши сотрудники помогут вам с выбором подходящей образовательной
+                программы и оформлением всех документов. Также можно записаться на день открытых дверей, чтобы лично
+                познакомиться с педагогами и директором школы.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Какие программы обучения предлагаются?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Мы предлагаем широкий выбор образовательных программ для детей разного возраста. Наша школа включает в
+                себя детский сад, начальную школу, среднюю школу и программы подготовки к вузам. Все программы
+                ориентированы на индивидуальные особенности каждого ребенка. Мы предлагаем специализированные курсы, а
+                также дополнительное образование по интересам, включая искусство, спорт и технологии. Программы
+                адаптированы под возрастные и интеллектуальные особенности учеников, что помогает максимально раскрыть
+                потенциал каждого ребенка.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Какие документы необходимы для поступления?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Для поступления в нашу школу требуется несколько документов. Вам нужно предоставить паспорт одного из
+                родителей (или законного представителя), свидетельство о рождении ребенка, медицинскую справку о
+                состоянии здоровья (обновляемую ежегодно), а также анкеты, которые заполняются при регистрации. В
+                случае, если ребенок уже учился в другой школе, может понадобиться аттестат или другие справки из
+                предыдущего учебного заведения. Вся информация о процессе поступления, а также о сроках и документах,
+                указана на нашем сайте в разделе "Поступление".</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Есть ли программа для детей с особыми потребностями?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Да, наша школа предоставляет особые образовательные условия для детей с особыми потребностями. Мы
+                понимаем, что каждый ребенок уникален, и создаем такие условия, которые помогут ему развиваться в
+                соответствии с индивидуальными потребностями. Для этого у нас есть квалифицированные специалисты,
+                включая психологов и дефектологов, которые разрабатывают персонализированные программы обучения. Мы
+                активно сотрудничаем с родителями, чтобы найти лучший подход для каждого ученика. В школе также
+                проводятся дополнительные занятия и занятия по коррекционной педагогике, которые помогают детям с
+                особыми образовательными потребностями достигать успехов в учебе.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Как осуществляется питание в школе?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>В нашей школе организовано полноценное и сбалансированное питание для всех учеников. Мы заботимся о
+                здоровье наших детей и предлагаем пятиразовое питание, включая завтрак, второй завтрак, обед, полдник и
+                ужин. Все блюда готовятся из свежих продуктов, а меню составляется с учетом возрастных особенностей и
+                потребностей детей. Мы также предлагаем специальные диетические блюда для детей с аллергиями или особыми
+                потребностями в питании. Питание организовано с учетом всех санитарных норм, а качество продуктов
+                постоянно проверяется нашим контролем качества.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Есть ли программа спортивных секций?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Да, наша школа активно поддерживает спортивные занятия и секции для учеников. Мы понимаем важность
+                физического развития и поддерживаем спортивные традиции. В нашей школе предлагаются различные спортивные
+                секции, включая футбол, баскетбол, плавание, гимнастику, волейбол и другие виды спорта. Также проводятся
+                спортивные мероприятия, турниры и олимпиады, в которых могут принять участие все желающие. Наша цель —
+                способствовать не только умственному, но и физическому развитию каждого ребенка. Мы уверены, что
+                активные занятия спортом способствуют лучшему обучению и укреплению здоровья наших учеников.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал -->
+  <!-- Подвал -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Часы работы</h3>
+          <p>Пн-Пт: 8:00 - 18:00</p>
+          <p>Сб: выходной</p>
+          <p>Вс: выходной</p>
+        </div>
+        <div class="footer-column">
+          <h3>Адрес</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Ташкент, Юнусабадский район, массив Юнусабад, 7-й квартал, 16/1</p>
+        </div>
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <p>
+            <i class="fas fa-phone-alt"></i><a href="tel:+998711234567" aria-label="Позвонить: +998 (71) 123-45-67">+998
+              (71) 123-45-67 </a>
+          </p>
+          <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+        </div>
+        <div class="footer-column">
+          <h3>Соцсети</h3>
+          <div class="social-links">
+            <a href="https://t.me/Shkolnayakademiya" rel="noopener noreferrer" aria-label="Перейти в Telegram"
+              title="Наш Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/shkolnayakademiya/" rel="noopener noreferrer"
+              aria-label="Перейти в Instagram" title="Наш Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU" rel="noopener noreferrer"
+              aria-label="Перейти в Facebook" title="Наш Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-map">
+        <h3>Наша локация</h3>
+        <div class="divider"></div>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
+          width="702" height="579" frameborder="0" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 School Academy. Все права защищены.</p>
+      <!-- Yandex Metrika -->
+      <!-- <noscript>
+            <div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" ></div>
+          </noscript> -->
+    </div>
+  </footer>
+  <script src="./js/ya.js"></script>
+  <!-- <script src="./js/main.js" defer></script> -->
+  <script src="./js/language.js" defer></script>
+  <script src="./js/about.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/gallery -2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 50,
+      mobile: true,
+    }).init();
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22ZG2NQ22L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-22ZG2NQ22L");
+  </script>
+  <script src="./js/about.js" defer></script>
+</body>
+
+</html>

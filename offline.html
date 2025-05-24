@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>School Academy (Оффлайн)</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background: #f5f5f5;
+      }
+
+      .offline-container {
+        max-width: 500px;
+        padding: 30px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #7f8c8d;
+        margin-bottom: 30px;
+      }
+
+      .reload-btn {
+        background: #1e88e5;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="offline-container">
+      <h1>Вы в оффлайн-режиме</h1>
+      <p>Для просмотра этой страницы требуется интернет-соединение.</p>
+      <button class="reload-btn" onclick="window.location.reload()">Повторить попытку</button>
+    </div>
+  </body>
+</html>
