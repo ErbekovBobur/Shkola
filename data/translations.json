@@ -83,13 +83,16 @@
     "ru": "Закрыть",
     "uz": "Yopish"
   },
-
-  "mission-title": {
-      "ru": "Наша миссия",
-      "uz": "Bizning vazifamiz"
-    },
-    "mission-description": {
-      "ru": "Обеспечить качественное образование, которое вдохновляет, развивает критическое мышление и готовит к вызовам будущего.",
-      "uz": "Ilhomlantiruvchi, tanqidiy fikrlashni rivojlantiruvchi va kelajak sinovlariga tayyorlaydigan sifatli ta'limga ega bo'lish imkoniyatini ta'minlash."
-    }
+  "our_mission_title": {
+    "ru": "Наша миссия",
+    "uz": "Bizning vazifamiz"
+  },
+  "our_mission_subtitle": {
+    "ru": "Вдохновлять, направлять и раскрывать потенциал каждого ребёнка",
+    "uz": "Har bir bolaning salohiyatini ilhomlantirish, yo'naltirish va ochib berish"
+  },
+  "our_mission_text": {
+    "ru": "В нашей школе мы стремимся создать среду, в которой каждый ученик чувствует себя уверенно, свободно и вдохновлённо. Мы верим, что образование должно не только давать знания, но и формировать личность, прививать ценности уважения, ответственности и стремления к саморазвитию.<br><br>Наша миссия — воспитать поколение молодых людей, которые умеют мыслить критически, действовать осознанно и влиять на мир вокруг себя позитивным образом.",
+    "uz": "Maktabimizda biz har bir o‘quvchi o‘zini ishonchli, erkin va ilhomlangan holda his qiladigan muhit yaratishga intilamiz. Biz taʼlim nafaqat bilim berishi, balki shaxsni shakllantirishi, hurmat, masʼuliyat va o‘zini rivojlantirishga intilish kabi qadriyatlarni singdirishi kerak, deb hisoblaymiz.<br><br>Bizning vazifamiz – tanqidiy fikrlaydigan, ongli harakat qiladigan va atrofdagi dunyoga ijobiy ta’sir ko‘rsatadigan yosh avlodni tarbiyalash."
+  }
 }

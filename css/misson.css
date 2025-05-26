@@ -1,161 +1,145 @@
-
-.mission-section {
+.mission-section-avantgarde {
   position: relative;
-  padding: 80px 0;
-  background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%);
+  background: #0d1117; /* Очень тёмный фон для контраста */
+  color: #f0f0f0;
+  padding: 80px 20px 120px;
   overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.mission-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    linear-gradient(45deg, transparent, rgba(30, 144, 255, 0.2), transparent),
-    linear-gradient(-45deg, transparent, rgba(205, 0, 116, 0.2), transparent);
-  background-size: 200% 200%;
-  animation: gradientShift 10s ease infinite;
-  z-index: 0;
-}
-
-.mission-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--primary);
-  opacity: 0.3;
-  animation: scanline 5s linear infinite;
-  z-index: 1;
-}
-
-.container {
+.section-header {
+  max-width: 600px;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 2;
 }
 
-.mission-goals {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 40px;
+.mission-title-avantgarde {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent, #00c6fb);
+  position: relative;
+  mix-blend-mode: screen;
+  margin-bottom: 0.2em;
+  transform: skew(-10deg);
 }
 
-.goal-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius);
-  padding: 20px;
-  text-align: center;
-  color: var(--dark);
-  text-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
-  animation: float 3s ease-in-out infinite;
-  transition: var(--transition);
+.avantgarde-divider {
+  width: 80px;
+  height: 6px;
+  background: var(--accent, #00c6fb);
+  margin-bottom: 1em;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  filter: drop-shadow(0 2px 2px rgba(0, 198, 251, 0.5));
 }
 
-.goal-card:hover {
-  box-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
-  transform: translateY(-5px);
+.mission-subtitle-avantgarde {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #a0a8b5;
+  max-width: 420px;
+  transform: skew(-10deg);
 }
 
-.goal-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.mission-content-avantgarde {
+  background: linear-gradient(135deg, #0d1117cc 0%, #1f2833cc 100%);
+  border: 4px solid var(--accent, #00c6fb);
+  padding: 2.5rem 3rem;
+  max-width: 850px;
+  margin: 0 auto;
+  border-radius: 40px 5px 40px 5px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #cfd7e3;
+  filter: drop-shadow(0 8px 12px rgba(0, 198, 251, 0.3));
+  transform: skew(-5deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 2;
 }
 
-.goal-card p {
-  font-size: 0.9rem;
+.mission-content-avantgarde:hover {
+  transform: skew(-5deg) translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 198, 251, 0.6);
 }
 
-.particle {
+.mission-text-avantgarde {
+  transform: skew(5deg);
+}
+
+/* Авангардные геометрические фигуры — абстрактные формы */
+.avantgarde-shapes {
   position: absolute;
-  background: var(--primary);
+  top: 0;
+  right: 10%;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.shape {
+  opacity: 0.15;
+  filter: drop-shadow(0 0 5px var(--accent, #00c6fb));
+  mix-blend-mode: screen;
+}
+
+.shape-circle {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  opacity: 0.5;
-  animation: twinkle infinite ease-in-out;
-  z-index: 0;
+  background: var(--accent, #00c6fb);
+  transform: translate(20px, -30px) rotate(-15deg);
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
+.shape-rectangle {
+  width: 160px;
+  height: 90px;
+  background: linear-gradient(45deg, #005f73, #0a9396);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  transform: translate(-10px, 40px) rotate(10deg);
 }
 
-@keyframes scanline {
-  0% { top: 0; }
-  100% { top: 100%; }
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 120px solid var(--accent, #00c6fb);
+  filter: drop-shadow(0 0 15px #00c6fbcc);
+  transform: translate(30px, 20px) rotate(5deg);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-.mission-goals .goal-card:nth-child(1) { animation-delay: 0s; }
-.mission-goals .goal-card:nth-child(2) { animation-delay: 0.5s; }
-.mission-goals .goal-card:nth-child(3) { animation-delay: 1s; }
-.mission-goals .goal-card:nth-child(4) { animation-delay: 1.5s; }
-
-@media (max-width: 992px) {
-  .mission-goals {
-    grid-template-columns: repeat(2, 1fr);
+/* Адаптив */
+@media (max-width: 900px) {
+  .avantgarde-shapes {
+    display: none;
+  }
+  .mission-content-avantgarde {
+    padding: 1.8rem 2rem;
+    border-radius: 20px 5px 20px 5px;
+  }
+  .mission-title-avantgarde {
+    font-size: 2.2rem;
+  }
+  .mission-subtitle-avantgarde {
+    max-width: 100%;
   }
 }
 
-@media (max-width: 575px) {
-  .mission-section {
-    padding: 40px 0;
-  }
-  .mission-goals {
-    grid-template-columns: 1fr;
-  }
-  .goal-card h3 {
-    font-size: 1.1rem;
-  }
-  .goal-card p {
-    font-size: 0.8rem;
-  }
-  .section-header h2 {
+@media (max-width: 480px) {
+  .mission-title-avantgarde {
     font-size: 1.8rem;
+    letter-spacing: 0.1em;
   }
-  .section-header p {
+  .mission-content-avantgarde {
     font-size: 1rem;
   }
-  .divider {
-    width: 60px;
-  }
-}
-
-:root[data-theme="dark"] .mission-section {
-  background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%);
-}
-
-:root[data-theme="dark"] .goal-card {
-  background: rgba(26, 26, 26, 0.1);
-  border: 1px solid rgba(26, 26, 26, 0.2);
-}
-
-:root[data-theme="dark"] .mission-section::before {
-  background: 
-    linear-gradient(45deg, transparent, rgba(144, 202, 249, 0.2), transparent),
-    linear-gradient(-45deg, transparent, rgba(255, 27, 156, 0.2), transparent);
-}
-
-:root[data-theme="dark"] .goal-card h3,
-:root[data-theme="dark"] .goal-card p {
-  color: var(--gray);
-  text-shadow: 0 0 5px rgba(144, 202, 249, 0.5);
 }
