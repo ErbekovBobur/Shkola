@@ -1,145 +1,163 @@
-.mission-section-avantgarde {
-  position: relative;
-  background: #0d1117; /* Очень тёмный фон для контраста */
-  color: #f0f0f0;
-  padding: 80px 20px 120px;
-  overflow: hidden;
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineExpand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.11;
+    transform: rotate(5deg) scale(1);
+  }
+  50% {
+    opacity: 0.18;
+    transform: rotate(45deg) scale(1.15);
+  }
+}
+
+.mission-flat {
+  background-color: #f0f8ff;
+  color: #1a1a1a;
+  padding: 60px 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.section-header {
-  max-width: 600px;
-  margin-bottom: 3rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 100px auto;
+  text-align: center;
+  user-select: none;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  z-index: 2;
 }
 
-.mission-title-avantgarde {
+.mission-flat::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 140%;
+  height: 150%;
+  background: linear-gradient(135deg, #007acc 20%, #00aaff 60%, #66c7ff 100%);
+  opacity: 0.12;
+  transform: rotate(25deg);
+  border-radius: 50%;
+  animation: pulseGlow 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+.mission-flat > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.mission-flat .section-header {
+  margin-bottom: 40px;
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+.mission-flat .mission-title {
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 700;
+  color: var(--gray);
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--accent, #00c6fb);
   position: relative;
-  mix-blend-mode: screen;
-  margin-bottom: 0.2em;
-  transform: skew(-10deg);
-}
-
-.avantgarde-divider {
-  width: 80px;
-  height: 6px;
-  background: var(--accent, #00c6fb);
-  margin-bottom: 1em;
-  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
-  filter: drop-shadow(0 2px 2px rgba(0, 198, 251, 0.5));
-}
-
-.mission-subtitle-avantgarde {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #a0a8b5;
-  max-width: 420px;
-  transform: skew(-10deg);
-}
-
-.mission-content-avantgarde {
-  background: linear-gradient(135deg, #0d1117cc 0%, #1f2833cc 100%);
-  border: 4px solid var(--accent, #00c6fb);
-  padding: 2.5rem 3rem;
-  max-width: 850px;
-  margin: 0 auto;
-  border-radius: 40px 5px 40px 5px;
-  font-size: 1.15rem;
-  line-height: 1.7;
-  font-weight: 500;
-  color: #cfd7e3;
-  filter: drop-shadow(0 8px 12px rgba(0, 198, 251, 0.3));
-  transform: skew(-5deg);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: inline-block;
+  cursor: default;
+  transition: color 0.3s ease;
   position: relative;
-  z-index: 2;
 }
-
-.mission-content-avantgarde:hover {
-  transform: skew(-5deg) translateY(-10px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(0, 198, 251, 0.6);
-}
-
-.mission-text-avantgarde {
-  transform: skew(5deg);
-}
-
-/* Авангардные геометрические фигуры — абстрактные формы */
-.avantgarde-shapes {
+.mission-flat .mission-title::before {
+  content: attr(data-text);
+  height: 100%;
+  width: 0;
   position: absolute;
   top: 0;
-  right: 10%;
-  bottom: 0;
   left: 0;
-  pointer-events: none;
-  z-index: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem;
+  color: var(--dark);
+  overflow: hidden;
+  animation: printText 5s linear both, pulse 1s 5.5s ease infinite;
+  white-space: nowrap;
+  border-right: 3px solid black;
 }
-
-.shape {
-  opacity: 0.15;
-  filter: drop-shadow(0 0 5px var(--accent, #00c6fb));
-  mix-blend-mode: screen;
-}
-
-.shape-circle {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: var(--accent, #00c6fb);
-  transform: translate(20px, -30px) rotate(-15deg);
-}
-
-.shape-rectangle {
-  width: 160px;
-  height: 90px;
-  background: linear-gradient(45deg, #005f73, #0a9396);
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-  transform: translate(-10px, 40px) rotate(10deg);
-}
-
-.shape-triangle {
-  width: 0;
-  height: 0;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  border-bottom: 120px solid var(--accent, #00c6fb);
-  filter: drop-shadow(0 0 15px #00c6fbcc);
-  transform: translate(30px, 20px) rotate(5deg);
-}
-
-/* Адаптив */
-@media (max-width: 900px) {
-  .avantgarde-shapes {
-    display: none;
+@keyframes printText {
+  0% {
+    width: 0;
   }
-  .mission-content-avantgarde {
-    padding: 1.8rem 2rem;
-    border-radius: 20px 5px 20px 5px;
+  100% {
+    width: 100%;
   }
-  .mission-title-avantgarde {
+}
+@keyframes pulse {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: black;
+  }
+}
+.mission-flat .divider {
+  height: 6px;
+  background-color: #00aaff;
+  margin: 0 auto 30px auto;
+  border-radius: 3px;
+  animation: underlineExpand 0.8s ease forwards;
+}
+
+.mission-flat .mission-subtitle {
+  font-size: 1.3rem;
+  color: #333333;
+  font-weight: 500;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.mission-flat .mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555555;
+  user-select: text;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.mission-flat .mission-content p:hover {
+  color: #007acc;
+  cursor: default;
+}
+
+@media (max-width: 600px) {
+  .mission-flat .mission-title {
     font-size: 2.2rem;
   }
-  .mission-subtitle-avantgarde {
-    max-width: 100%;
+  .mission-flat .mission-subtitle {
+    font-size: 1.1rem;
   }
-}
-
-@media (max-width: 480px) {
-  .mission-title-avantgarde {
-    font-size: 1.8rem;
-    letter-spacing: 0.1em;
-  }
-  .mission-content-avantgarde {
+  .mission-flat .mission-content p {
     font-size: 1rem;
   }
 }
