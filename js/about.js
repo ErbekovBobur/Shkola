@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3 data-translate="teacher-${i + 1}-name">${t.name[lang] || t.name.ru}</h3>
             <div class="position" data-translate="teacher-${i + 1}-position">${t.position[lang] || t.position.ru}</div>
             <p class="bio" data-translate="teacher-${i + 1}-bio">${t.bio[lang] || t.bio.ru}</p>
-            <button class="more-btn" data-modal="modal-${i}" data-translate="more-btn">${getTranslation("more-btn", lang)}</button>
+            <button class="more-btn" data-modal="modal-${i}" data-translate="more-btn">${getTranslation(
+        "more-btn",
+        lang
+      )}</button>
           </div>
         </div>
         <div class="teacher-modal" id="modal-${i}">
@@ -43,7 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3 data-translate="teacher-${i + 1}-name">${t.name[lang] || t.name.ru}</h3>
             <div class="position" data-translate="teacher-${i + 1}-position">${t.position[lang] || t.position.ru}</div>
             <p data-translate="teacher-${i + 1}-bio">${t.bio[lang] || t.bio.ru}</p>
-            <button class="close-btn" data-close="modal-${i}" data-translate="close-btn">${getTranslation("close-btn", lang)}</button>
+            <button class="close-btn" data-close="modal-${i}" data-translate="close-btn">${getTranslation(
+        "close-btn",
+        lang
+      )}</button>
           </div>
         </div>
       `;

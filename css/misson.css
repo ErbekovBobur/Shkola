@@ -92,7 +92,7 @@
   left: 0;
   color: var(--dark);
   overflow: hidden;
-  animation: printText 5s linear both, pulse 1s 5.5s ease infinite;
+  animation: printText 5s linear both, pulse 1s 5.5s ease-in infinite;
   white-space: nowrap;
   border-right: 3px solid black;
 }
