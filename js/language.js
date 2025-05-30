@@ -152,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const browserLang = navigator.language.slice(0, 2);
     const defaultLang = ["ru", "uz"].includes(browserLang) ? browserLang : "ru";
     const lang = savedLang || defaultLang;
-
     applyLanguage(lang);
     updateLanguageUI(lang);
   }
