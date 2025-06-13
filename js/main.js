@@ -173,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // header.style.background = "rgba(255, 255, 255, 0.98)";
         header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
       }
-
       lastScroll = currentScroll;
     }, 50)
   );
