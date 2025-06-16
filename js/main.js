@@ -473,4 +473,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  // language --
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const lang = this.dataset.lang;
+      const currentPath = window.location.pathname;
+
+      // Узнать имя страницы (например, about.html)
+      const filename = currentPath.split("/").pop() || "index.html";
+
+      if (lang === "ru") {
+        // Перейти в корень (удалить /uz/)
+        const targetPath = currentPath.startsWith("/uz/") ? "/" + filename : currentPath; // уже на ru
+        window.location.href = targetPath;
+      } else if (lang === "uz") {
+        // Перейти в /uz/ если ещё не там
+        const targetPath = currentPath.startsWith("/uz/")
+          ? currentPath // уже на uz
+          : "/uz/" + filename;
+        window.location.href = targetPath;
+      }
+    });
+  });
 });

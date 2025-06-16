@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="uz" dir="ltr">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Toshkentdagi xususiy maktab – individual yondashuv va besh mahal ovqatlanish. Ekskursiyaga yoziling." />
+  <meta name="theme-color" content="#1e88e5" />
+  <meta property="og:title" content="School Academy | Toshkent" />
+  <meta property="og:description"
+    content="Toshkentdagi xususiy maktab – individual yondashuv va besh mahal ovqatlanish." />
+  <meta property="og:image" content="https://erbekovbobur.github.io/Shkola/img/logo-uz.webp" />
+  <meta property="og:image:width" content="856" />
+  <meta property="og:image:height" content="944" />
+  <meta property="og:url" content="https://erbekovbobur.github.io/Shkola/uz/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="School Academy" />
+  <meta property="og:locale" content="uz_UZ" />
+  <title>School Academy | Toshkent</title>
+  <!--  Иконка и манифест -->
+  <link rel="shortcut icon" href="../img/ico/favicon.ico" type="image/x-icon" />
+  <link rel="preload" href="../img/logo-uz.webp" as="image" />
+  <link rel="icon" href="../img/ico/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href=".../img/ico/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <!--  Шрифты -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <!--  Preload важнейших ресурсов -->
+  <link rel="preload" href="../css/style.css" as="style" />
+  <!-- Стили -->
+  <link rel="dns-prefetch" href="https://cdn.plyr.io" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <!-- <link rel="stylesheet" href="css/video.css" /> -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animate.css" />
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/video-gallery.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Скрипты -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
+  <script type="module" src="../js/main.js" defer></script>
+  <!-- <script type="module" src="../js/language.js" defer></script> -->
+</head>
+
+<body class="page-index">
+  <!-- Шапка -->
+  <header class="sticky-header">
+    <div class="header-container">
+      <a href="index.html">
+        <div class="logo-container">
+          <img src="./img/logo-uz.webp" alt="School Academy" class="logo" />
+          <div class="school-info">
+            <h1 data-translate="school-name">School Academy</h1>
+            <p data-translate="address">Toshkent, Yunusobod tumani</p>
+          </div>
+        </div>
+      </a>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li>
+            <a data-translate="nav-home" href="index.html" class="active nav-link">Asosiy</a>
+          </li>
+          <li class="dropdown">
+            <a href="about.html" class="nav-link"> <span data-translate="nav-about">Maktab haqida</span> <i
+                class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-about-history" href="about.html#history" class="nav-link">Tarix</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-mission" href="about.html#mission" class="nav-link">Bizning missiyamiz</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-teachers" href="about.html#teachers" class="nav-link">Ustozlar</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-gallery" href="about.html#gallery" class="nav-link">Galareya</a>
+              </li>
+              <li>
+                <a data-translate="nav-about-faq" href="about.html#faq" class="nav-link">Ko'p beriladigan savollar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="program.html" class="nav-link"><span data-translate="nav-program">O'quv dasturlari</span><i
+                class="fa fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a data-translate="nav-program-primary-school" href="program.html#elementary"
+                  class="nav-link">Boshlang'ich maktab</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-high-school" href="program.html#middle" class="nav-link">O'rta maktab</a>
+              </li>
+              <li>
+                <a data-translate="nav-program-clubs" href="program.html#kindergarten" class="nav-link">Qo'shimcha
+                  mashg'ulotlar</a>
+              </li>
+            </ul>
+          </li>
+          <li><a data-translate="nav-contact" href="contacts.html" class="nav-link">Aloqa</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <!-- Темы  -->
+        <div class="theme-switcher">
+          <button id="theme-toggle" aria-label="Toggle Theme">
+            <span class="material-icons dark-mode"> light_mode </span>
+            <span class="material-icons light-mode"> nightlight_round </span>
+          </button>
+        </div>
+        <!-- Переключатель языка на этот код -->
+        <div class="language-switcher">
+          <a href="/" class="lang-switch">
+            <button class="lang-btn active" data-lang="ru" aria-label="Rus tili" lang="ru">RU</button>
+          </a>
+          <a href="/uz/" class="lang-switch">
+            <button class="lang-btn" data-lang="uz" aria-label="O'zbek tili" lang="uz">UZ</button>
+          </a>
+          <span class="lang-slider"></span>
+        </div>
+        <!-- ========= Телефон ====== -->
+        <div class="minimal-phone">
+          <div class="phone-pulse-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <a href="tel:+998507776060" class="bouncing-phone-number" aria-label="Qo'ng'iroq qilish: +998507776060">+998
+            (50) 777-60-60
+          </a>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Mobil menyuni ochish" aria-expanded="false">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+  </header>
+  <!-- Основной контент -->
+  <main class="content-wrapper">
+    <!-- Баннер -->
+    <section class="hero-banner">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <h1 class="wow fadeInUp" data-wow-delay="0.6s">
+          <span class="banner-content-title" data-translate="hero-title">Sifatli ta'lim</span>
+          <span class="banner-content-accent" data-translate="hero-title-accent">Toshkentda</span>
+        </h1>
+        <a href="https://t.me/Shkolnayakademiya" target="_blank" class="cta-button wow fadeInUp"
+          data-translate="hero-button" data-wow-delay="0.6s" target="_blank" rel="noopener noreferrer"
+          aria-label="Ekskursiyaga yozilish">
+          Ekskursiyaga yozilish
+        </a>
+      </div>
+      <div class="scroll-down">
+        <div class="mouse">
+          <div class="scroller"></div>
+        </div>
+      </div>
+    </section>
+    <section class="video-section">
+      <div class="container">
+        <div class="section-header video-section__title wow zoomIn" data-key="video_title">
+          <h2>School Academy</h2>
+          <div class="divider"></div>
+          <p class="video-section__descr" data-key="video_description">Maktabimizga xush kelibsiz</p>
+        </div>
+        <!-- Заглушка -->
+        <div class="video-placeholder wow zoomIn" id="myVideo-placeholder" data-wow-delay="0.2s"
+          style="position: relative; cursor: pointer; max-width: 100%; margin: 0 auto">
+          <div class="banner-overlay"></div>
+          <img src="../img/poster_intro.webp" alt="Maktab haqida video"
+            style="width: 100%; height: auto; display: block" />
+          <button class="video-play-button" aria-label="Воспроизвести видео">▶</button>
+        </div>
+        <!-- Видео (изначально скрыто) -->
+        <div id="plyr-container" style="display: none">
+          <div class="plyr__video-embed" id="player">
+            <iframe src="https://www.youtube.com/embed/rjj1ECWiEQk?si=vB-IP5SesbOz6s6i&vq=hd1080" allowfullscreen
+              data-plyr-provider="youtube" allow="autoplay; encrypted-media" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Поему мы -->
+    <section class="why-us-section section-padding">
+      <div class="container">
+        <div class="section-header wow zoomIn" data-wow-delay="0.2s">
+          <h2>Nega bizni tanlashadi?</h2>
+          <div class="divider"></div>
+          <p>Bizning asosiy afzalliklarimiz</p>
+        </div>
+        <!-- Блок 1 -->
+        <div class="why-us-row wow fadeInLeft" data-wow-delay="0.4s">
+          <div class="why-us-image">
+            <img src="../img/sections/why-us-personal.webp" alt="Individual ta'lim" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Individual ta'lim dasturi</h3>
+            <p>
+              Har bir o‘quvchi — noyob. Biz har bir bolaning bilim darajasi, qabul qilish tezligi va qiziqishlariga
+              moslashtirilgan shaxsiy ta’lim strategiyasini ishlab chiqamiz. O‘qituvchilarimiz o‘quvchilarning
+              salohiyatini bosim va stresssiz ochishga yordam beruvchi moslashuvchan uslullardan foydalanadilar. Bu esa
+              o‘qishga bo‘lgan motivatsiyani saqlab qolishga va o‘z kuchiga ishonchni shakllantirishga yordam beradi.
+            </p>
+          </div>
+        </div>
+        <!-- Блок 2 -->
+        <div class="why-us-row reverse wow fadeInRight" data-wow-delay="0.6s">
+          <div class="why-us-image">
+            <img src="../img/sections/why-us-program.webp" alt="Rivojlanish" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Har bir rivojlanish jihatiga mehr bilan</h3>
+            <p>
+              Maktabimizda bolaning har tomonlama uyg‘un rivojlanishiga alohida e’tibor qaratiladi. Tajribali
+              o‘qituvchilar rahbarligida har bir mashg‘ulot shunday tashkil etilganki, bolalar nafaqat bilim olishadi,
+              balki psixologik jihatdan barqaror, faolligi yuqori va qiziquvchan bo‘lib ulg‘ayishadi. O‘quv dasturi
+              intellektual salohiyat, jismoniy faollik va hissiy aqlni rivojlantirishga yo‘naltirilgan.
+            </p>
+          </div>
+        </div>
+        <!-- Блок 3 -->
+        <div class="why-us-row wow fadeInLeft">
+          <div class="why-us-image">
+            <img src="../img/sections/why-us-eats.webp" alt="Foydali ovqatlanish" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Kun davomida to‘g‘ri va foydali ovqatlanish</h3>
+            <p>
+              Sog‘lom ovqatlanish — bu bolalarning yaxshi o‘qishi va rivojlanishida muhim rol o‘ynaydi. Biz yoshga mos
+              va mutaxassislar tavsiyasiga binoan tuzilgan to‘rt mahal ovqatlanishni taklif qilamiz. Har kungi menyuda
+              yangi sabzavot va mevalar, don mahsulotlari, go‘sht hamda sut mahsulotlari mavjud. Taomlar maktab
+              oshxonasida tayyorlanib, sifat qat’iy nazorat ostida bo‘ladi. Allergiya yoki shaxsiy xususiyatlarga ega
+              bolalar uchun esa alohida yondashuv qo‘llaniladi.
+            </p>
+          </div>
+        </div>
+        <!-- Блок 4 -->
+        <div class="why-us-row reverse wow fadeInRight">
+          <div class="why-us-image">
+            <img src="../img/sections/why-us-early.webp" alt="Ta’lim — ilk qadamlar" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Ta’lim — ilk qadamlardan maktab bitiruvigacha</h3>
+            <p>
+              Farzandingizning ta’limiy yo‘li bizda 2 yoshdan boshlanadi va maktab bitiruvigacha izchil davom etadi. Bu
+              esa bola uchun barqaror muhit, uzluksiz dasturlar va maktab hayotiga chuqur moslashuvni ta’minlaydi.
+              Bolalar o‘zlari uchun tanish, ishonchli muhitda ulg‘ayishadi, pedagoglar esa har bir bosqichda ularning
+              o‘sishi va rivojlanishini yaqindan kuzatib borishadi. Bunday izchil yondashuv nafaqat bilim, balki ongli,
+              kuchli va barkamol shaxs shakllanishiga xizmat qiladi.
+            </p>
+          </div>
+        </div>
+        <!-- Блок 5 -->
+        <div class="why-us-row wow fadeInLeft">
+          <div class="why-us-image">
+            <img src="../img/sections/why-us-admission.webp" alt="Oliy o‘quv yurtlari" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Oliy o‘quv yurtlariga puxta tayyorgarlik</h3>
+            <p>
+              Biz yuqori sinf o‘quvchilarini kasb tanlashdan boshlab hujjat topshirishgacha bo‘lgan barcha bosqichlarda
+              qo‘llab-quvvatlaymiz. Har bir bola uchun — individual maslahatlar, imtihonlarga tayyorgarlik, motivatsion
+              xat yozish va suhbatga tayyorgarlik. Bizning yondashuv — tizimli va mas’uliyatli. Maqsadimiz —
+              o‘quvchilarni Yevropa, AQSh va Osiyodagi yetakchi universitetlarga ishonch bilan kirishga tayyorlash.
+            </p>
+          </div>
+        </div>
+        <!-- Блок 6 -->
+        <div class="why-us-row reverse wow fadeInRight">
+          <div class="why-us-image">
+            <img src="../img/sections/why-us-safe.webp" alt="Qulaylik va xavfsizlik" loading="lazy" />
+          </div>
+          <div class="why-us-text">
+            <h3>Qulaylik va xavfsizlik — bizning ustuvor vazifamiz</h3>
+            <p>
+              Maktab hududida to‘liq xavfsizlik ta’minlangan: 24 soatlik qo‘riqlash, videokuzatuv tizimi va kirishni
+              nazorat qilish mexanizmi mavjud. Shuningdek, tibbiyot xonasi doimiy navbatchi mutaxassis bilan ishlaydi,
+              sanitariya me’yorlariga muntazam rioya qilinadi va favqulodda vaziyatlarga tayyorlik protokollari joriy
+              etilgan. Bolalar uchun xavfsiz va qulay muhit — bu ota-onalarning ishonchi va o‘quvchilarning xotirjamligi
+              garovidir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- О школе -->
+    <section class="about-section section-padding">
+      <div class="container">
+        <div class="section-header wow zoomIn">
+          <h2>Maktabimiz ta’limining afzalliklari</h2>
+          <div class="divider"></div>
+          <p>Farzandingiz uchun o‘ziga xos rivojlanish muhiti. Iqtidor va o‘sish uchun ilhomlantiruvchi makon</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card wow fadeIn" data-wow-delay="0.2s">
+            <div class="feature-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Individual yondashuv</h3>
+            <p>Ta’lim dasturlari har bir o‘quvchining qobiliyati va ehtiyojlariga moslab tuzilgan</p>
+          </div>
+          <div class="feature-card wow fadeIn" data-wow-delay="0.4s">
+            <div class="feature-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Shaxsning kompleks rivojlanishi</h3>
+            <p>
+              Har bir bolaning uyg‘un va to‘liq shakllanishiga alohida e’tibor beramiz. Farzandlarimiz jismoniy,
+              aqliy va ruhiy jihatdan barqaror va sog‘lom rivojlanadi
+            </p>
+          </div>
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h3>Sog‘lom va mazali ovqatlanish</h3>
+            <p>Farzandingizning salomatligi biz uchun muhim. Maktabimizda bolalar to‘g‘ri, foydali va mazali ovqatlar
+              bilan ta’minlanadi</p>
+          </div>
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Boshlang'ich bilimdan — katta yutuqlargacha</h3>
+            <p>
+              Barqaror va izchil ta'lim - farzandingiz uchun mustahkam bilim poydevorini
+            </p>
+          </div>
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3>Oliy ta'limga tayyorgarlik</h3>
+            <p>
+              Bitiruvchilarimiz yetakchi OTMlarga muvaffaqiyatli kiradi
+            </p>
+          </div>
+          <div class="feature-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Xavfsiz maktab hududi</h3>
+            <p>Har bir o‘quvchi xavfsizligi biz uchun muhim</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Видео-галарея -->
+    <section class="video-gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Videogalereya</h2>
+          <div class="divider"></div>
+          <p>“School Academy” muhitiga sho‘ng‘ing — bizning videoroliklar tariximizdagi yorqin lahzalarni aks ettiradi.
+          </p>
+        </div>
+        <div class="video-gallery-content">
+          <p>Videolarimiz maktab hayotidan so‘zlaydi: tantanali tadbirlardan tortib, kundalik darslar va ijodiy
+            loyihalargacha. Videoni ko‘rish uchun kartochkani bosing.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/ofvuR0oyv9s?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 1;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/intro.webp" alt="Intro" loading="lazy">
+            <div class="video-card-content">
+              <h3>“School Academy”ga xush kelibsiz!</h3>
+              <p>Sifatli ta’lim olamiga “School Academy” bilan birga qadam qo‘ying!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/TmifC4STeTk?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 2;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/history.webp" alt="Open lesson" loading="lazy">
+            <div class="video-card-content">
+              <h3>Ochiq dars</h3>
+              <p>“School Academy”da tarix fanidan o‘tkazilgan ochiq dars</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/VxaWAG32Rqs?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 3;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/math.webp" alt="Open lesson" loading="lazy">
+            <div class="video-card-content">
+              <h3>Ochiq dars</h3>
+              <p>“School Academy”da matematika fanidan o‘tkazilgan ochiq dars</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/LuC_hx5NKGI?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 4;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/football.webp" alt="Football training" loading="lazy">
+            <div class="video-card-content">
+              <h3>Katta yutuqlar sari ilk qadamlar!</h3>
+              <p>“School Academy”dagi yosh futbolchilarning mashg‘uloti!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/bg6gPvKmzSk?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 5;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/summer.webp" alt="Summer camp" loading="lazy">
+            <div class="video-card-content">
+              <h3>Yozgi oromgoh</h3>
+              <p>“School Academy”ning foydali, quvnoq va unutilmas yozgi oromgohiga xush kelibsiz!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/A6RaqtpGPrI?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 6;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/icecream.webp" alt="Ice cream" loading="lazy">
+            <div class="video-card-content">
+              <h3>Maktabdagi mazali kun!</h3>
+              <p>Bolalarga mehr bilan. Yoz, quvonch va g‘amxo‘rlik yonimizda!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/vBSjbEUAed8?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 7;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/water.webp" alt="Fun water games" loading="lazy">
+            <div class="video-card-content">
+              <h3>Bolalar va suv o‘yinlari!</h3>
+              <p>Issiq yoz kunida eng katta quvonch — bu suv bilan o‘ynash!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/NyI_Z7xJ9q8?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 8;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/basseyn.webp" alt="Water games" loading="lazy">
+            <div class="video-card-content">
+              <h3>Basseyn</h3>
+              <p>Quvnoq suzish — cheksiz quvonch va yaxshi kayfiyat!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/ERBWoJIuSzQ?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 9;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/sections/cta-invite-2.webp" alt="Welcome to school" loading="lazy">
+            <div class="video-card-content">
+              <h3>Maktab sizni kutmoqda</h3>
+              <p>Maktabimizga xush kelibsiz!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/T0DzZlcVQDw?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 10;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/Daniel.webp" alt="English teacher" loading="lazy">
+            <div class="video-card-content">
+              <h3>Chet ellik ustoz bilan ingliz tili!</h3>
+              <p>Tabiiy talaffuz — chet ellik ustoz bilan ingliz tili mashg‘ulotlari!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/i-1D8tVNOqk?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 11;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/entertaiment.webp" alt="Pool party" loading="lazy">
+            <div class="video-card-content">
+              <h3>Basseyndagi bayram</h3>
+              <p>Basseynda ko‘piklar bilan haqiqiy shou! Xursandchilik, suvlar va quvonch!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/4lRfZAAjdTE?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 12;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/food.webp" alt="Tasty break" loading="lazy">
+            <div class="video-card-content">
+              <h3>Mazali tanaffus</h3>
+              <p>Maktabimizda tushlik qanday o‘tishini ko‘ring!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/1xxHZ2QhMZ0?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 13;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/food-2.webp" alt="School lunch" loading="lazy">
+            <div class="video-card-content">
+              <h3>Maktab tushligi</h3>
+              <p>Maktabimizdagi tushlik tanaffusi — faqat ovqat emas, balki kulgu va tabassumlar!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/wSYWxWhsZzY?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 14;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/lab.webp" alt="Knowledge Lab" loading="lazy">
+            <div class="video-card-content">
+              <h3>Bilim laboratoriyasi</h3>
+              <p>Maktab laboratoriyasida o‘quvchilar fan sirlarini zabt etishadi!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/d-qmGJ-5GQA?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 15;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/myday.webp" alt="My school" loading="lazy">
+            <div class="video-card-content">
+              <h3>Maktabdagi bir kunim</h3>
+              <p>Bizning maktabimiz o‘quvchisining yorqin kuniga sho‘ng‘ing!</p>
+            </div>
+          </div>
+          <div class="video-card"
+            data-video="https://www.youtube.com/embed/2wUveOyWc6A?vq=hd1080&autoplay=1&controls=0&modestbranding=1"
+            style="--n: 16;">
+            <span class="material-icons material-playButton">play_arrow</span>
+            <img src="../img/video-gallery/merve.webp" alt="English teacher" loading="lazy">
+            <div class="video-card-content">
+              <h3>Ingliz tili - Merve ilhomlantiradi!</h3>
+              <p>Merve — ingliz tili o‘qituvchisi, uning uchun dars berish — bu haqiqiy ishtiyoq!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="videoModal">
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <iframe id="videoPlayer" src="" allowfullscreen allow="autoplay; fullscreen"></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- Программы -->
+    <section class="programs-unique section-padding">
+      <div class="container">
+        <div class="section-header wow zoomIn">
+          <h2>Ta’lim dasturlari</h2>
+          <div class="divider"></div>
+          <p>Bolalikning har bosqichida ta’lim — birinchi qadamdan bitirish tantanasigacha</p>
+        </div>
+        <div class="programs-grid">
+          <div class="program-card wow fadeIn" data-wow-delay="0.2s">
+            <h3>Bog‘cha</h3>
+            <p>G‘amxo‘rlik, o‘yin va bilim olamiga ilk qadamlar — 2 dan 6 yoshgacha bolalar uchun dastur</p>
+          </div>
+          <div class="program-card wow fadeIn" data-wow-delay="0.4s">
+            <h3>Boshlang‘ich maktab</h3>
+            <p>6–11 yoshdagi bolalarda tafakkur, ijodkorlik va muloqot ko‘nikmalarini rivojlantirish.</p>
+          </div>
+          <div class="program-card wow fadeIn" data-wow-delay="0.6s">
+            <h3>O‘rta maktab</h3>
+            <p>Fanlarni chuqur o‘rganish, imtihonlarga tayyorgarlik va kelajak yo‘lini tanlash</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Дейстия -->
+    <section class="cta-wow section-padding">
+      <div class="container">
+        <div class="cta-box wow fadeIn" data-wow-delay="1.2s">
+          <h2>Maktabimizga tashrif buyuring</h2>
+          <p>Darslar jarayonini ko‘rish va o‘qituvchilar bilan tanishish uchun ekskursiyaga yoziling</p>
+          <a href="#" class="cta-wow-btn" aria-label="Ro‘yxatdan o‘tish">Ro‘yxatdan o‘tish</a>
+        </div>
+      </div>
+    </section>
+    <!-- Новости -->
+    <section class="news-unique section-padding">
+      <div class="container">
+        <div class="section-header wow fadeIn">
+          <h2>Yangiliklar</h2>
+          <div class="divider"></div>
+          <p>Maktabimiz hayotidan so‘nggi yangiliklar</p>
+        </div>
+        <div class="news-grid">
+          <div class="news-card wow fadeIn" data-wow-delay="0.2s">
+            <div class="news-thumb">
+              <img src="../img/sections/news1.webp" alt="Maktab yarmarkasi" loading="lazy" />
+              <span class="news-date">01.05.2025</span>
+            </div>
+            <div class="news-content">
+              <h3>Maktab yarmarkasi 2025</h3>
+              <p>O'quvchilar, ota-onalar va o‘qituvchilar ishtirokidagi bilim va ijod bayrami.</p>
+              <a href="#">Batafsil</a>
+            </div>
+          </div>
+          <div class="news-card wow fadeIn" data-wow-delay="0.4s">
+            <div class="news-thumb">
+              <img src="../img/sections/news2.webp" alt="Olimpiada" loading="lazy" />
+              <span class="news-date">18.04.2025</span>
+            </div>
+            <div class="news-content">
+              <h3>Olimpiadada g‘alaba</h3>
+              <p>O‘quvchilarimiz mintaqaviy matematika olimpiadasida 1-o‘rinni egalladi.</p>
+              <a href="#">Batafsil</a>
+            </div>
+          </div>
+          <div class="news-card wow fadeIn" data-wow-delay="0.6s">
+            <div class="news-thumb">
+              <img src="../img/sections/news3.webp" alt="Yozgi oromgoh" loading="lazy" />
+              <span class="news-date">05.03.2025</span>
+            </div>
+            <div class="news-content">
+              <h3>Yozgi oromgohning ochilishi</h3>
+              <p>“School Academy”ning shahar yozgi maktab oromgohiga bolalarni taklif qilamiz!</p>
+              <a href="#">Batafsil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Подвал -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Ish vaqtlari</h3>
+          <p>Du-Ju: 8:00 - 18:00</p>
+          <p>Shanba: dam olish kuni</p>
+          <p>Yakshanba: dam olish kuni</p>
+        </div>
+        <div class="footer-column">
+          <h3>Manzil</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Toshkent, Yunusobod tumani, 7 - mavze, 16/1</p>
+        </div>
+        <div class="footer-column">
+          <h3>Aloqa</h3>
+          <p>
+            <i class="fas fa-phone-alt"></i><a href="tel:+998507776060"
+              aria-label="Qo'ng'iroq qilish: +998 (50) 777-60-60">+998
+              (50) 777-60-60 </a>
+          </p>
+          <p><i class="fas fa-envelope"></i> info@schoolacademy.uz</p>
+        </div>
+        <div class="footer-column">
+          <h3>Ijtimoiy tarmoqlar</h3>
+          <div class="social-links">
+            <a href="https://t.me/Shkolnayakademiya" rel="noopener noreferrer" target="_blank"
+              aria-label="Telegramga o‘tish" title="Bizning Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/shkolnayakademiya/" rel="noopener noreferrer" target="_blank"
+              aria-label="Instagramga o‘tish" title="Bizning Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/NOUShkolnayaAkademiya/?locale=ru_RU" rel="noopener noreferrer"
+              aria-label="Facebookga o‘tish" target="_blank" title="Bizning Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-map">
+        <h3>Bizning joylashuvimiz</h3>
+        <div class="divider"></div>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adda1209b7a5c59fe3bd970bb4c51a58e50ee31d637424ce509900d18c84b&amp;source=constructor"
+          width="702" height="579" frameborder="0" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 School Academy. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22ZG2NQ22L"></script>
+  <script src="https://unpkg.com/eruda"></script>
+  <script type="module" src="./js/ya.js"></script>
+  <script src="../js/video-gallery.js"></script>
+</body>
+
+</html>
