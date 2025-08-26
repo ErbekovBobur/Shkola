@@ -6,7 +6,7 @@
       "ru": "Опыт работы 15 лет, специализируется на подготовке к олимпиадам. Автор множества учебных пособий и победитель профессиональных конкурсов.",
       "uz": "15 yillik tajriba, olimpiadalarga tayyorlashga ixtisoslashgan. Ko'plab o'quv qo'llanmalar muallifi va professional tanlovlar g'olibi."
     },
-    "image": "./img/teachers/teacher-1.webp"
+    "image": "../img/teachers/teacher-1.webp"
   },
   {
     "name": { "ru": "Игорь Смирнов", "uz": "Igor Smirnov" },
@@ -15,7 +15,7 @@
       "ru": "Доктор наук, автор курсов по квантовой физике и динамике. Работает в школе более 10 лет.",
       "uz": "Fan doktori, kvant fizika va dinamika bo'yicha kurslar muallifi. 10 yildan ortiq tajriba."
     },
-    "image": "./img/teachers/teacher-2.webp"
+    "image": "../img/teachers/teacher-2.webp"
   },
   {
     "name": { "ru": "Мария Ким", "uz": "Mariya Kim" },
@@ -24,7 +24,7 @@
       "ru": "Ведет лабораторные работы и занимается научным наставничеством учеников.",
       "uz": "Laboratoriya ishlarini olib boradi va o'quvchilarga ilmiy rahbarlik qiladi."
     },
-    "image": "./img/teachers/teacher-3.webp"
+    "image": "../img/teachers/teacher-3.webp"
   },
   {
     "name": { "ru": "Денис Абдуллаев", "uz": "Denis Abdullayev" },
@@ -33,7 +33,7 @@
       "ru": "Специалист по программированию и робототехнике. Руководит IT-клубом школы.",
       "uz": "Dasturlash va robototexnika bo'yicha mutaxassis. Maktabning IT klubini boshqaradi."
     },
-    "image": "./img/teachers/teacher-4.webp"
+    "image": "../img/teachers/teacher-4.webp"
   },
   {
     "name": { "ru": "Светлана Нуреева", "uz": "Svetlana Nuriyeva" },
@@ -42,7 +42,7 @@
       "ru": "Магистр педагогики, регулярно проводит разговорные клубы и олимпиады.",
       "uz": "Pedagogika magistri, muntazam suhbat klublari va olimpiadalar o'tkazadi."
     },
-    "image": "./img/teachers/teacher-5.webp"
+    "image": "../img/teachers/teacher-5.webp"
   },
   {
     "name": { "ru": "Рустам Саидов", "uz": "Rustam Saidov" },
@@ -51,7 +51,7 @@
       "ru": "Опыт полевых исследований, организует экскурсии и проекты по экологии.",
       "uz": "Tadqiqot tajribasiga ega, ekologiya bo'yicha ekskursiyalar va loyihalarni tashkil qiladi."
     },
-    "image": "./img/teachers/teacher-6.webp"
+    "image": "../img/teachers/teacher-6.webp"
   },
   {
     "name": { "ru": "Елена Тихонова", "uz": "Elena Tixonova" },
@@ -60,7 +60,7 @@
       "ru": "Увлеченный преподаватель, автор учебных программ и пособий по истории Узбекистана.",
       "uz": "Tarixiy darsliklar va o‘quv dasturlar muallifi, fidokor ustoz."
     },
-    "image": "./img/teachers/teacher-7.webp"
+    "image": "../img/teachers/teacher-7.webp"
   },
   {
     "name": { "ru": "Алексей Павлов", "uz": "Aleksey Pavlov" },
@@ -69,7 +69,7 @@
       "ru": "Организует географические олимпиады и ведет кружки по картографии.",
       "uz": "Geografik olimpiadalar va kartografiya to‘garaklarini tashkil qiladi."
     },
-    "image": "./img/teachers/teacher-8.webp"
+    "image": "../img/teachers/teacher-8.webp"
   },
   {
     "name": { "ru": "Наталья Сергеева", "uz": "Natalya Sergeeva" },
@@ -78,7 +78,7 @@
       "ru": "Проводит театральные постановки и творческие мастерские по литературе.",
       "uz": "Adabiyot bo‘yicha ijodiy mahorat darslari va sahna ko‘rinishlarini tashkil qiladi."
     },
-    "image": "./img/teachers/teacher-9.webp"
+    "image": "../img/teachers/teacher-9.webp"
   },
   {
     "name": { "ru": "Шавкат Исмоилов", "uz": "Shavkat Ismoilov" },
@@ -87,6 +87,6 @@
       "ru": "Тренер школьной сборной, участник международных спортивных мероприятий.",
       "uz": "Maktab sport jamoasi murabbiyi, xalqaro sport tadbirlari ishtirokchisi."
     },
-    "image": "./img/teachers/teacher-10.webp"
+    "image": "../img/teachers/teacher-10.webp"
   }
 ]

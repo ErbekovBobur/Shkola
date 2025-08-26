@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("main.js is start");
-
   const themeToggleBtn = document.querySelector("#theme-toggle");
-
   // Проверка текущей темы из localStorage
   if (localStorage.getItem("theme") === "dark" && false) {
     document.documentElement.setAttribute("data-theme", "dark");
@@ -33,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn("WOW.js не загружен");
   }
   // google analitics
+  /*
   window.dataLayer = window.dataLayer || [];
   window.gtag =
     window.gtag ||
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   gtag("js", new Date());
   gtag("config", "G-22ZG2NQ22L");
-
+*/
   // консоль eruda
   const consol = document.querySelector('p[data-translate="address"]');
   if (consol && typeof eruda !== "undefined") {
@@ -204,9 +203,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Выпадающее меню (dropdown) ---
+  // --- Выпадающее меню (dropdown) ---  
+  const ENABLE_DROPDOWN = false;
   const dropdown_menu = document.querySelectorAll(".dropdown");
-  if (dropdown_menu && false) {
+  if (dropdown_menu && ENABLE_DROPDOWN) {
     dropdown_menu.forEach((item) => {
       const menu = item.querySelector(".dropdown-menu");
       item.addEventListener("mouseenter", () => {
@@ -214,7 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
           menu.classList.add("show"); // меняем подход
         }
       });
-
       item.addEventListener("mouseleave", () => {
         if (menu) {
           // menu.style.animation = "";
@@ -223,7 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-
   if (document.body.classList.contains("page-about")) {
     // Управление темами
     const themeSwitcher = document.querySelector(".theme-switcher");
@@ -266,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const rightBtn = document.querySelector(".right-btn");
     const cards = document.querySelectorAll(".teacher-card");
 
-    if (cardsWrapper && cards && leftBtn && rightBtn) {
+    if (cardsWrapper && cards.length > 0 && leftBtn && rightBtn) {
       // Получаем ширину карточки, чтобы прокручивать на одну карточку
       const cardWidth = cards[0].offsetWidth + 20; // Ширина карточки с учетом отступа
       let scrollPosition = 0; // Текущая позиция прокрутки
@@ -337,6 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         requestAnimationFrame(continuousScroll);
       }
+      requestAnimationFrame(continuousScroll);
 
       // Функция паузы автопрокрутки
       function pauseAutoScroll() {
@@ -357,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Закрытие модального окна
-      function closeModal() {
+      function closeModalFunc() {
         const lightbox = document.getElementById("lightbox");
         lightbox.style.display = "none"; // Скрываем модальное окно
       }
@@ -393,22 +392,17 @@ document.addEventListener("DOMContentLoaded", function () {
       galleryRow.addEventListener("wheel", pauseAutoScroll);
 
       // Закрытие модального окна при клике
-      document.querySelector(".lightbox-close").addEventListener("click", closeModal);
+      document.querySelector(".lightbox-close").addEventListener("click", closeModalFunc);
       const lightbox = document.getElementById("lightbox");
       if (lightbox) {
         lightbox.addEventListener("click", (e) => {
           if (e.target === lightbox) {
-            closeModal();
+            closeModalFunc();
           }
         });
       }
       document.querySelector(".lightbox-nav.left").addEventListener("click", () => changeImage(-1));
       document.querySelector(".lightbox-nav.right").addEventListener("click", () => changeImage(1));
-
-      // Запуск непрерывной прокрутки
-      window.addEventListener("DOMContentLoaded", () => {
-        requestAnimationFrame(continuousScroll);
-      });
     }
   }
   if (document.body.classList.contains("page-index")) {
@@ -418,6 +412,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const playButton = document.querySelector(".video-play-button");
 
     let player = new Plyr("#player", {
+      controls: [
+        'play',
+        'progress',
+        'duration',
+        'mute',
+        'volume',
+        'fullscreen',
+      ],
       youtube: {
         noCookie: true,
       },
@@ -453,7 +455,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       { threshold: 0.1 }
     );
-
     // Наблюдаем за plyrContainer
     observer.observe(plyrContainer);
   }
@@ -472,5 +473,38 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Ошибка регистрации ServiceWorker:", error);
       }
     });
+  };
+  const videoCards = document.querySelectorAll(".video-card");
+  const modal = document.getElementById("videoModal");
+  const videoPlayer = document.getElementById("videoPlayer");
+  const modalCloseBtn = document.querySelector(".modal-close");
+
+  videoCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      try {
+        const videoUrl = card.getAttribute("data-video");
+        videoPlayer.src = videoUrl;
+        modal.classList.add("show");
+        document.body.classList.add("no-scroll");
+      } catch (error) {
+        // console.log("Ошибка при открытии видео:", error);
+      }
+    });
+  });
+
+  function closeVideoModal() {
+    modal.classList.remove("show");
+    videoPlayer.src = "";
+    document.body.classList.remove("no-scroll");
   }
+
+  modalCloseBtn.addEventListener("click", closeVideoModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeVideoModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("show")) closeVideoModal();
+  });
 });

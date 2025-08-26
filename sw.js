@@ -2,10 +2,10 @@ const CACHE_NAME = "school-academy-v2.0";
 const OFFLINE_URL = "/offline.html";
 const urlsToCache = [
   "/",                  // Главная
-  "/index.html",
-  "/about.html",
-  "/program.html",
-  "/offline.html",
+  "/index/index.html",
+  "/about/index.html",
+  "/program/index.html",
+  "/offline/index.html",
   "/css/style.css",
   "/css/index.css",
   "/css/about.css",

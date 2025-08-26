@@ -473,6 +473,10 @@ video:not(.plyr-video)::-webkit-media-controls {
   .banner-content h1 {
     font-size: 2rem;
   }
+  /* скрыть duration Video на мобильных */
+  .plyr__controls__item.plyr__progress__container {
+    display: none !important;
+  }
   .feature-card {
     padding: 30px 20px;
   }
